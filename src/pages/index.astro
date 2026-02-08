@@ -3,12 +3,112 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout title="Explicit Studio — A Storytelling Studio for Startups">
-  <section style="padding: 140px 0 80px; padding-left: var(--section-padding-x); padding-right: var(--section-padding-x); max-width: var(--container-max); margin: 0 auto;">
-    <h1 style="font-size: var(--text-hero); font-weight: var(--weight-bold); letter-spacing: var(--tracking-tight); line-height: var(--leading-tight);">
-      EXPLICIT<span style="color: var(--color-accent);">&reg;</span>
+
+  <!-- Hero -->
+  <section class="hero">
+    <p class="hero__descriptor">Brand strategy & creative for startups.</p>
+    <h1 class="hero__headline">
+      Storytelling for founders who believe creativity is a business advantage.
     </h1>
-    <p style="margin-top: 24px; font-size: var(--text-body); color: var(--color-text-secondary);">
-      A storytelling studio for startups. Full site coming soon.
-    </p>
+    <div class="hero__media">
+      <div class="placeholder" style="aspect-ratio: 16/9;">
+        Showreel Video
+      </div>
+    </div>
   </section>
+
+  <!-- Logo Bar -->
+  <section class="logo-bar">
+    <p class="logo-bar__text">
+      Working with founders in AI, crypto, D2C & venture capital.
+    </p>
+    <div class="logo-bar__logos">
+      <div class="logo-bar__logo placeholder">Logo 1</div>
+      <div class="logo-bar__logo placeholder">Logo 2</div>
+      <div class="logo-bar__logo placeholder">Logo 3</div>
+      <div class="logo-bar__logo placeholder">Logo 4</div>
+      <div class="logo-bar__logo placeholder">Logo 5</div>
+    </div>
+  </section>
+
 </BaseLayout>
+
+<style>
+  /* --- Hero --- */
+  .hero {
+    padding: 140px var(--section-padding-x) 0;
+    max-width: var(--container-max);
+    margin: 0 auto;
+  }
+
+  .hero__descriptor {
+    font-size: var(--text-small);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-wide);
+    color: var(--color-text-secondary);
+    margin-bottom: 24px;
+  }
+
+  .hero__headline {
+    font-size: var(--text-hero);
+    font-weight: var(--weight-bold);
+    line-height: var(--leading-tight);
+    letter-spacing: var(--tracking-tight);
+    max-width: 900px;
+  }
+
+  .hero__media {
+    margin-top: 60px;
+  }
+
+  /* --- Logo Bar --- */
+  .logo-bar {
+    padding: var(--section-padding-y) var(--section-padding-x);
+    max-width: var(--container-max);
+    margin: 0 auto;
+  }
+
+  .logo-bar__text {
+    font-size: var(--text-h3);
+    font-weight: var(--weight-regular);
+    color: var(--color-text-secondary);
+    margin-bottom: 40px;
+  }
+
+  .logo-bar__logos {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    flex-wrap: wrap;
+  }
+
+  .logo-bar__logo {
+    height: 28px;
+    width: 100px;
+    border-radius: 4px;
+    filter: grayscale(1);
+    transition: filter 0.3s ease;
+  }
+
+  .logo-bar__logo:hover {
+    filter: grayscale(0);
+  }
+
+  @media (max-width: 767px) {
+    .hero {
+      padding-top: 120px;
+    }
+
+    .hero__headline {
+      max-width: 100%;
+    }
+
+    .logo-bar__logos {
+      gap: 32px;
+    }
+
+    .logo-bar__logo {
+      width: 80px;
+    }
+  }
+</style>
