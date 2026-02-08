@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+import projects from '../../data/projects.json';
+---
+
+<BaseLayout title="Work — Explicit Studio">
+
+  <section class="work-listing">
+    <h1 class="work-listing__title">The work.</h1>
+    <div class="work-listing__grid">
+      {projects.map((project) => (
+        <ProjectCard
+          slug={project.slug}
+          title={project.title}
+          description={project.description}
+          tags={project.tags}
+        />
+      ))}
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .work-listing {
+    padding: 40px var(--section-padding-x) var(--section-padding-y);
+  }
+
+  .work-listing__title {
+    font-size: var(--text-h1);
+    font-weight: 400;
+    margin-bottom: 48px;
+  }
+
+  .work-listing__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--grid-gap);
+  }
+
+  @media (max-width: 767px) {
+    .work-listing__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
