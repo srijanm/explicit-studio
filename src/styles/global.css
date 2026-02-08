@@ -104,6 +104,10 @@ input, textarea {
   --container-max: 1400px;
   --container-narrow: 900px;
   --grid-gap: clamp(16px, 2vw, 32px);
+
+  /* Border Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
 }
 
 /* --- Utility: Section Container --- */
@@ -124,6 +128,7 @@ input, textarea {
   font-family: var(--font-primary);
   text-transform: uppercase;
   letter-spacing: var(--tracking-wide);
+  border-radius: var(--radius-md);
 }
 
 /* --- Scroll Reveal Animation --- */
@@ -155,6 +160,7 @@ input, textarea {
   border: none;
   cursor: pointer;
   transition: background 0.3s ease;
+  border-radius: var(--radius-sm);
 }
 
 .btn-primary:hover {
