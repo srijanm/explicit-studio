@@ -14,30 +14,28 @@ const featured = projects.filter((p) => p.featured);
     <h1 class="hero__headline">
       Storytelling for founders who believe creativity is a business advantage.
     </h1>
-    <div class="hero__media">
-      <div class="placeholder" style="aspect-ratio: 16/9;">
-        Showreel Video
-      </div>
+    <div class="hero__media placeholder" style="aspect-ratio: 16/9;">
+      Showreel Coming Soon
     </div>
   </section>
 
   <!-- Logo Bar -->
-  <section class="logo-bar">
-    <p class="logo-bar__text">
+  <section class="logos-section">
+    <p class="logos-section__text">
       Working with founders in AI, crypto, D2C & venture capital.
     </p>
-    <div class="logo-bar__logos">
-      <div class="logo-bar__logo placeholder">Logo 1</div>
-      <div class="logo-bar__logo placeholder">Logo 2</div>
-      <div class="logo-bar__logo placeholder">Logo 3</div>
-      <div class="logo-bar__logo placeholder">Logo 4</div>
-      <div class="logo-bar__logo placeholder">Logo 5</div>
+    <div class="logos-grid">
+      <div class="logo-placeholder"></div>
+      <div class="logo-placeholder"></div>
+      <div class="logo-placeholder"></div>
+      <div class="logo-placeholder"></div>
+      <div class="logo-placeholder"></div>
     </div>
   </section>
 
   <!-- Selected Work -->
-  <section class="selected-work reveal">
-    <h2 class="selected-work__heading">Selected work.</h2>
+  <section class="work-section reveal">
+    <h2 class="work-section__title">Selected work.</h2>
     <div class="work-grid">
       {featured.map((project) => (
         <ProjectCard
@@ -48,7 +46,7 @@ const featured = projects.filter((p) => p.featured);
         />
       ))}
     </div>
-    <div class="selected-work__more">
+    <div class="work-section__more">
       <a href="/work" class="view-all-link">
         View all work <span class="view-all-arrow">&rarr;</span>
       </a>
@@ -56,12 +54,12 @@ const featured = projects.filter((p) => p.featured);
   </section>
 
   <!-- The Problem -->
-  <section class="problem reveal">
-    <div class="problem__inner">
-      <p class="problem__opening">
+  <section class="problem-section reveal">
+    <div class="problem-section__inner">
+      <p class="problem-section__opening">
         If we believe in what you have to say, we'll find the best damn way to say it.
       </p>
-      <div class="problem__body">
+      <div class="problem-section__body">
         <p>130,000 startups launch every day. Most die of obscurity. Not because the product was bad — but because no one heard the story.</p>
         <p>You've built the product. You've found the market. But tech has a storytelling problem. Everyone talks about narratives and taste, but everything still looks the same. Soft gradients, safe copy, the same five homepage layouts. Code isn't the differentiator it used to be. And "we're an AI company" isn't a brand.</p>
         <p>The best companies aren't just built on great products. They're built on stories that make people pay attention — stories that attract customers, convince investors, and make top talent want to join before you even have a careers page.</p>
@@ -72,52 +70,52 @@ const featured = projects.filter((p) => p.featured);
   </section>
 
   <!-- Services -->
-  <section class="services reveal">
-    <h2 class="services__heading">
+  <section class="services-section reveal">
+    <h2 class="services-section__heading">
       We turn what you're building into a story people want to tell each other.
     </h2>
 
-    <div class="services__list">
-      <div class="services__item">
-        <span class="services__number">01</span>
-        <div class="services__content">
-          <h3 class="services__title">Story & Strategy</h3>
-          <p class="services__desc">Before we design anything, we find the story. We dig into your market, your competition, and your unfair advantages to find the angle that makes you the only choice — not one of many. Strategic positioning, narrative architecture, messaging frameworks, and the brand voice that ties it all together.</p>
+    <div class="services-list">
+      <div class="services-item">
+        <span class="services-item__number">01</span>
+        <div class="services-item__content">
+          <h3 class="services-item__title">Story & Strategy</h3>
+          <p class="services-item__desc">Before we design anything, we find the story. We dig into your market, your competition, and your unfair advantages to find the angle that makes you the only choice — not one of many. Strategic positioning, narrative architecture, messaging frameworks, and the brand voice that ties it all together.</p>
         </div>
       </div>
 
-      <div class="services__item">
-        <span class="services__number">02</span>
-        <div class="services__content">
-          <h3 class="services__title">Brand & Web</h3>
-          <p class="services__desc">We take the strategy and make it visible. Brand identity, visual systems, and websites that tell your story and convert — designed and built so your team can own it after we're done. The kind of brand that makes people screenshot your homepage and send it to their friends.</p>
+      <div class="services-item">
+        <span class="services-item__number">02</span>
+        <div class="services-item__content">
+          <h3 class="services-item__title">Brand & Web</h3>
+          <p class="services-item__desc">We take the strategy and make it visible. Brand identity, visual systems, and websites that tell your story and convert — designed and built so your team can own it after we're done. The kind of brand that makes people screenshot your homepage and send it to their friends.</p>
         </div>
       </div>
 
-      <div class="services__item services__item--last">
-        <span class="services__number">03</span>
-        <div class="services__content">
-          <h3 class="services__title">Marketing & Campaigns</h3>
-          <p class="services__desc">The story doesn't matter if nobody hears it. We design campaigns that get people talking, content strategies that build audiences, and launch playbooks that make noise. Advertising, social, viral concepts, and the GTM engine to make it all reach the people who matter — customers, investors, and the talent you want to hire.</p>
+      <div class="services-item">
+        <span class="services-item__number">03</span>
+        <div class="services-item__content">
+          <h3 class="services-item__title">Marketing & Campaigns</h3>
+          <p class="services-item__desc">The story doesn't matter if nobody hears it. We design campaigns that get people talking, content strategies that build audiences, and launch playbooks that make noise. Advertising, social, viral concepts, and the GTM engine to make it all reach the people who matter — customers, investors, and the talent you want to hire.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Who We Work With -->
-  <section class="audience reveal">
-    <div class="audience__inner">
-      <h2 class="audience__heading">You belong with us if you're:</h2>
-      <div class="audience__grid">
-        <div class="audience__col">
+  <section class="audience-section reveal">
+    <div class="audience-section__inner">
+      <h2 class="audience-section__heading">You belong with us if you're:</h2>
+      <div class="audience-grid">
+        <div class="audience-col">
           <h3>Launching a Startup</h3>
           <p>You've raised (or are raising) your first round and you need a brand that can attract top talent, build trust with customers, and make investors remember your name. You've got the product — now you need the story.</p>
         </div>
-        <div class="audience__col">
+        <div class="audience-col">
           <h3>Launching a Product</h3>
           <p>You've scaled past the initial phase and need to refine your narrative for expansion. Whether you're entering new markets or shipping new products, you need strategic storytelling to make it land.</p>
         </div>
-        <div class="audience__col">
+        <div class="audience-col">
           <h3>Launching a Fund</h3>
           <p>You're building a fund with a unique thesis and need to stand out. From brand positioning to comms strategy, we help you attract the right founders and LPs.</p>
         </div>
@@ -126,19 +124,19 @@ const featured = projects.filter((p) => p.featured);
   </section>
 
   <!-- How We Work -->
-  <section class="process reveal">
-    <div class="process__inner">
-      <div class="process__intro">
+  <section class="process-section reveal">
+    <div class="process-section__inner">
+      <div class="process-section__intro">
         <p>We don't have account managers, elaborate processes, or bloated teams. You talk to us. We understand your startup, we move fast, and we build things that work. No scope creep, no surprise invoices, no design-by-committee.</p>
         <p><strong>We take on 3 clients per quarter.</strong> Not because we can't scale — because we won't.</p>
       </div>
 
-      <div class="process__offers">
-        <div class="process__offer">
+      <div class="process-offers">
+        <div class="process-offer">
           <h3>Storytelling Sprint — 6 Weeks</h3>
-          <p class="process__offer-sub">Everything you need to go from unknown to unforgettable.</p>
-          <p class="process__offer-label">What you walk away with:</p>
-          <div class="process__deliverables">
+          <p class="process-offer__sub">Everything you need to go from unknown to unforgettable.</p>
+          <p class="process-offer__label">What you walk away with:</p>
+          <div class="process-offer__deliverables">
             <p>&rarr; Brand positioning document</p>
             <p>&rarr; Complete narrative & messaging framework</p>
             <p>&rarr; Brand identity & visual system</p>
@@ -149,10 +147,10 @@ const featured = projects.filter((p) => p.featured);
           </div>
         </div>
 
-        <div class="process__offer">
+        <div class="process-offer">
           <h3>Monthly Partnership — Ongoing</h3>
-          <p class="process__offer-sub">An ongoing creative partner for the work that comes after launch.</p>
-          <div class="process__deliverables">
+          <p class="process-offer__sub">An ongoing creative partner for the work that comes after launch.</p>
+          <div class="process-offer__deliverables">
             <p>&rarr; GTM strategy and campaign architecture</p>
             <p>&rarr; Advertising creatives and copy</p>
             <p>&rarr; Viral campaign concepts and execution</p>
@@ -165,16 +163,16 @@ const featured = projects.filter((p) => p.featured);
   </section>
 
   <!-- CTA -->
-  <section class="cta reveal">
-    <div class="cta__inner">
+  <section class="cta-section reveal">
+    <div class="cta-section__inner">
       <h2>
         Tell a story that sells.<br />
         Build a brand that moves.
       </h2>
-      <a href="/contact" class="btn-primary cta__button">
+      <a href="/contact" class="btn-primary cta-section__button">
         Get in touch <span class="arrow">&rarr;</span>
       </a>
-      <a href="mailto:hey@explicit.studio" class="cta__email">hey@explicit.studio</a>
+      <a href="mailto:hey@explicit.studio" class="cta-section__email">hey@explicit.studio</a>
     </div>
   </section>
 
@@ -183,9 +181,7 @@ const featured = projects.filter((p) => p.featured);
 <style>
   /* ===== Hero ===== */
   .hero {
-    padding: 140px var(--section-padding-x) 0;
-    max-width: var(--container-max);
-    margin: 0 auto;
+    padding: 80px var(--section-padding-x) var(--section-padding-y);
   }
 
   .hero__descriptor {
@@ -197,56 +193,49 @@ const featured = projects.filter((p) => p.featured);
   .hero__headline {
     font-size: var(--text-hero);
     font-weight: var(--weight-medium);
-    line-height: var(--leading-tight);
-    letter-spacing: var(--tracking-tight);
-    max-width: 1000px;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    color: var(--color-text);
+    max-width: 900px;
+    margin-bottom: 60px;
   }
 
   .hero__media {
-    margin-top: 60px;
+    width: 100%;
   }
 
   /* ===== Logo Bar ===== */
-  .logo-bar {
-    padding: var(--section-padding-y) var(--section-padding-x);
-    max-width: var(--container-max);
-    margin: 0 auto;
+  .logos-section {
+    padding: 0 var(--section-padding-x) var(--section-padding-y);
   }
 
-  .logo-bar__text {
+  .logos-section__text {
     font-size: var(--text-h3);
     font-weight: var(--weight-regular);
     color: var(--color-text-secondary);
     margin-bottom: 40px;
   }
 
-  .logo-bar__logos {
+  .logos-grid {
     display: flex;
-    align-items: center;
-    gap: 48px;
     flex-wrap: wrap;
+    gap: 32px 48px;
+    align-items: center;
   }
 
-  .logo-bar__logo {
-    height: 30px;
+  .logo-placeholder {
     width: 120px;
+    height: 30px;
+    background: var(--color-bg-alt);
     border-radius: 4px;
-    filter: grayscale(1);
-    transition: filter 0.3s ease;
-  }
-
-  .logo-bar__logo:hover {
-    filter: grayscale(0);
   }
 
   /* ===== Selected Work ===== */
-  .selected-work {
-    padding: 0 var(--section-padding-x) var(--section-padding-y);
-    max-width: var(--container-max);
-    margin: 0 auto;
+  .work-section {
+    padding: var(--section-padding-y) var(--section-padding-x);
   }
 
-  .selected-work__heading {
+  .work-section__title {
     font-size: var(--text-h1);
     font-weight: var(--weight-medium);
     margin-bottom: 60px;
@@ -258,7 +247,7 @@ const featured = projects.filter((p) => p.featured);
     gap: var(--grid-gap);
   }
 
-  .selected-work__more {
+  .work-section__more {
     margin-top: 40px;
   }
 
@@ -285,17 +274,16 @@ const featured = projects.filter((p) => p.featured);
   }
 
   /* ===== The Problem ===== */
-  .problem {
-    background: var(--color-bg-alt);
+  .problem-section {
     padding: var(--section-padding-y) var(--section-padding-x);
+    background: var(--color-bg-alt);
   }
 
-  .problem__inner {
+  .problem-section__inner {
     max-width: var(--container-narrow);
-    margin: 0 auto;
   }
 
-  .problem__opening {
+  .problem-section__opening {
     font-size: var(--text-h2);
     font-weight: var(--weight-medium);
     font-style: italic;
@@ -303,40 +291,38 @@ const featured = projects.filter((p) => p.featured);
     margin-bottom: 48px;
   }
 
-  .problem__body p {
+  .problem-section__body p {
     font-size: var(--text-body);
     line-height: var(--leading-relaxed);
     margin-bottom: 24px;
     color: var(--color-text);
   }
 
-  .problem__body p:last-child {
+  .problem-section__body p:last-child {
     margin-bottom: 0;
   }
 
-  .problem__body strong {
+  .problem-section__body strong {
     font-weight: var(--weight-semibold);
   }
 
   /* ===== Services ===== */
-  .services {
+  .services-section {
     padding: var(--section-padding-y) var(--section-padding-x);
-    max-width: var(--container-max);
-    margin: 0 auto;
   }
 
-  .services__heading {
+  .services-section__heading {
     font-size: var(--text-h2);
     font-weight: var(--weight-medium);
     max-width: 700px;
     margin-bottom: 60px;
   }
 
-  .services__list {
+  .services-list {
     border-top: 1px solid var(--color-border);
   }
 
-  .services__item {
+  .services-item {
     display: grid;
     grid-template-columns: 60px 1fr;
     gap: 24px;
@@ -344,19 +330,19 @@ const featured = projects.filter((p) => p.featured);
     border-bottom: 1px solid var(--color-border);
   }
 
-  .services__number {
+  .services-item__number {
     font-size: var(--text-small);
     font-weight: var(--weight-medium);
     color: var(--color-accent);
   }
 
-  .services__title {
+  .services-item__title {
     font-size: var(--text-h3);
     font-weight: var(--weight-medium);
     margin-bottom: 12px;
   }
 
-  .services__desc {
+  .services-item__desc {
     font-size: var(--text-body);
     color: var(--color-text-secondary);
     line-height: var(--leading-relaxed);
@@ -364,128 +350,119 @@ const featured = projects.filter((p) => p.featured);
   }
 
   /* ===== Who We Work With ===== */
-  .audience {
+  .audience-section {
     background: var(--color-bg-alt);
     padding: var(--section-padding-y) var(--section-padding-x);
   }
 
-  .audience__inner {
-    max-width: var(--container-max);
-    margin: 0 auto;
-  }
-
-  .audience__heading {
+  .audience-section__heading {
     font-size: var(--text-h2);
     font-weight: var(--weight-medium);
     margin-bottom: 60px;
   }
 
-  .audience__grid {
+  .audience-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 48px;
   }
 
-  .audience__col h3 {
+  .audience-col h3 {
     font-size: var(--text-h3);
     font-weight: var(--weight-medium);
     margin-bottom: 16px;
   }
 
-  .audience__col p {
+  .audience-col p {
     font-size: var(--text-body);
     color: var(--color-text-secondary);
     line-height: var(--leading-relaxed);
   }
 
   /* ===== How We Work ===== */
-  .process {
+  .process-section {
     padding: var(--section-padding-y) var(--section-padding-x);
-    max-width: var(--container-max);
-    margin: 0 auto;
   }
 
-  .process__inner {
+  .process-section__inner {
     max-width: var(--container-narrow);
   }
 
-  .process__intro {
+  .process-section__intro {
     margin-bottom: 60px;
   }
 
-  .process__intro p {
+  .process-section__intro p {
     font-size: var(--text-body);
     line-height: var(--leading-relaxed);
     margin-bottom: 24px;
   }
 
-  .process__intro p:last-child {
+  .process-section__intro p:last-child {
     margin-bottom: 0;
   }
 
-  .process__intro strong {
+  .process-section__intro strong {
     font-weight: var(--weight-semibold);
   }
 
-  .process__offers {
+  .process-offers {
     display: flex;
     flex-direction: column;
     gap: 32px;
   }
 
-  .process__offer {
+  .process-offer {
     border: 1px solid var(--color-border);
     border-radius: var(--radius-md);
     padding: 48px;
   }
 
-  .process__offer h3 {
+  .process-offer h3 {
     font-size: var(--text-h3);
     font-weight: var(--weight-medium);
     margin-bottom: 8px;
   }
 
-  .process__offer-sub {
+  .process-offer__sub {
     font-size: var(--text-body);
     font-style: italic;
     color: var(--color-text-secondary);
     margin-bottom: 24px;
   }
 
-  .process__offer-label {
+  .process-offer__label {
     font-size: var(--text-body);
     margin-bottom: 16px;
   }
 
-  .process__deliverables p {
+  .process-offer__deliverables p {
     font-size: var(--text-body);
     line-height: 1.8;
   }
 
   /* ===== CTA ===== */
-  .cta {
+  .cta-section {
     background: var(--color-bg-alt);
     padding: var(--section-padding-y) var(--section-padding-x);
   }
 
-  .cta__inner {
+  .cta-section__inner {
     text-align: center;
-    max-width: var(--container-max);
-    margin: 0 auto;
   }
 
-  .cta__inner h2 {
+  .cta-section__inner h2 {
     font-size: var(--text-h1);
     font-weight: var(--weight-medium);
     line-height: 1.1;
     margin-bottom: 40px;
   }
 
-  .cta__button {
+  .cta-section__button {
     padding: 16px 40px;
   }
 
-  .cta__email {
+  .cta-section__email {
     display: block;
     margin-top: 24px;
     font-size: var(--text-body);
@@ -494,38 +471,30 @@ const featured = projects.filter((p) => p.featured);
     transition: color 0.3s ease;
   }
 
-  .cta__email:hover {
+  .cta-section__email:hover {
     color: var(--color-accent);
   }
 
   /* ===== Responsive ===== */
   @media (max-width: 767px) {
-    .hero {
-      padding-top: 120px;
-    }
-
     .work-grid {
       grid-template-columns: 1fr;
     }
 
-    .audience__grid {
+    .audience-grid {
       grid-template-columns: 1fr;
     }
 
-    .services__item {
+    .services-item {
       grid-template-columns: 1fr;
       gap: 12px;
     }
 
-    .process__offer {
+    .process-offer {
       padding: 32px;
     }
 
-    .logo-bar__logos {
-      gap: 32px;
-    }
-
-    .logo-bar__logo {
+    .logo-placeholder {
       width: 80px;
     }
   }

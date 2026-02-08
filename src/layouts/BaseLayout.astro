@@ -1,7 +1,5 @@
 ---
 import '../styles/global.css';
-import Nav from '../components/Nav.astro';
-import Sidebar from '../components/Sidebar.astro';
 import Footer from '../components/Footer.astro';
 
 interface Props {
@@ -23,11 +21,112 @@ const { title = 'Explicit Studio', description = 'A storytelling studio for star
     <title>{title}</title>
   </head>
   <body>
-    <Nav />
-    <Sidebar />
-    <main>
-      <slot />
-    </main>
-    <Footer />
+    <!-- Top nav bar — full width -->
+    <nav class="topnav">
+      <a href="/" class="topnav__logo">EXPLICIT<span class="accent">&reg;</span></a>
+      <div class="topnav__links">
+        <a href="/">Home</a>
+        <a href="/work">Work</a>
+        <a href="/info">Info</a>
+        <a href="/contact">Contact</a>
+      </div>
+      <a href="/contact" class="topnav__cta">Get in touch</a>
+      <button class="topnav__hamburger" id="hamburger-btn" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+
+    <!-- Two-column layout below nav -->
+    <div class="layout">
+      <!-- Fixed left sidebar — desktop only -->
+      <aside class="sidebar">
+        <div class="sidebar__top">
+          <nav class="sidebar__nav">
+            <a href="/work">Work</a>
+            <a href="/info">Info</a>
+            <a href="/contact">Contact</a>
+          </nav>
+        </div>
+
+        <div class="sidebar__middle">
+          <a href="/contact" class="sidebar__cta-card">
+            <span class="sidebar__cta-text">Get in touch</span>
+            <span class="sidebar__cta-arrow">&rarr;</span>
+          </a>
+        </div>
+
+        <div class="sidebar__bottom">
+          <p class="sidebar__descriptor">
+            A storytelling studio for startups.<br />
+            Led by Srijan Mahajan.
+          </p>
+          <div class="sidebar__logo-large">
+            EXPLICIT<span class="accent">&reg;</span>
+          </div>
+          <div class="sidebar__socials">
+            <a href="#" target="_blank" rel="noopener noreferrer">X</a>
+            <a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="#" target="_blank" rel="noopener noreferrer">Instagram</a>
+          </div>
+          <a href="mailto:hey@explicit.studio" class="sidebar__email">hey@explicit.studio</a>
+        </div>
+      </aside>
+
+      <!-- Main scrollable content -->
+      <main class="main-content">
+        <slot />
+        <Footer />
+      </main>
+    </div>
+
+    <!-- Mobile sidebar overlay (hidden on desktop) -->
+    <div class="mobile-sidebar-overlay" id="mobile-overlay"></div>
+    <div class="mobile-sidebar" id="mobile-sidebar">
+      <button class="mobile-sidebar__close" id="mobile-close" aria-label="Close menu">&times;</button>
+      <nav class="mobile-sidebar__nav">
+        <a href="/">Home</a>
+        <a href="/work">Work</a>
+        <a href="/info">Info</a>
+        <a href="/contact">Contact</a>
+      </nav>
+      <div class="mobile-sidebar__bottom">
+        <p>A storytelling studio for startups.<br />Led by Srijan Mahajan.</p>
+        <div class="mobile-sidebar__socials">
+          <a href="#" target="_blank" rel="noopener noreferrer">X</a>
+          <a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="#" target="_blank" rel="noopener noreferrer">Instagram</a>
+        </div>
+        <a href="mailto:hey@explicit.studio">hey@explicit.studio</a>
+      </div>
+    </div>
+
+    <script>
+      const hamburger = document.getElementById('hamburger-btn');
+      const mobileSidebar = document.getElementById('mobile-sidebar');
+      const mobileOverlay = document.getElementById('mobile-overlay');
+      const mobileClose = document.getElementById('mobile-close');
+
+      function openMobile() {
+        mobileSidebar?.classList.add('open');
+        mobileOverlay?.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeMobile() {
+        mobileSidebar?.classList.remove('open');
+        mobileOverlay?.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+
+      hamburger?.addEventListener('click', openMobile);
+      mobileOverlay?.addEventListener('click', closeMobile);
+      mobileClose?.addEventListener('click', closeMobile);
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeMobile();
+      });
+    </script>
   </body>
 </html>

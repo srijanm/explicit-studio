@@ -15,7 +15,7 @@
 
   <div class="footer__bottom">
     <div class="footer__bottom-left">
-      <span class="footer__bottom-logo">EXPLICIT<span class="footer__bottom-r">&reg;</span></span>
+      <span class="footer__bottom-logo">EXPLICIT<span class="accent">&reg;</span></span>
       <a href="mailto:hey@explicit.studio" class="footer__bottom-email">hey@explicit.studio</a>
     </div>
 
@@ -36,104 +36,3 @@
     <span>&copy; 2025 Explicit&reg;</span>
   </div>
 </footer>
-
-<style>
-  .footer {
-    border-top: 1px solid var(--color-border);
-  }
-
-  .footer__manifesto {
-    padding: 80px var(--section-padding-x);
-    border-bottom: 1px solid var(--color-border);
-  }
-
-  .footer__manifesto h2 {
-    font-size: var(--text-h2);
-    font-weight: var(--weight-medium);
-    line-height: var(--leading-tight);
-    margin-bottom: 40px;
-  }
-
-  .footer__bottom {
-    padding: 32px var(--section-padding-x);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 24px;
-    border-bottom: 1px solid var(--color-border);
-  }
-
-  .footer__bottom-left {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-  }
-
-  .footer__bottom-logo {
-    font-size: var(--text-small);
-    font-weight: var(--weight-bold);
-    color: var(--color-text);
-    text-transform: uppercase;
-    letter-spacing: var(--tracking-wide);
-  }
-
-  .footer__bottom-r {
-    color: var(--color-accent);
-  }
-
-  .footer__bottom-email {
-    font-size: var(--text-small);
-    color: var(--color-text-secondary);
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-
-  .footer__bottom-email:hover {
-    color: var(--color-accent);
-  }
-
-  .footer__bottom-center span {
-    font-size: var(--text-small);
-    color: var(--color-text-secondary);
-  }
-
-  .footer__bottom-right {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-
-  .footer__bottom-right a {
-    font-size: var(--text-small);
-    color: var(--color-text-secondary);
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-
-  .footer__bottom-right a:hover {
-    color: var(--color-accent);
-  }
-
-  .footer__dot {
-    font-size: var(--text-small);
-    color: var(--color-text-tertiary);
-  }
-
-  .footer__copyright {
-    padding: 20px var(--section-padding-x);
-    text-align: center;
-  }
-
-  .footer__copyright span {
-    font-size: var(--text-tiny);
-    color: var(--color-text-tertiary);
-  }
-
-  @media (max-width: 767px) {
-    .footer__bottom {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  }
-</style>
