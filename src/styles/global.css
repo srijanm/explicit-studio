@@ -114,14 +114,14 @@ input, textarea {
   /* Font */
   --font-primary: 'PP Neue Montreal', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
-  /* Type Scale */
-  --text-hero: clamp(3rem, 7vw, 6rem);
-  --text-h1: clamp(2.5rem, 5vw, 4.5rem);
-  --text-h2: clamp(1.75rem, 3.5vw, 3rem);
-  --text-h3: clamp(1.1rem, 1.5vw, 1.35rem);
-  --text-body: clamp(1rem, 1.1vw, 1.125rem);
-  --text-small: clamp(0.75rem, 0.85vw, 0.85rem);
-  --text-tiny: 0.7rem;
+  /* Type Scale — recalibrated for two-column layout */
+  --text-hero: clamp(2.2rem, 3.5vw, 3.2rem);
+  --text-h1: clamp(1.8rem, 3vw, 2.6rem);
+  --text-h2: clamp(1.5rem, 2.5vw, 2rem);
+  --text-h3: clamp(1rem, 1.3vw, 1.2rem);
+  --text-body: clamp(0.95rem, 1vw, 1.05rem);
+  --text-small: 0.85rem;
+  --text-tiny: 0.75rem;
 
   /* Weights */
   --weight-regular: 400;
@@ -140,11 +140,11 @@ input, textarea {
   --tracking-wide: 0.05em;
 
   /* Spacing */
-  --section-padding-y: clamp(100px, 14vw, 180px);
-  --section-padding-x: clamp(24px, 5vw, 80px);
+  --section-padding-y: clamp(80px, 10vw, 140px);
+  --section-padding-x: clamp(24px, 4vw, 60px);
   --container-max: 1400px;
-  --container-narrow: 900px;
-  --grid-gap: clamp(40px, 6vw, 80px);
+  --container-narrow: 800px;
+  --grid-gap: clamp(32px, 5vw, 64px);
 
   /* Layout */
   --topnav-height: 56px;
