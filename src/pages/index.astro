@@ -1,26 +1,14 @@
 ---
-import '../styles/global.css';
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<title>Explicit Studio</title>
-	</head>
-	<body>
-		<h1 style="padding: 80px; font-size: var(--text-hero); font-weight: var(--weight-bold); letter-spacing: var(--tracking-tight); line-height: var(--leading-tight);">
-			EXPLICIT<span style="color: var(--color-accent);">&reg;</span>
-		</h1>
-		<p style="padding: 0 80px; font-size: var(--text-body); color: var(--color-text-secondary);">
-			A storytelling studio for startups. Site under construction.
-		</p>
-		<div style="margin: 60px 80px;">
-			<a href="#" class="btn-primary">Get in touch <span class="arrow">&rarr;</span></a>
-		</div>
-		<div class="placeholder" style="margin: 60px 80px; aspect-ratio: 16/9; max-width: 800px;">
-			Showreel Video
-		</div>
-	</body>
-</html>
+<BaseLayout title="Explicit Studio — A Storytelling Studio for Startups">
+  <section style="padding: 140px 0 80px; padding-left: var(--section-padding-x); padding-right: var(--section-padding-x); max-width: var(--container-max); margin: 0 auto;">
+    <h1 style="font-size: var(--text-hero); font-weight: var(--weight-bold); letter-spacing: var(--tracking-tight); line-height: var(--leading-tight);">
+      EXPLICIT<span style="color: var(--color-accent);">&reg;</span>
+    </h1>
+    <p style="margin-top: 24px; font-size: var(--text-body); color: var(--color-text-secondary);">
+      A storytelling studio for startups. Full site coming soon.
+    </p>
+  </section>
+</BaseLayout>
