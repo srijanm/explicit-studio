@@ -482,8 +482,33 @@ const featured = projects.filter((p) => p.featured);
 
   /* ===== Responsive ===== */
   @media (max-width: 767px) {
+    .hero {
+      padding: 32px var(--section-padding-x) 32px;
+    }
+
+    .hero__headline {
+      margin-bottom: 8px;
+    }
+
+    .hero__media {
+      margin-top: 32px;
+    }
+
+    .logos-section {
+      padding: 32px var(--section-padding-x) 32px;
+    }
+
+    .logos-section__text {
+      margin-bottom: 24px;
+    }
+
+    .logos-grid {
+      gap: 20px 32px;
+    }
+
     .audience-grid {
       grid-template-columns: 1fr;
+      gap: 32px;
     }
 
     .services-item {
@@ -492,7 +517,7 @@ const featured = projects.filter((p) => p.featured);
     }
 
     .process-offer {
-      padding: 32px;
+      padding: 24px;
     }
 
     .logo-placeholder {

@@ -421,15 +421,23 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   @media (max-width: 767px) {
     .info-about__grid {
       grid-template-columns: 1fr;
-      gap: 40px;
+      gap: 32px;
     }
 
     .info-about__portrait {
       position: static;
     }
 
+    .info-about__blocks {
+      gap: 32px;
+    }
+
     .info-services__offer {
-      padding: 32px;
+      padding: 24px;
+    }
+
+    .info-beliefs__item h2 {
+      font-size: var(--text-h3);
     }
   }
 </style>

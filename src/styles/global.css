@@ -653,6 +653,14 @@ input, textarea {
 }
 
 @media (max-width: 767px) {
+  .footer__manifesto {
+    padding: 48px var(--section-padding-x);
+  }
+
+  .footer__manifesto h2 {
+    margin-bottom: 32px;
+  }
+
   .footer__bottom {
     flex-direction: column;
     align-items: flex-start;
@@ -785,12 +793,34 @@ input, textarea {
 }
 
 @media (max-width: 767px) {
+  .project-page {
+    padding: 32px var(--section-padding-x) var(--section-padding-y);
+  }
+
+  .project-page__hero-image {
+    margin-bottom: 32px;
+  }
+
+  .project-page__subtitle {
+    margin-bottom: 32px;
+  }
+
   .project-details {
     grid-template-columns: 1fr 1fr;
     gap: 20px;
+    margin-bottom: 40px;
+  }
+
+  .project-page__full-image {
+    margin: 32px 0;
   }
 
   .project-page__image-grid {
     grid-template-columns: 1fr;
+    margin: 32px 0;
+  }
+
+  .project-page__next {
+    margin-top: 40px;
   }
 }
