@@ -1,0 +1,42 @@
+[
+  {
+    "slug": "pause",
+    "title": "Pause",
+    "description": "Pause: Built a mental health brand people actually loved by doing what no one else would \u2014 making them laugh.",
+    "metric": "70+ NPS",
+    "tags": ["Story & Strategy", "Brand & Content"],
+    "featured": true
+  },
+  {
+    "slug": "attis-insider",
+    "title": "Attis Insider",
+    "description": "Attis Insider: Launched India\u2019s first biohacking community with a viral campaign and a bag of magic beans.",
+    "metric": "1000+ signups, \u20b90 spent",
+    "tags": ["Strategy", "Campaign", "Community"],
+    "featured": true
+  },
+  {
+    "slug": "attis-campaigns",
+    "title": "Attis Campaigns",
+    "description": "Attis Campaigns: Two viral campaigns that exposed nerves. Zero ad spend. Massive reach.",
+    "metric": "850+ orders \u00b7 250k+ views",
+    "tags": ["Strategy", "Campaign", "Product Design"],
+    "featured": true
+  },
+  {
+    "slug": "singeonesong",
+    "title": "SingOneSong",
+    "description": "SingOneSong: [Coming Soon]",
+    "metric": "",
+    "tags": ["Brand Positioning", "Campaign", "Content Strategy"],
+    "featured": true
+  },
+  {
+    "slug": "nothing",
+    "title": "Nothing",
+    "description": "Nothing: [Coming Soon]",
+    "metric": "",
+    "tags": ["Brand Positioning", "Campaign", "Content Strategy"],
+    "featured": true
+  }
+]

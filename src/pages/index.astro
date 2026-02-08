@@ -1,5 +1,9 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import projects from '../data/projects.json';
+
+const featured = projects.filter((p) => p.featured);
 ---
 
 <BaseLayout title="Explicit Studio — A Storytelling Studio for Startups">
@@ -31,10 +35,153 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
+  <!-- Selected Work -->
+  <section class="selected-work reveal">
+    <h2 class="selected-work__heading">Selected work.</h2>
+    <div class="work-grid">
+      {featured.map((project) => (
+        <ProjectCard
+          slug={project.slug}
+          title={project.title}
+          description={project.description}
+          tags={project.tags}
+        />
+      ))}
+    </div>
+    <div class="selected-work__more">
+      <a href="/work" class="view-all-link">
+        View all work <span class="view-all-arrow">&rarr;</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- The Problem -->
+  <section class="problem reveal">
+    <div class="problem__inner">
+      <p class="problem__opening">
+        If we believe in what you have to say, we'll find the best damn way to say it.
+      </p>
+      <div class="problem__body">
+        <p>130,000 startups launch every day. Most die of obscurity. Not because the product was bad — but because no one heard the story.</p>
+        <p>You've built the product. You've found the market. But tech has a storytelling problem. Everyone talks about narratives and taste, but everything still looks the same. Soft gradients, safe copy, the same five homepage layouts. Code isn't the differentiator it used to be. And "we're an AI company" isn't a brand.</p>
+        <p>The best companies aren't just built on great products. They're built on stories that make people pay attention — stories that attract customers, convince investors, and make top talent want to join before you even have a careers page.</p>
+        <p>We work with ambitious founders and adventure capitalists to make sure the world pays attention. <strong>We make things people like & we make people like things.</strong></p>
+        <p>You've made something the world needs. <strong>Make it Explicit.</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="services reveal">
+    <h2 class="services__heading">
+      We turn what you're building into a story people want to tell each other.
+    </h2>
+
+    <div class="services__list">
+      <div class="services__item">
+        <span class="services__number">01</span>
+        <div class="services__content">
+          <h3 class="services__title">Story & Strategy</h3>
+          <p class="services__desc">Before we design anything, we find the story. We dig into your market, your competition, and your unfair advantages to find the angle that makes you the only choice — not one of many. Strategic positioning, narrative architecture, messaging frameworks, and the brand voice that ties it all together.</p>
+        </div>
+      </div>
+
+      <div class="services__item">
+        <span class="services__number">02</span>
+        <div class="services__content">
+          <h3 class="services__title">Brand & Web</h3>
+          <p class="services__desc">We take the strategy and make it visible. Brand identity, visual systems, and websites that tell your story and convert — designed and built so your team can own it after we're done. The kind of brand that makes people screenshot your homepage and send it to their friends.</p>
+        </div>
+      </div>
+
+      <div class="services__item services__item--last">
+        <span class="services__number">03</span>
+        <div class="services__content">
+          <h3 class="services__title">Marketing & Campaigns</h3>
+          <p class="services__desc">The story doesn't matter if nobody hears it. We design campaigns that get people talking, content strategies that build audiences, and launch playbooks that make noise. Advertising, social, viral concepts, and the GTM engine to make it all reach the people who matter — customers, investors, and the talent you want to hire.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who We Work With -->
+  <section class="audience reveal">
+    <div class="audience__inner">
+      <h2 class="audience__heading">You belong with us if you're:</h2>
+      <div class="audience__grid">
+        <div class="audience__col">
+          <h3>Launching a Startup</h3>
+          <p>You've raised (or are raising) your first round and you need a brand that can attract top talent, build trust with customers, and make investors remember your name. You've got the product — now you need the story.</p>
+        </div>
+        <div class="audience__col">
+          <h3>Launching a Product</h3>
+          <p>You've scaled past the initial phase and need to refine your narrative for expansion. Whether you're entering new markets or shipping new products, you need strategic storytelling to make it land.</p>
+        </div>
+        <div class="audience__col">
+          <h3>Launching a Fund</h3>
+          <p>You're building a fund with a unique thesis and need to stand out. From brand positioning to comms strategy, we help you attract the right founders and LPs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How We Work -->
+  <section class="process reveal">
+    <div class="process__inner">
+      <div class="process__intro">
+        <p>We don't have account managers, elaborate processes, or bloated teams. You talk to us. We understand your startup, we move fast, and we build things that work. No scope creep, no surprise invoices, no design-by-committee.</p>
+        <p><strong>We take on 3 clients per quarter.</strong> Not because we can't scale — because we won't.</p>
+      </div>
+
+      <div class="process__offers">
+        <div class="process__offer">
+          <h3>Storytelling Sprint — 6 Weeks</h3>
+          <p class="process__offer-sub">Everything you need to go from unknown to unforgettable.</p>
+          <p class="process__offer-label">What you walk away with:</p>
+          <div class="process__deliverables">
+            <p>&rarr; Brand positioning document</p>
+            <p>&rarr; Complete narrative & messaging framework</p>
+            <p>&rarr; Brand identity & visual system</p>
+            <p>&rarr; Designed and developed website</p>
+            <p>&rarr; 90-day content strategy</p>
+            <p>&rarr; Brand guidelines</p>
+            <p>&rarr; 30 days of post-launch support</p>
+          </div>
+        </div>
+
+        <div class="process__offer">
+          <h3>Monthly Partnership — Ongoing</h3>
+          <p class="process__offer-sub">An ongoing creative partner for the work that comes after launch.</p>
+          <div class="process__deliverables">
+            <p>&rarr; GTM strategy and campaign architecture</p>
+            <p>&rarr; Advertising creatives and copy</p>
+            <p>&rarr; Viral campaign concepts and execution</p>
+            <p>&rarr; Content strategy and production</p>
+            <p>&rarr; Weekly syncs — no ticket systems, no queues</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta reveal">
+    <div class="cta__inner">
+      <h2>
+        Tell a story that sells.<br />
+        Build a brand that moves.
+      </h2>
+      <a href="/contact" class="btn-primary cta__button">
+        Get in touch <span class="arrow">&rarr;</span>
+      </a>
+      <a href="mailto:hey@explicit.studio" class="cta__email">hey@explicit.studio</a>
+    </div>
+  </section>
+
 </BaseLayout>
 
 <style>
-  /* --- Hero --- */
+  /* ===== Hero ===== */
   .hero {
     padding: 140px var(--section-padding-x) 0;
     max-width: var(--container-max);
@@ -43,25 +190,23 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   .hero__descriptor {
     font-size: var(--text-small);
-    text-transform: uppercase;
-    letter-spacing: var(--tracking-wide);
     color: var(--color-text-secondary);
     margin-bottom: 24px;
   }
 
   .hero__headline {
     font-size: var(--text-hero);
-    font-weight: var(--weight-bold);
+    font-weight: var(--weight-medium);
     line-height: var(--leading-tight);
     letter-spacing: var(--tracking-tight);
-    max-width: 900px;
+    max-width: 1000px;
   }
 
   .hero__media {
     margin-top: 60px;
   }
 
-  /* --- Logo Bar --- */
+  /* ===== Logo Bar ===== */
   .logo-bar {
     padding: var(--section-padding-y) var(--section-padding-x);
     max-width: var(--container-max);
@@ -83,8 +228,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   }
 
   .logo-bar__logo {
-    height: 28px;
-    width: 100px;
+    height: 30px;
+    width: 120px;
     border-radius: 4px;
     filter: grayscale(1);
     transition: filter 0.3s ease;
@@ -94,13 +239,286 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     filter: grayscale(0);
   }
 
+  /* ===== Selected Work ===== */
+  .selected-work {
+    padding: 0 var(--section-padding-x) var(--section-padding-y);
+    max-width: var(--container-max);
+    margin: 0 auto;
+  }
+
+  .selected-work__heading {
+    font-size: var(--text-h1);
+    font-weight: var(--weight-medium);
+    margin-bottom: 60px;
+  }
+
+  .work-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--grid-gap);
+  }
+
+  .selected-work__more {
+    margin-top: 40px;
+  }
+
+  .view-all-link {
+    font-size: var(--text-body);
+    font-weight: var(--weight-medium);
+    color: var(--color-text);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .view-all-link:hover {
+    color: var(--color-accent);
+  }
+
+  .view-all-arrow {
+    color: var(--color-accent);
+    transition: transform 0.3s ease;
+    display: inline-block;
+  }
+
+  .view-all-link:hover .view-all-arrow {
+    transform: translateX(4px);
+  }
+
+  /* ===== The Problem ===== */
+  .problem {
+    background: var(--color-bg-alt);
+    padding: var(--section-padding-y) var(--section-padding-x);
+  }
+
+  .problem__inner {
+    max-width: var(--container-narrow);
+    margin: 0 auto;
+  }
+
+  .problem__opening {
+    font-size: var(--text-h2);
+    font-weight: var(--weight-medium);
+    font-style: italic;
+    line-height: var(--leading-tight);
+    margin-bottom: 48px;
+  }
+
+  .problem__body p {
+    font-size: var(--text-body);
+    line-height: var(--leading-relaxed);
+    margin-bottom: 24px;
+    color: var(--color-text);
+  }
+
+  .problem__body p:last-child {
+    margin-bottom: 0;
+  }
+
+  .problem__body strong {
+    font-weight: var(--weight-semibold);
+  }
+
+  /* ===== Services ===== */
+  .services {
+    padding: var(--section-padding-y) var(--section-padding-x);
+    max-width: var(--container-max);
+    margin: 0 auto;
+  }
+
+  .services__heading {
+    font-size: var(--text-h2);
+    font-weight: var(--weight-medium);
+    max-width: 700px;
+    margin-bottom: 60px;
+  }
+
+  .services__list {
+    border-top: 1px solid var(--color-border);
+  }
+
+  .services__item {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    gap: 24px;
+    padding: 40px 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .services__number {
+    font-size: var(--text-small);
+    font-weight: var(--weight-medium);
+    color: var(--color-accent);
+  }
+
+  .services__title {
+    font-size: var(--text-h3);
+    font-weight: var(--weight-medium);
+    margin-bottom: 12px;
+  }
+
+  .services__desc {
+    font-size: var(--text-body);
+    color: var(--color-text-secondary);
+    line-height: var(--leading-relaxed);
+    max-width: 600px;
+  }
+
+  /* ===== Who We Work With ===== */
+  .audience {
+    background: var(--color-bg-alt);
+    padding: var(--section-padding-y) var(--section-padding-x);
+  }
+
+  .audience__inner {
+    max-width: var(--container-max);
+    margin: 0 auto;
+  }
+
+  .audience__heading {
+    font-size: var(--text-h2);
+    font-weight: var(--weight-medium);
+    margin-bottom: 60px;
+  }
+
+  .audience__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px;
+  }
+
+  .audience__col h3 {
+    font-size: var(--text-h3);
+    font-weight: var(--weight-medium);
+    margin-bottom: 16px;
+  }
+
+  .audience__col p {
+    font-size: var(--text-body);
+    color: var(--color-text-secondary);
+    line-height: var(--leading-relaxed);
+  }
+
+  /* ===== How We Work ===== */
+  .process {
+    padding: var(--section-padding-y) var(--section-padding-x);
+    max-width: var(--container-max);
+    margin: 0 auto;
+  }
+
+  .process__inner {
+    max-width: var(--container-narrow);
+  }
+
+  .process__intro {
+    margin-bottom: 60px;
+  }
+
+  .process__intro p {
+    font-size: var(--text-body);
+    line-height: var(--leading-relaxed);
+    margin-bottom: 24px;
+  }
+
+  .process__intro p:last-child {
+    margin-bottom: 0;
+  }
+
+  .process__intro strong {
+    font-weight: var(--weight-semibold);
+  }
+
+  .process__offers {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .process__offer {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 48px;
+  }
+
+  .process__offer h3 {
+    font-size: var(--text-h3);
+    font-weight: var(--weight-medium);
+    margin-bottom: 8px;
+  }
+
+  .process__offer-sub {
+    font-size: var(--text-body);
+    font-style: italic;
+    color: var(--color-text-secondary);
+    margin-bottom: 24px;
+  }
+
+  .process__offer-label {
+    font-size: var(--text-body);
+    margin-bottom: 16px;
+  }
+
+  .process__deliverables p {
+    font-size: var(--text-body);
+    line-height: 1.8;
+  }
+
+  /* ===== CTA ===== */
+  .cta {
+    background: var(--color-bg-alt);
+    padding: var(--section-padding-y) var(--section-padding-x);
+  }
+
+  .cta__inner {
+    text-align: center;
+    max-width: var(--container-max);
+    margin: 0 auto;
+  }
+
+  .cta__inner h2 {
+    font-size: var(--text-h1);
+    font-weight: var(--weight-medium);
+    line-height: 1.1;
+    margin-bottom: 40px;
+  }
+
+  .cta__button {
+    padding: 16px 40px;
+  }
+
+  .cta__email {
+    display: block;
+    margin-top: 24px;
+    font-size: var(--text-body);
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .cta__email:hover {
+    color: var(--color-accent);
+  }
+
+  /* ===== Responsive ===== */
   @media (max-width: 767px) {
     .hero {
       padding-top: 120px;
     }
 
-    .hero__headline {
-      max-width: 100%;
+    .work-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .audience__grid {
+      grid-template-columns: 1fr;
+    }
+
+    .services__item {
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+
+    .process__offer {
+      padding: 32px;
     }
 
     .logo-bar__logos {
@@ -112,3 +530,20 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     }
   }
 </style>
+
+<script>
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+
+  document.querySelectorAll('.reveal').forEach((el) => {
+    observer.observe(el);
+  });
+</script>

@@ -7,13 +7,12 @@ const { pathname } = Astro.url;
     EXPLICIT<span class="nav__logo-r">&reg;</span>
   </a>
 
-  <div class="nav__links">
-    <a href="/work" class:list={[{ active: pathname.startsWith('/work') }]}>Work</a>
-    <a href="/info" class:list={[{ active: pathname === '/info' }]}>Info</a>
-    <a href="/contact" class:list={[{ active: pathname === '/contact' }]}>Contact</a>
-  </div>
-
   <div class="nav__right">
+    <div class="nav__links">
+      <a href="/work" class:list={[{ active: pathname.startsWith('/work') }]}>Work</a>
+      <a href="/info" class:list={[{ active: pathname === '/info' }]}>Info</a>
+      <a href="/contact" class:list={[{ active: pathname === '/contact' }]}>Contact</a>
+    </div>
     <a href="/contact" class="btn-primary nav__cta">
       Get in touch <span class="arrow">&rarr;</span>
     </a>
@@ -43,7 +42,7 @@ const { pathname } = Astro.url;
   }
 
   .nav.scrolled {
-    background: rgba(250, 249, 246, 0.92);
+    background: rgba(250, 250, 250, 0.92);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-bottom-color: var(--color-border);
@@ -62,6 +61,12 @@ const { pathname } = Astro.url;
     color: var(--color-accent);
   }
 
+  .nav__right {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+
   .nav__links {
     display: flex;
     align-items: center;
@@ -70,9 +75,7 @@ const { pathname } = Astro.url;
 
   .nav__links a {
     font-size: var(--text-small);
-    font-weight: var(--weight-medium);
-    text-transform: uppercase;
-    letter-spacing: var(--tracking-wide);
+    font-weight: var(--weight-regular);
     text-decoration: none;
     color: var(--color-text);
     transition: color 0.3s ease;
@@ -83,18 +86,8 @@ const { pathname } = Astro.url;
     color: var(--color-accent);
   }
 
-  .nav__right {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-  }
-
-  .nav__cta {
-    font-size: var(--text-small);
-  }
-
   .nav__hamburger {
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -133,6 +126,10 @@ const { pathname } = Astro.url;
     .nav__links,
     .nav__cta {
       display: none;
+    }
+
+    .nav__hamburger {
+      display: flex;
     }
   }
 </style>
