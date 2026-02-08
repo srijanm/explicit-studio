@@ -90,7 +90,7 @@ ul, ol {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: var(--weight-medium);
+  font-weight: var(--weight-regular);
   line-height: var(--leading-tight);
 }
 
@@ -140,7 +140,7 @@ input, textarea {
   --tracking-wide: 0.05em;
 
   /* Spacing */
-  --section-padding-y: clamp(80px, 10vw, 140px);
+  --section-padding-y: clamp(60px, 8vw, 100px);
   --section-padding-x: clamp(24px, 4vw, 60px);
   --container-max: 1400px;
   --container-narrow: 800px;
@@ -576,7 +576,7 @@ input, textarea {
 
 .footer__manifesto h2 {
   font-size: var(--text-h2);
-  font-weight: var(--weight-medium);
+  font-weight: var(--weight-regular);
   line-height: var(--leading-tight);
   margin-bottom: 40px;
 }
