@@ -1,0 +1,156 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Contact — Explicit Studio">
+
+  <section class="contact-section reveal">
+    <h1 class="contact-section__headline">Got a story to tell?</h1>
+    <p class="contact-section__subtitle">Tell us what you're building. If there's a fit, we'll be on a call within 48 hours.</p>
+
+    <form class="contact-form" action="#" method="POST">
+      <div class="form-group">
+        <label class="form-label" for="name">Name</label>
+        <input class="form-input" type="text" id="name" name="name" required />
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="email">Email</label>
+        <input class="form-input" type="email" id="email" name="email" required />
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="company">Company</label>
+        <input class="form-input" type="text" id="company" name="company" />
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="url">URL</label>
+        <input class="form-input" type="url" id="url" name="url" />
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="message">What do you need?</label>
+        <textarea class="form-textarea" id="message" name="message" required></textarea>
+      </div>
+
+      <button type="submit" class="btn-primary form-submit">
+        Send message <span class="arrow">&rarr;</span>
+      </button>
+    </form>
+
+    <div class="contact-section__footer">
+      <p>Or email us: <a href="mailto:hey@explicit.studio">hey@explicit.studio</a></p>
+      <p class="contact-section__byline">Srijan Mahajan &middot; Founder, Explicit</p>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .contact-section {
+    padding: 40px var(--section-padding-x) var(--section-padding-y);
+  }
+
+  .contact-section__headline {
+    font-size: var(--text-h1);
+    font-weight: 400;
+    margin-bottom: 16px;
+  }
+
+  .contact-section__subtitle {
+    font-size: var(--text-body);
+    color: var(--color-text-secondary);
+    max-width: 600px;
+    margin-bottom: 40px;
+    line-height: 1.7;
+  }
+
+  .contact-form {
+    max-width: 600px;
+  }
+
+  .form-group {
+    margin-bottom: 24px;
+  }
+
+  .form-label {
+    display: block;
+    font-size: var(--text-small);
+    color: var(--color-text-tertiary);
+    margin-bottom: 8px;
+  }
+
+  .form-input,
+  .form-textarea {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid var(--color-border);
+    padding: 12px 0;
+    font-size: var(--text-body);
+    font-family: var(--font-primary);
+    background: transparent;
+    color: var(--color-text);
+    outline: none;
+    transition: border-color 0.3s ease;
+    border-radius: 0;
+  }
+
+  .form-input:focus,
+  .form-textarea:focus {
+    border-bottom-color: var(--color-text);
+  }
+
+  .form-textarea {
+    min-height: 120px;
+    resize: vertical;
+  }
+
+  .form-submit {
+    margin-top: 32px;
+  }
+
+  .contact-section__footer {
+    margin-top: 48px;
+    max-width: 600px;
+  }
+
+  .contact-section__footer p {
+    font-size: var(--text-body);
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+  }
+
+  .contact-section__footer a {
+    color: var(--color-text);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .contact-section__footer a:hover {
+    color: var(--color-accent);
+  }
+
+  .contact-section__byline {
+    margin-top: 8px;
+    font-size: var(--text-small);
+    color: var(--color-text-tertiary);
+  }
+</style>
+
+<script>
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+
+  document.querySelectorAll('.reveal').forEach((el) => {
+    observer.observe(el);
+  });
+</script>
