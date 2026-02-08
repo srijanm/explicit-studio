@@ -6,7 +6,7 @@ import projects from '../../data/projects.json';
 
 <BaseLayout title="Work — Explicit Studio">
 
-  <section class="work-listing">
+  <section class="work-listing reveal">
     <h1 class="work-listing__title">The work.</h1>
     <div class="work-listing__grid">
       {projects.map((project) => (
@@ -43,3 +43,20 @@ import projects from '../../data/projects.json';
     aspect-ratio: 16 / 9;
   }
 </style>
+
+<script>
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+
+  document.querySelectorAll('.reveal').forEach((el) => {
+    observer.observe(el);
+  });
+</script>

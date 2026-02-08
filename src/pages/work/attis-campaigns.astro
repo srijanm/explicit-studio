@@ -4,7 +4,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
 <BaseLayout title="Attis Campaigns — Explicit Studio">
 
-  <article class="project-page">
+  <article class="project-page reveal">
 
     <div class="project-page__hero-image placeholder">
       Attis Campaigns — Hero Image
@@ -66,3 +66,20 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   </article>
 
 </BaseLayout>
+
+<script>
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+
+  document.querySelectorAll('.reveal').forEach((el) => {
+    observer.observe(el);
+  });
+</script>
