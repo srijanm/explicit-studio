@@ -286,20 +286,19 @@ input, textarea {
 }
 
 .topnav__cta {
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   font-weight: var(--weight-medium);
   text-decoration: none;
-  color: var(--color-text);
-  border: 1px solid var(--color-text);
+  color: #FFFFFF;
+  background: var(--color-accent);
+  border: none;
   border-radius: var(--radius-sm);
   padding: 10px 24px;
-  transition: all 0.3s ease;
+  transition: background 0.3s ease;
 }
 
 .topnav__cta:hover {
-  background: var(--color-accent);
-  color: #FFFFFF;
-  border-color: var(--color-accent);
+  background: var(--color-accent-hover);
 }
 
 .topnav__hamburger {
@@ -357,7 +356,7 @@ input, textarea {
   gap: 6px;
   margin-top: 8px;
   padding: 10px 20px;
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   font-weight: var(--weight-medium);
   color: #FFFFFF;
   background: var(--color-accent);
