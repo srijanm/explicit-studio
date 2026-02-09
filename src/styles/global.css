@@ -352,6 +352,11 @@ input, textarea {
 
 .sidebar__cta-btn {
   margin-top: 8px;
+  color: #FFFFFF;
+}
+
+.sidebar__cta-btn:hover {
+  color: #FFFFFF;
 }
 
 .sidebar__descriptor {
