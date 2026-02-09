@@ -5,41 +5,65 @@
 /* --- Font Face --- */
 @font-face {
   font-family: 'PP Neue Montreal';
-  src: url('/fonts/PPNeueMontreal-Book.otf') format('opentype');
+  src: url('/fonts/PPNeueMontreal-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'PP Neue Montreal';
+  src: url('/fonts/PPNeueMontreal-ThinItalic.ttf') format('truetype');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'PP Neue Montreal';
+  src: url('/fonts/PPNeueMontreal-Light.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'PP Neue Montreal';
+  src: url('/fonts/PPNeueMontreal-Book.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'PP Neue Montreal';
+  src: url('/fonts/PPNeueMontreal-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
   font-family: 'PP Neue Montreal';
-  src: url('/fonts/PPNeueMontreal-Italic.otf') format('opentype');
+  src: url('/fonts/PPNeueMontreal-Italic.ttf') format('truetype');
   font-weight: 400;
   font-style: italic;
   font-display: swap;
 }
-
 @font-face {
   font-family: 'PP Neue Montreal';
-  src: url('/fonts/PPNeueMontreal-Medium.otf') format('opentype');
+  src: url('/fonts/PPNeueMontreal-Medium.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
   font-family: 'PP Neue Montreal';
-  src: url('/fonts/PPNeueMontreal-SemiBolditalic.otf') format('opentype');
-  font-weight: 600;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'PP Neue Montreal';
-  src: url('/fonts/PPNeueMontreal-Bold.otf') format('opentype');
+  src: url('/fonts/PPNeueMontreal-Bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'PP Neue Montreal';
+  src: url('/fonts/PPNeueMontreal-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
   font-display: swap;
 }
 
@@ -60,7 +84,7 @@ html {
 body {
   font-family: var(--font-primary);
   font-size: var(--text-body);
-  font-weight: var(--weight-regular);
+  font-weight: 500;
   line-height: var(--leading-normal);
   color: var(--color-text);
   background-color: var(--color-bg);
@@ -114,19 +138,19 @@ input, textarea {
   /* Font */
   --font-primary: 'PP Neue Montreal', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
-  /* Type Scale — bumping everything up */
+  /* Type Scale */
   --text-hero: clamp(2.5rem, 4vw, 3.5rem);
   --text-h1: clamp(2rem, 3.2vw, 2.8rem);
   --text-h2: clamp(1.6rem, 2.8vw, 2.2rem);
-  --text-h3: clamp(1.1rem, 1.4vw, 1.3rem);
-  --text-body: clamp(1rem, 1.1vw, 1.125rem);
-  --text-small: 0.95rem;
-  --text-tiny: 0.8rem;
+  --text-h3: clamp(1.15rem, 1.4vw, 1.35rem);
+  --text-body: clamp(1.05rem, 1.15vw, 1.2rem);
+  --text-small: 1rem;
+  --text-tiny: 0.85rem;
 
   /* Weights */
+  --weight-book: 300;
   --weight-regular: 400;
   --weight-medium: 500;
-  --weight-semibold: 600;
   --weight-bold: 700;
 
   /* Line Heights */
@@ -250,7 +274,7 @@ input, textarea {
 }
 
 .topnav__links a {
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-weight: var(--weight-medium);
   text-decoration: none;
   color: var(--color-text);
@@ -355,7 +379,8 @@ input, textarea {
 }
 
 .sidebar__descriptor {
-  font-size: 0.85rem;
+  font-size: 0.95rem;
+  font-weight: var(--weight-regular);
   color: var(--color-text-secondary);
   line-height: 1.5;
   margin-bottom: 24px;
@@ -378,7 +403,8 @@ input, textarea {
 }
 
 .sidebar__socials a {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
+  font-weight: var(--weight-regular);
   text-decoration: none;
   color: var(--color-text-secondary);
   transition: color 0.3s ease;
@@ -389,7 +415,8 @@ input, textarea {
 }
 
 .sidebar__email {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
+  font-weight: var(--weight-regular);
   color: var(--color-text-secondary);
   text-decoration: none;
   transition: color 0.3s ease;
@@ -488,7 +515,8 @@ input, textarea {
 }
 
 .mobile-sidebar__bottom p {
-  font-size: 0.85rem;
+  font-size: 0.95rem;
+  font-weight: var(--weight-regular);
   color: var(--color-text-secondary);
   line-height: 1.5;
   margin-bottom: 24px;
@@ -501,7 +529,8 @@ input, textarea {
 }
 
 .mobile-sidebar__socials a {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
+  font-weight: var(--weight-regular);
   text-decoration: none;
   color: var(--color-text-secondary);
   transition: color 0.3s ease;
@@ -512,7 +541,8 @@ input, textarea {
 }
 
 .mobile-sidebar__bottom > a {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
+  font-weight: var(--weight-regular);
   color: var(--color-text-secondary);
   text-decoration: none;
   transition: color 0.3s ease;
@@ -616,6 +646,7 @@ input, textarea {
 
 .footer__bottom-email {
   font-size: var(--text-small);
+  font-weight: var(--weight-regular);
   color: var(--color-text-secondary);
   text-decoration: none;
   transition: color 0.3s ease;
@@ -627,6 +658,7 @@ input, textarea {
 
 .footer__bottom-center span {
   font-size: var(--text-small);
+  font-weight: var(--weight-regular);
   color: var(--color-text-secondary);
 }
 
@@ -638,6 +670,7 @@ input, textarea {
 
 .footer__bottom-right a {
   font-size: var(--text-small);
+  font-weight: var(--weight-regular);
   color: var(--color-text-secondary);
   text-decoration: none;
   transition: color 0.3s ease;
@@ -659,6 +692,7 @@ input, textarea {
 
 .footer__copyright span {
   font-size: var(--text-tiny);
+  font-weight: 300;
   color: var(--color-text-tertiary);
 }
 
@@ -701,7 +735,7 @@ input, textarea {
 
 .project-page__subtitle {
   font-size: var(--text-h3);
-  font-weight: 400;
+  font-weight: var(--weight-regular);
   color: var(--color-text-secondary);
   max-width: 700px;
   margin-bottom: 40px;
@@ -719,6 +753,7 @@ input, textarea {
 
 .project-details__label {
   font-size: var(--text-tiny);
+  font-weight: 300;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: var(--color-text-tertiary);
@@ -732,6 +767,7 @@ input, textarea {
 
 .project-page__label {
   font-size: var(--text-tiny);
+  font-weight: 300;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: var(--color-text-tertiary);
@@ -740,6 +776,7 @@ input, textarea {
 
 .project-page__body {
   font-size: var(--text-body);
+  font-weight: var(--weight-regular);
   line-height: 1.7;
   max-width: 800px;
   margin-bottom: 20px;
