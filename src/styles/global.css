@@ -350,12 +350,12 @@ input, textarea {
   color: var(--color-accent);
 }
 
-.sidebar__cta-btn {
+.sidebar__nav a.sidebar__cta-btn {
   margin-top: 8px;
   color: #FFFFFF;
 }
 
-.sidebar__cta-btn:hover {
+.sidebar__nav a.sidebar__cta-btn:hover {
   color: #FFFFFF;
 }
 
