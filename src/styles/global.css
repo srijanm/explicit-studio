@@ -234,6 +234,14 @@ input, textarea {
   text-decoration: none;
   color: var(--color-text);
   letter-spacing: 0.02em;
+  display: flex;
+  align-items: center;
+}
+
+.topnav__logo-img {
+  height: 20px;
+  width: auto;
+  display: block;
 }
 
 .topnav__links {
@@ -356,12 +364,13 @@ input, textarea {
 }
 
 .sidebar__logo-large {
-  font-size: 2.5rem;
-  font-weight: var(--weight-bold);
-  letter-spacing: -0.02em;
-  line-height: 1;
   margin-bottom: 24px;
-  color: var(--color-text);
+}
+
+.sidebar__logo-img {
+  width: 160px;
+  height: auto;
+  display: block;
 }
 
 .sidebar__socials {
@@ -598,10 +607,13 @@ input, textarea {
 }
 
 .footer__bottom-logo {
-  font-size: var(--text-small);
-  font-weight: var(--weight-bold);
-  color: var(--color-text);
-  letter-spacing: var(--tracking-wide);
+  display: block;
+}
+
+.footer__logo-img {
+  height: 16px;
+  width: auto;
+  display: block;
 }
 
 .footer__bottom-email {

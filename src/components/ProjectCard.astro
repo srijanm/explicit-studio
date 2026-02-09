@@ -16,9 +16,7 @@ const { slug, title, description, tags, cardTextColor } = Astro.props;
   style={cardTextColor ? `--card-text: ${cardTextColor}` : ''}
 >
   <div class="project-card__media">
-    <div class="placeholder" style="aspect-ratio: 16/10;">
-      {title} — Video/Image
-    </div>
+    <img src={`/images/projects/${slug}-thumb.jpg`} alt={title} loading="lazy" />
   </div>
   <div class="project-card__content">
     <h3 class="project-card__title">{description}</h3>

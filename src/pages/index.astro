@@ -25,11 +25,10 @@ const featured = projects.filter((p) => p.featured);
       Working with founders in AI, crypto, D2C & venture capital.
     </p>
     <div class="logos-grid">
-      <div class="logo-placeholder"></div>
-      <div class="logo-placeholder"></div>
-      <div class="logo-placeholder"></div>
-      <div class="logo-placeholder"></div>
-      <div class="logo-placeholder"></div>
+      <img src="/images/logos/pause.svg" alt="Pause" class="client-logo" />
+      <img src="/images/logos/attis.svg" alt="Attis" class="client-logo" />
+      <img src="/images/logos/QAonC.svg" alt="QAonC" class="client-logo" />
+      <img src="/images/logos/QB.svg" alt="QB" class="client-logo" />
     </div>
   </section>
 
@@ -224,11 +223,15 @@ const featured = projects.filter((p) => p.featured);
     align-items: center;
   }
 
-  .logo-placeholder {
-    width: 120px;
+  .client-logo {
     height: 30px;
-    background: var(--color-bg-alt);
-    border-radius: 4px;
+    width: auto;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+  }
+
+  .client-logo:hover {
+    opacity: 1;
   }
 
   /* ===== Selected Work ===== */
@@ -520,8 +523,8 @@ const featured = projects.filter((p) => p.featured);
       padding: 24px;
     }
 
-    .logo-placeholder {
-      width: 80px;
+    .client-logo {
+      height: 22px;
     }
   }
 </style>
