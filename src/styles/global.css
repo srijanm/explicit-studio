@@ -213,7 +213,7 @@ input, textarea {
   color: #FFFFFF;
   padding: 12px 28px;
   font-family: var(--font-primary);
-  font-size: var(--text-small);
+  font-size: 1.1rem;
   font-weight: var(--weight-medium);
   text-decoration: none;
   border: none;
@@ -351,30 +351,7 @@ input, textarea {
 }
 
 .sidebar__cta-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
   margin-top: 8px;
-  padding: 10px 20px;
-  font-size: 1.1rem;
-  font-weight: var(--weight-medium);
-  color: #FFFFFF;
-  background: var(--color-accent);
-  border-radius: var(--radius-sm);
-  text-decoration: none;
-  transition: background 0.3s ease;
-}
-
-.sidebar__cta-btn:hover {
-  background: var(--color-accent-hover);
-}
-
-.sidebar__cta-btn span {
-  transition: transform 0.3s ease;
-}
-
-.sidebar__cta-btn:hover span {
-  transform: translateX(3px);
 }
 
 .sidebar__descriptor {
