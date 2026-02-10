@@ -3,7 +3,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import ProjectCard from '../components/ProjectCard.astro';
 import projects from '../data/projects.json';
 
-const featured = projects.filter((p) => p.featured);
+const workProjects = projects.filter((p) => p.category === 'work');
+const explorations = projects.filter((p) => p.category === 'exploration');
 ---
 
 <BaseLayout title="Explicit Studio — A Storytelling Studio for Startups">
@@ -37,7 +38,7 @@ const featured = projects.filter((p) => p.featured);
   <section class="work-section reveal">
     <h2 class="work-section__title">Selected work.</h2>
     <div class="home-work-grid">
-      {featured.map((project) => (
+      {workProjects.map((project) => (
         <ProjectCard
           slug={project.slug}
           title={project.title}
@@ -46,6 +47,19 @@ const featured = projects.filter((p) => p.featured);
         />
       ))}
     </div>
+    {explorations.length > 0 && (
+      <h3 class="work-section__subtitle">Explorations</h3>
+      <div class="home-work-grid">
+        {explorations.map((project) => (
+          <ProjectCard
+            slug={project.slug}
+            title={project.title}
+            description={project.description}
+            tags={project.tags}
+          />
+        ))}
+      </div>
+    )}
     <div class="work-section__more">
       <a href="/work" class="view-all-link">
         View all work <span class="view-all-arrow">&rarr;</span>
@@ -237,6 +251,13 @@ const featured = projects.filter((p) => p.featured);
     display: flex;
     flex-direction: column;
     gap: clamp(48px, 8vw, 80px);
+  }
+
+  .work-section__subtitle {
+    font-size: var(--text-h2);
+    font-weight: 500;
+    margin-top: 60px;
+    margin-bottom: 48px;
   }
 
   .home-work-grid :global(.project-card__media) {

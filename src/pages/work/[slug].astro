@@ -1,0 +1,109 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import projects from '../../data/projects.json';
+
+export function getStaticPaths() {
+  return projects.map(project => ({
+    params: { slug: project.slug },
+    props: { project }
+  }));
+}
+
+const { project } = Astro.props;
+const currentIndex = projects.indexOf(project);
+const nextProject = projects[(currentIndex + 1) % projects.length];
+---
+
+<BaseLayout title={`${project.title} — Explicit Studio`}>
+  <article class="project-page">
+    <!-- Hero image -->
+    <div class="project-page__hero-image placeholder">
+      {project.title} — Hero Image
+    </div>
+
+    <!-- Title + subtitle -->
+    <h1 class="project-page__title">{project.title}</h1>
+    <p class="project-page__subtitle">{project.subtitle}</p>
+
+    <!-- Details bar -->
+    <div class="project-details">
+      <div>
+        <p class="project-details__label">Client</p>
+        <p class="project-details__value">{project.client}</p>
+      </div>
+      <div>
+        <p class="project-details__label">Industry</p>
+        <p class="project-details__value">{project.industry}</p>
+      </div>
+      <div>
+        <p class="project-details__label">Services</p>
+        <p class="project-details__value">{project.tags.join(', ')}</p>
+      </div>
+      <div>
+        <p class="project-details__label">Year</p>
+        <p class="project-details__value">{project.year}</p>
+      </div>
+      <div>
+        <p class="project-details__label">Result</p>
+        <p class="project-details__value">{project.metric || '—'}</p>
+      </div>
+    </div>
+
+    <!-- Case study sections -->
+    {project.sections && project.sections.map((section, i) => (
+      <div class="project-page__section">
+        {section.label && (
+          <p class="project-page__label">{section.label}</p>
+        )}
+        {section.text && (
+          <div class="project-page__body">
+            {section.text.split('\n\n').map(p => <p>{p}</p>)}
+          </div>
+        )}
+        {section.image && (
+          <div class="project-page__full-image placeholder">
+            {project.title} — Image {i + 1}
+          </div>
+        )}
+        {section.imageGrid && (
+          <div class="project-page__image-grid">
+            <div class="placeholder">{project.title} — Grid Image A</div>
+            <div class="placeholder">{project.title} — Grid Image B</div>
+          </div>
+        )}
+      </div>
+    ))}
+
+    {!project.sections && (
+      <div class="project-page__section">
+        <div class="project-page__body">
+          <p>[Case study content coming soon]</p>
+        </div>
+      </div>
+    )}
+
+    <!-- Next project -->
+    <div class="project-page__next">
+      <a href={`/work/${nextProject.slug}`}>
+        Next project &mdash; {nextProject.title} <span class="arrow">&rarr;</span>
+      </a>
+    </div>
+  </article>
+</BaseLayout>
+
+<script>
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+
+  document.querySelectorAll('.reveal, .project-page').forEach((el) => {
+    observer.observe(el);
+  });
+</script>

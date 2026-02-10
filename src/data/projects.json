@@ -2,73 +2,167 @@
   {
     "slug": "pause",
     "title": "Pause",
-    "description": "Pause: Built a mental health brand people actually loved by doing what no one else would \u2014 making them laugh.",
+    "description": "Pause: Built a mental health brand people actually loved by doing what no one else would — making them laugh.",
+    "subtitle": "Built a mental health brand people actually loved by doing what no one else would — making them laugh.",
+    "client": "Pause",
+    "industry": "Mental Health",
+    "year": "2024",
     "metric": "70+ NPS",
     "tags": ["Story & Strategy", "Brand & Content"],
     "color": "",
-    "featured": true
+    "category": "work",
+    "featured": true,
+    "sections": [
+      {
+        "label": "THE LANDSCAPE",
+        "text": "Mental health came with stigma, and the last thing people wanted was another earnest, overly-precious meditation app. Meanwhile the category was drowning in the same visual clichés — pastels, nature, soft whispers, and gentle hands resting on knees."
+      },
+      { "image": true },
+      {
+        "label": "THE INSIGHT",
+        "text": "Dark humour is how a lot of people actually deal with hard feelings. Instead of the expected \"it's okay to not be okay\" approach, we built Pause's brand voice around self-deprecating humour, honest emotional admission, and a tone that felt like talking to your sharpest friend — the one who makes you laugh about the thing you've been avoiding."
+      },
+      { "image": true },
+      { "imageGrid": true },
+      {
+        "label": "THE OUTCOME",
+        "text": "When an entire category competes on sincerity, the funniest voice in the room wins. Pause launched with a 70+ NPS and a brand that didn't feel like a brand — it felt like a group chat. Users didn't just use the app, they shared it — because the content was worth sharing independent of the product."
+      }
+    ]
   },
   {
     "slug": "attis-insider",
     "title": "Attis Insider",
-    "description": "Attis Insider: Launched India\u2019s first biohacking community with a viral campaign and a bag of magic beans.",
-    "metric": "1000+ signups, \u20b90 spent",
+    "description": "Attis Insider: Launched India's first biohacking community with a viral campaign and a bag of magic beans.",
+    "subtitle": "Launched India's first biohacking community with a viral campaign and a bag of magic beans.",
+    "client": "Attis",
+    "industry": "Biohacking / Wellness",
+    "year": "2024",
+    "metric": "1000+ signups, ₹0 spent",
     "tags": ["Strategy", "Campaign", "Community"],
     "color": "",
-    "featured": true
+    "category": "work",
+    "featured": true,
+    "sections": [
+      {
+        "label": "THE LANDSCAPE",
+        "text": "India's biohacking space was nonexistent. There were no dedicated brands, no communities, no cultural conversation around the idea that optimisation wasn't just for athletes or tech bros. Attis wanted to build a community before selling a product — but \"biohacking\" sounded intimidating."
+      },
+      { "image": true },
+      {
+        "label": "THE INSIGHT",
+        "text": "We created Attis Insider — a membership-style community that made biohacking feel like a culture, not a science experiment. The launch campaign, \"Magic Pills\", was deliberately provocative: we sent mystery packages branded as pills to health influencers and content creators with no context."
+      },
+      { "image": true },
+      {
+        "label": "THE OUTCOME",
+        "text": "The campaign generated over 100k organic views, 500+ social mentions, and 1000+ community signups — all on ₹0 ad spend. The mystery packaging created FOMO-driven sharing loops that outperformed paid campaigns."
+      }
+    ]
   },
   {
     "slug": "attis-campaigns",
     "title": "Attis Campaigns",
     "description": "Attis Campaigns: Two viral campaigns that exposed nerves. Zero ad spend. Massive reach.",
-    "metric": "850+ orders \u00b7 250k+ views",
+    "subtitle": "Two viral campaigns that exposed nerves. Zero ad spend. Massive reach.",
+    "client": "Attis",
+    "industry": "Biohacking / Wellness",
+    "year": "2024",
+    "metric": "850+ orders · 250k+ views",
     "tags": ["Strategy", "Campaign", "Product Design"],
     "color": "",
-    "featured": true
+    "category": "work",
+    "featured": true,
+    "sections": [
+      {
+        "label": "THE LANDSCAPE",
+        "text": "After building the community, Attis needed to convert attention into revenue. But typical health-brand advertising — clean product shots, benefit-focused copy, influencer unboxings — would have killed the edge that made the brand interesting."
+      },
+      { "image": true },
+      {
+        "label": "THE INSIGHT",
+        "text": "We ran two campaigns designed to expose nerves. Each one made people uncomfortable enough to stop scrolling, curious enough to click, and convinced enough to buy. The campaigns leaned into Attis's counter-cultural positioning rather than softening it for conversion."
+      },
+      { "image": true },
+      {
+        "label": "THE OUTCOME",
+        "text": "Two viral campaigns. 850+ product orders. 250k+ organic views. The brand maintained its edge while proving that provocative creative isn't just for awareness — it converts."
+      }
+    ]
   },
   {
     "slug": "origin-one",
     "title": "Origin One",
     "description": "Origin One: Increased sales by 153% in 4 weeks via user research, media buying & advertising.",
+    "subtitle": "Increased sales by 153% in 4 weeks via user research, media buying & advertising.",
+    "client": "Origin One",
+    "industry": "E-commerce",
+    "year": "2024",
     "metric": "153% sales increase",
     "tags": ["Advertising Creative", "User Research & Media Buying"],
     "color": "#ea1c24",
-    "featured": true
+    "category": "work",
+    "featured": true,
+    "sections": null
   },
   {
     "slug": "qaoncloud",
     "title": "QAonCloud",
     "description": "QAonCloud: Increased sales conversion rate with strategic positioning, GTM engineering & a new identity & content strategy.",
+    "subtitle": "Increased sales conversion rate with strategic positioning, GTM engineering & a new identity & content strategy.",
+    "client": "QAonCloud",
+    "industry": "SaaS / QA",
+    "year": "2024",
     "metric": "",
     "tags": ["Brand & Positioning", "Content Strategy", "Web Design"],
     "color": "#01adff",
-    "featured": true
+    "category": "work",
+    "featured": true,
+    "sections": null
   },
   {
     "slug": "qwikbuild",
     "title": "QwikBuild",
     "description": "QwikBuild: Swiss army knife role spanning GTM, advertising, positioning & content.",
+    "subtitle": "Swiss army knife role spanning GTM, advertising, positioning & content.",
+    "client": "QwikBuild",
+    "industry": "Construction Tech",
+    "year": "2024",
     "metric": "",
     "tags": ["GTM", "Content & Community"],
     "color": "#25d366",
-    "featured": true
+    "category": "work",
+    "featured": true,
+    "sections": null
   },
   {
     "slug": "singeonesong",
     "title": "SingOneSong",
     "description": "SingOneSong: [Coming Soon]",
+    "subtitle": "[Coming Soon]",
+    "client": "SingOneSong",
+    "industry": "Music / Community",
+    "year": "2024",
     "metric": "",
     "tags": ["Brand Positioning", "Campaign", "Content Strategy"],
     "color": "",
-    "featured": true
+    "category": "exploration",
+    "featured": true,
+    "sections": null
   },
   {
     "slug": "nothing",
     "title": "Nothing",
     "description": "Nothing: [Coming Soon]",
+    "subtitle": "[Coming Soon]",
+    "client": "Nothing",
+    "industry": "Consumer Tech",
+    "year": "2024",
     "metric": "",
     "tags": ["Brand Positioning", "Campaign", "Content Strategy"],
     "color": "",
-    "featured": true
+    "category": "exploration",
+    "featured": true,
+    "sections": null
   }
 ]
