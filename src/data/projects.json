@@ -5,6 +5,7 @@
     "description": "Pause: Built a mental health brand people actually loved by doing what no one else would \u2014 making them laugh.",
     "metric": "70+ NPS",
     "tags": ["Story & Strategy", "Brand & Content"],
+    "color": "",
     "featured": true
   },
   {
@@ -13,6 +14,7 @@
     "description": "Attis Insider: Launched India\u2019s first biohacking community with a viral campaign and a bag of magic beans.",
     "metric": "1000+ signups, \u20b90 spent",
     "tags": ["Strategy", "Campaign", "Community"],
+    "color": "",
     "featured": true
   },
   {
@@ -21,6 +23,34 @@
     "description": "Attis Campaigns: Two viral campaigns that exposed nerves. Zero ad spend. Massive reach.",
     "metric": "850+ orders \u00b7 250k+ views",
     "tags": ["Strategy", "Campaign", "Product Design"],
+    "color": "",
+    "featured": true
+  },
+  {
+    "slug": "origin-one",
+    "title": "Origin One",
+    "description": "Origin One: Increased sales by 153% in 4 weeks via user research, media buying & advertising.",
+    "metric": "153% sales increase",
+    "tags": ["Advertising Creative", "User Research & Media Buying"],
+    "color": "#ea1c24",
+    "featured": true
+  },
+  {
+    "slug": "qaoncloud",
+    "title": "QAonCloud",
+    "description": "QAonCloud: Increased sales conversion rate with strategic positioning, GTM engineering & a new identity & content strategy.",
+    "metric": "",
+    "tags": ["Brand & Positioning", "Content Strategy", "Web Design"],
+    "color": "#01adff",
+    "featured": true
+  },
+  {
+    "slug": "qwikbuild",
+    "title": "QwikBuild",
+    "description": "QwikBuild: Swiss army knife role spanning GTM, advertising, positioning & content.",
+    "metric": "",
+    "tags": ["GTM", "Content & Community"],
+    "color": "#25d366",
     "featured": true
   },
   {
@@ -29,6 +59,7 @@
     "description": "SingOneSong: [Coming Soon]",
     "metric": "",
     "tags": ["Brand Positioning", "Campaign", "Content Strategy"],
+    "color": "",
     "featured": true
   },
   {
@@ -37,6 +68,7 @@
     "description": "Nothing: [Coming Soon]",
     "metric": "",
     "tags": ["Brand Positioning", "Campaign", "Content Strategy"],
+    "color": "",
     "featured": true
   }
 ]

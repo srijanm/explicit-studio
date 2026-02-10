@@ -1,0 +1,85 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="QwikBuild — Explicit Studio">
+
+  <article class="project-page reveal">
+
+    <div class="project-page__hero-image placeholder">
+      QwikBuild — Hero Image
+    </div>
+
+    <h1 class="project-page__title">QwikBuild</h1>
+    <p class="project-page__subtitle">Swiss army knife role spanning GTM, advertising, positioning & content.</p>
+
+    <div class="project-details">
+      <div>
+        <p class="project-details__label">Client</p>
+        <p class="project-details__value">QwikBuild</p>
+      </div>
+      <div>
+        <p class="project-details__label">Industry</p>
+        <p class="project-details__value">Construction Tech</p>
+      </div>
+      <div>
+        <p class="project-details__label">Services</p>
+        <p class="project-details__value">GTM, Content & Community</p>
+      </div>
+      <div>
+        <p class="project-details__label">Year</p>
+        <p class="project-details__value">2024</p>
+      </div>
+      <div>
+        <p class="project-details__label">Result</p>
+        <p class="project-details__value">—</p>
+      </div>
+    </div>
+
+    <p class="project-page__label">The landscape</p>
+    <p class="project-page__body">[Case study content coming soon]</p>
+
+    <div class="project-page__full-image placeholder">
+      QwikBuild — Image
+    </div>
+
+    <p class="project-page__label">The insight</p>
+    <p class="project-page__body">[Case study content coming soon]</p>
+
+    <div class="project-page__full-image placeholder">
+      QwikBuild — Image
+    </div>
+    <div class="project-page__image-grid">
+      <div class="placeholder">QwikBuild — Image</div>
+      <div class="placeholder">QwikBuild — Image</div>
+    </div>
+
+    <p class="project-page__label">The outcome</p>
+    <p class="project-page__body">[Case study content coming soon]</p>
+
+    <div class="project-page__next">
+      <a href="/work/singeonesong">
+        Next project &mdash; SingOneSong <span class="arrow">&rarr;</span>
+      </a>
+    </div>
+
+  </article>
+
+</BaseLayout>
+
+<script>
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+
+  document.querySelectorAll('.reveal').forEach((el) => {
+    observer.observe(el);
+  });
+</script>
