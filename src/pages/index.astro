@@ -39,26 +39,14 @@ const explorations = projects.filter((p) => p.category === 'exploration');
     <h2 class="work-section__title">Selected work.</h2>
     <div class="home-work-grid">
       {workProjects.map((project) => (
-        <ProjectCard
-          slug={project.slug}
-          title={project.title}
-          description={project.description}
-          tags={project.tags}
-          cardBg={project.cardBg}
-        />
+        <ProjectCard project={project} />
       ))}
     </div>
     {explorations.length > 0 && (
       <h3 class="work-section__subtitle">Explorations</h3>
       <div class="home-work-grid">
         {explorations.map((project) => (
-          <ProjectCard
-            slug={project.slug}
-            title={project.title}
-            description={project.description}
-            tags={project.tags}
-            cardBg={project.cardBg}
-          />
+          <ProjectCard project={project} />
         ))}
       </div>
     )}

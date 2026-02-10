@@ -10,13 +10,7 @@ import projects from '../../data/projects.json';
     <h1 class="work-listing__title">The work.</h1>
     <div class="work-listing__grid">
       {projects.map((project) => (
-        <ProjectCard
-          slug={project.slug}
-          title={project.title}
-          description={project.description}
-          tags={project.tags}
-          cardBg={project.cardBg}
-        />
+        <ProjectCard project={project} />
       ))}
     </div>
   </section>

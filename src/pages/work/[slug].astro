@@ -17,10 +17,8 @@ const nextProject = projects[(currentIndex + 1) % projects.length];
 <BaseLayout title={`${project.title} — Explicit Studio`}>
   <article class="project-page">
     <!-- Hero image -->
-    <div class="project-page__hero-frame" style={project.cardBg ? `background-color: ${project.cardBg};` : ''}>
-      <div class="project-page__hero-image">
-        <span class="project-page__hero-placeholder" style={project.cardBg ? 'color: rgba(255,255,255,0.4);' : ''}>{project.title} — Hero Image</span>
-      </div>
+    <div class="project-page__hero-image" style={`background-color: ${project.cardBg || '#F0F0F0'};`}>
+      <span class="project-page__hero-placeholder">{project.title}</span>
     </div>
 
     <!-- Title + subtitle -->
