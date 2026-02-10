@@ -5,6 +5,41 @@ import projects from '../data/projects.json';
 
 const workProjects = projects.filter((p) => p.category === 'work');
 const explorations = projects.filter((p) => p.category === 'exploration');
+
+const testimonials = [
+  {
+    quote: "Explicit didn't just give us a brand — they gave us a story that made investors lean in and customers remember our name.",
+    name: "Placeholder Name",
+    role: "CEO, Startup Co",
+    avatar: "",
+    cardBg: "#1a1a2e",
+    textColor: "#ffffff"
+  },
+  {
+    quote: "Most agencies gave us mood boards. Explicit gave us a narrative that became our entire GTM strategy.",
+    name: "Placeholder Name",
+    role: "Founder, Product Co",
+    avatar: "",
+    cardBg: "#F0F0F0",
+    textColor: "#1A1A1A"
+  },
+  {
+    quote: "We went from 'another AI company' to the one people actually talked about. That's the Explicit difference.",
+    name: "Placeholder Name",
+    role: "Co-founder, AI Startup",
+    avatar: "",
+    cardBg: "#2d3a2d",
+    textColor: "#ffffff"
+  },
+  {
+    quote: "They made biohacking feel like culture, not science. Our community grew itself after that.",
+    name: "Placeholder Name",
+    role: "Founder, Wellness Brand",
+    avatar: "",
+    cardBg: "#3a2d2d",
+    textColor: "#ffffff"
+  }
+];
 ---
 
 <BaseLayout title="Explicit Studio — A Storytelling Studio for Startups">
@@ -73,95 +108,46 @@ const explorations = projects.filter((p) => p.category === 'exploration');
     </div>
   </section>
 
-  <!-- Services -->
-  <section class="services-section reveal">
-    <h2 class="services-section__heading">
-      We turn what you're building into a story people want to tell each other.
-    </h2>
-
-    <div class="services-list">
-      <div class="services-item">
-        <span class="services-item__number">01</span>
-        <div class="services-item__content">
-          <h3 class="services-item__title">Story & Strategy</h3>
-          <p class="services-item__desc">Before we design anything, we find the story. We dig into your market, your competition, and your unfair advantages to find the angle that makes you the only choice — not one of many. Strategic positioning, narrative architecture, messaging frameworks, and the brand voice that ties it all together.</p>
+  <!-- Testimonials -->
+  <section class="testimonials-section reveal">
+    <h2 class="testimonials-section__title">What people say.</h2>
+    <div class="testimonials-grid">
+      {testimonials.map(t => (
+        <div class="testimonial-card" style={`background-color: ${t.cardBg};`}>
+          <p class="testimonial-card__quote" style={`color: ${t.textColor};`}>"{t.quote}"</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">
+              {t.avatar ? (
+                <img src={t.avatar} alt={t.name} />
+              ) : (
+                <span>{t.name.charAt(0)}</span>
+              )}
+            </div>
+            <div class="testimonial-card__info">
+              <span class="testimonial-card__name" style={`color: ${t.textColor};`}>{t.name}</span>
+              <span class="testimonial-card__role" style={`color: ${t.textColor === '#ffffff' ? 'rgba(255,255,255,0.6)' : 'rgba(0,0,0,0.5)'};`}>{t.role}</span>
+            </div>
+          </div>
         </div>
-      </div>
-
-      <div class="services-item">
-        <span class="services-item__number">02</span>
-        <div class="services-item__content">
-          <h3 class="services-item__title">Brand & Web</h3>
-          <p class="services-item__desc">We take the strategy and make it visible. Brand identity, visual systems, and websites that tell your story and convert — designed and built so your team can own it after we're done. The kind of brand that makes people screenshot your homepage and send it to their friends.</p>
-        </div>
-      </div>
-
-      <div class="services-item">
-        <span class="services-item__number">03</span>
-        <div class="services-item__content">
-          <h3 class="services-item__title">Marketing & Campaigns</h3>
-          <p class="services-item__desc">The story doesn't matter if nobody hears it. We design campaigns that get people talking, content strategies that build audiences, and launch playbooks that make noise. Advertising, social, viral concepts, and the GTM engine to make it all reach the people who matter — customers, investors, and the talent you want to hire.</p>
-        </div>
-      </div>
+      ))}
     </div>
   </section>
 
-  <!-- Who We Work With -->
-  <section class="audience-section reveal">
-    <div class="audience-section__inner">
-      <h2 class="audience-section__heading">You belong with us if you're:</h2>
-      <div class="audience-grid">
-        <div class="audience-col">
-          <h3>Launching a Startup</h3>
-          <p>You've raised (or are raising) your first round and you need a brand that can attract top talent, build trust with customers, and make investors remember your name. You've got the product — now you need the story.</p>
-        </div>
-        <div class="audience-col">
-          <h3>Launching a Product</h3>
-          <p>You've scaled past the initial phase and need to refine your narrative for expansion. Whether you're entering new markets or shipping new products, you need strategic storytelling to make it land.</p>
-        </div>
-        <div class="audience-col">
-          <h3>Launching a Fund</h3>
-          <p>You're building a fund with a unique thesis and need to stand out. From brand positioning to comms strategy, we help you attract the right founders and LPs.</p>
-        </div>
+  <!-- You Belong With Us -->
+  <section class="belong-section reveal">
+    <h2 class="belong-section__title">You belong with us if you're:</h2>
+    <div class="belong-grid">
+      <div class="belong-card" style="background-color: #F0F0F0;">
+        <h3 class="belong-card__title">Launching a Startup</h3>
+        <p class="belong-card__body">You've raised (or are raising) your first round and you need a brand that can attract top talent, build trust with customers, and make investors remember your name. You've got the product — now you need the story.</p>
       </div>
-    </div>
-  </section>
-
-  <!-- How We Work -->
-  <section class="process-section reveal">
-    <div class="process-section__inner">
-      <div class="process-section__intro">
-        <p>We don't have account managers, elaborate processes, or bloated teams. You talk to us. We understand your startup, we move fast, and we build things that work. No scope creep, no surprise invoices, no design-by-committee.</p>
-        <p><strong>We take on 3 clients per quarter.</strong> Not because we can't scale — because we won't.</p>
+      <div class="belong-card" style="background-color: #F0F0F0;">
+        <h3 class="belong-card__title">Launching a Product</h3>
+        <p class="belong-card__body">You've scaled past the initial phase and need to refine your narrative for expansion. Whether you're entering new markets or shipping new products, you need strategic storytelling to make it land.</p>
       </div>
-
-      <div class="process-offers">
-        <div class="process-offer">
-          <h3>Storytelling Sprint — 6 Weeks</h3>
-          <p class="process-offer__sub">Everything you need to go from unknown to unforgettable.</p>
-          <p class="process-offer__label">What you walk away with:</p>
-          <div class="process-offer__deliverables">
-            <p>&rarr; Brand positioning document</p>
-            <p>&rarr; Complete narrative & messaging framework</p>
-            <p>&rarr; Brand identity & visual system</p>
-            <p>&rarr; Designed and developed website</p>
-            <p>&rarr; 90-day content strategy</p>
-            <p>&rarr; Brand guidelines</p>
-            <p>&rarr; 30 days of post-launch support</p>
-          </div>
-        </div>
-
-        <div class="process-offer">
-          <h3>Monthly Partnership — Ongoing</h3>
-          <p class="process-offer__sub">An ongoing creative partner for the work that comes after launch.</p>
-          <div class="process-offer__deliverables">
-            <p>&rarr; GTM strategy and campaign architecture</p>
-            <p>&rarr; Advertising creatives and copy</p>
-            <p>&rarr; Viral campaign concepts and execution</p>
-            <p>&rarr; Content strategy and production</p>
-            <p>&rarr; Weekly syncs — no ticket systems, no queues</p>
-          </div>
-        </div>
+      <div class="belong-card" style="background-color: #F0F0F0;">
+        <h3 class="belong-card__title">Launching a Fund</h3>
+        <p class="belong-card__body">You're building a fund with a unique thesis and need to stand out. From brand positioning to comms strategy, we help you attract the right founders and LPs.</p>
       </div>
     </div>
   </section>
@@ -278,7 +264,7 @@ const explorations = projects.filter((p) => p.category === 'exploration');
   /* ===== The Problem ===== */
   .problem-section {
     padding: var(--section-padding-y) var(--section-padding-x);
-    background: var(--color-bg-alt);
+    background: var(--color-bg);
   }
 
   .problem-section__inner {
@@ -309,145 +295,119 @@ const explorations = projects.filter((p) => p.category === 'exploration');
     font-weight: 700;
   }
 
-  /* ===== Services ===== */
-  .services-section {
+  /* ===== Testimonials ===== */
+  .testimonials-section {
     padding: var(--section-padding-y) var(--section-padding-x);
+    background: var(--color-bg);
   }
 
-  .services-section__heading {
-    font-size: var(--text-h2);
+  .testimonials-section__title {
+    font-size: var(--text-h1);
     font-weight: 500;
-    max-width: 600px;
     margin-bottom: 48px;
   }
 
-  .services-list {
-    border-top: 1px solid var(--color-border);
-  }
-
-  .services-item {
+  .testimonials-grid {
     display: grid;
-    grid-template-columns: 60px 1fr;
-    gap: 24px;
-    padding: 40px 0;
-    border-bottom: 1px solid var(--color-border);
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(16px, 2vw, 24px);
   }
 
-  .services-item__number {
-    font-size: var(--text-small);
-    font-weight: var(--weight-medium);
-    color: var(--color-accent);
-  }
-
-  .services-item__title {
-    font-size: var(--text-h3);
-    font-weight: 500;
-    margin-bottom: 12px;
-  }
-
-  .services-item__desc {
-    font-size: var(--text-body);
-    font-weight: var(--weight-regular);
-    color: var(--color-text-secondary);
-    line-height: 1.7;
-    max-width: 550px;
-  }
-
-  /* ===== Who We Work With ===== */
-  .audience-section {
-    background: var(--color-bg-alt);
-    padding: var(--section-padding-y) var(--section-padding-x);
-  }
-
-  .audience-section__heading {
-    font-size: var(--text-h2);
-    font-weight: 500;
-    margin-bottom: 48px;
-  }
-
-  .audience-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 48px;
-  }
-
-  .audience-col h3 {
-    font-size: var(--text-h3);
-    font-weight: 500;
-    margin-bottom: 16px;
-  }
-
-  .audience-col p {
-    font-size: var(--text-body);
-    font-weight: var(--weight-regular);
-    color: var(--color-text-secondary);
-    line-height: var(--leading-relaxed);
-  }
-
-  /* ===== How We Work ===== */
-  .process-section {
-    padding: var(--section-padding-y) var(--section-padding-x);
-  }
-
-  .process-section__inner {
-    max-width: 800px;
-  }
-
-  .process-section__intro {
-    margin-bottom: 48px;
-  }
-
-  .process-section__intro p {
-    font-size: var(--text-body);
-    font-weight: var(--weight-regular);
-    line-height: var(--leading-relaxed);
-    margin-bottom: 24px;
-  }
-
-  .process-section__intro p:last-child {
-    margin-bottom: 0;
-  }
-
-  .process-section__intro strong {
-    font-weight: 700;
-  }
-
-  .process-offers {
+  .testimonial-card {
+    border-radius: var(--radius-md);
+    padding: clamp(24px, 3vw, 40px);
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    justify-content: space-between;
+    min-height: 280px;
   }
 
-  .process-offer {
-    border: 1px solid var(--color-border);
+  .testimonial-card__quote {
+    font-size: var(--text-body);
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: 32px;
+  }
+
+  .testimonial-card__author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .testimonial-card__avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .testimonial-card__avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .testimonial-card__avatar span {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  .testimonial-card__info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .testimonial-card__name {
+    font-size: var(--text-small);
+    font-weight: 500;
+  }
+
+  .testimonial-card__role {
+    font-size: var(--text-tiny);
+    font-weight: 400;
+  }
+
+  /* ===== You Belong With Us ===== */
+  .belong-section {
+    padding: var(--section-padding-y) var(--section-padding-x);
+    background: var(--color-bg);
+  }
+
+  .belong-section__title {
+    font-size: var(--text-h1);
+    font-weight: 500;
+    margin-bottom: 48px;
+  }
+
+  .belong-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(16px, 2vw, 24px);
+  }
+
+  .belong-card {
     border-radius: var(--radius-md);
-    padding: 48px;
+    padding: clamp(24px, 3vw, 40px);
   }
 
-  .process-offer h3 {
+  .belong-card__title {
     font-size: var(--text-h3);
     font-weight: 500;
-    margin-bottom: 8px;
-  }
-
-  .process-offer__sub {
-    font-size: var(--text-body);
-    font-weight: var(--weight-regular);
-    font-style: italic;
-    color: var(--color-text-secondary);
-    margin-bottom: 24px;
-  }
-
-  .process-offer__label {
-    font-size: var(--text-body);
-    font-weight: var(--weight-regular);
     margin-bottom: 16px;
   }
 
-  .process-offer__deliverables p {
+  .belong-card__body {
     font-size: var(--text-body);
-    font-weight: var(--weight-regular);
-    line-height: 1.8;
+    font-weight: 400;
+    line-height: 1.7;
+    color: var(--color-text-secondary);
   }
 
   /* ===== Responsive ===== */
@@ -476,18 +436,12 @@ const explorations = projects.filter((p) => p.category === 'exploration');
       gap: 20px 32px;
     }
 
-    .audience-grid {
+    .testimonials-grid {
       grid-template-columns: 1fr;
-      gap: 32px;
     }
 
-    .services-item {
+    .belong-grid {
       grid-template-columns: 1fr;
-      gap: 12px;
-    }
-
-    .process-offer {
-      padding: 24px;
     }
 
     .client-logo {
