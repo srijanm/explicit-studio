@@ -4,19 +4,17 @@ interface Props {
   title: string;
   description: string;
   tags: string[];
-  cardTextColor?: string;
+  cardBg?: string;
 }
 
-const { slug, title, description, tags, cardTextColor } = Astro.props;
+const { slug, title, description, tags, cardBg } = Astro.props;
 ---
 
-<a
-  href={`/work/${slug}`}
-  class="project-card"
-  style={cardTextColor ? `--card-text: ${cardTextColor}` : ''}
->
-  <div class="project-card__media">
-    <img src={`/images/projects/${slug}-thumb.jpg`} alt={title} loading="lazy" />
+<a href={`/work/${slug}`} class="project-card">
+  <div class="project-card__frame" style={cardBg ? `background-color: ${cardBg};` : ''}>
+    <div class="project-card__media">
+      <span class="project-card__placeholder" style={cardBg ? 'color: rgba(255,255,255,0.4);' : ''}>{title}</span>
+    </div>
   </div>
   <div class="project-card__content">
     <h3 class="project-card__title">{description}</h3>
@@ -28,31 +26,52 @@ const { slug, title, description, tags, cardTextColor } = Astro.props;
   .project-card {
     display: block;
     text-decoration: none;
-    color: var(--card-text, var(--color-text));
+    color: var(--color-text);
+  }
+
+  .project-card__frame {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: var(--radius-md);
+    background: var(--color-bg-alt);
+    padding: clamp(24px, 4vw, 48px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    overflow: hidden;
   }
 
   .project-card__media {
-    position: relative;
     width: 100%;
+    height: 100%;
+    border-radius: 8px;
     overflow: hidden;
-    margin-bottom: 20px;
-    background: #E8E8E8;
-    border-radius: var(--radius-md);
+    background: rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  .project-card__media video,
-  .project-card__media img {
+  .project-card__media img,
+  .project-card__media video {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
   }
 
+  .project-card__placeholder {
+    font-size: var(--text-small);
+    font-weight: 400;
+    color: var(--color-text-tertiary);
+  }
+
   @media (hover: hover) {
-    .project-card__media {
+    .project-card__frame {
       transition: transform 0.6s ease;
     }
-    .project-card:hover .project-card__media {
+    .project-card:hover .project-card__frame {
       transform: scale(1.02);
     }
   }

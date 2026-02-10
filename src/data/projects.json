@@ -9,7 +9,7 @@
     "year": "2024",
     "metric": "70+ NPS",
     "tags": ["Story & Strategy", "Brand & Content"],
-    "color": "",
+    "cardBg": "",
     "category": "work",
     "featured": true,
     "sections": [
@@ -40,7 +40,7 @@
     "year": "2024",
     "metric": "1000+ signups, ₹0 spent",
     "tags": ["Strategy", "Campaign", "Community"],
-    "color": "",
+    "cardBg": "",
     "category": "work",
     "featured": true,
     "sections": [
@@ -70,7 +70,7 @@
     "year": "2024",
     "metric": "",
     "tags": ["Brand & Positioning", "Content Strategy", "Web Design"],
-    "color": "#01adff",
+    "cardBg": "#01adff",
     "category": "work",
     "featured": true,
     "sections": null
@@ -85,7 +85,7 @@
     "year": "2024",
     "metric": "153% sales increase",
     "tags": ["Advertising Creative", "User Research & Media Buying"],
-    "color": "#ea1c24",
+    "cardBg": "#ea1c24",
     "category": "work",
     "featured": true,
     "sections": null
@@ -100,7 +100,7 @@
     "year": "2024",
     "metric": "",
     "tags": ["GTM", "Content & Community"],
-    "color": "#25d366",
+    "cardBg": "#25d366",
     "category": "work",
     "featured": true,
     "sections": null
@@ -115,7 +115,7 @@
     "year": "2024",
     "metric": "850+ orders · 250k+ views",
     "tags": ["Strategy", "Campaign", "Product Design"],
-    "color": "",
+    "cardBg": "",
     "category": "work",
     "featured": true,
     "sections": [
@@ -145,7 +145,7 @@
     "year": "2024",
     "metric": "",
     "tags": ["Brand Positioning", "Campaign", "Content Strategy"],
-    "color": "",
+    "cardBg": "",
     "category": "exploration",
     "featured": true,
     "sections": null
@@ -160,7 +160,7 @@
     "year": "2024",
     "metric": "",
     "tags": ["Brand Positioning", "Campaign", "Content Strategy"],
-    "color": "",
+    "cardBg": "",
     "category": "exploration",
     "featured": true,
     "sections": null

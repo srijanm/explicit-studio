@@ -15,6 +15,7 @@ import projects from '../../data/projects.json';
           title={project.title}
           description={project.description}
           tags={project.tags}
+          cardBg={project.cardBg}
         />
       ))}
     </div>
@@ -39,9 +40,6 @@ import projects from '../../data/projects.json';
     gap: clamp(48px, 8vw, 80px);
   }
 
-  .work-listing__grid :global(.project-card__media) {
-    aspect-ratio: 16 / 9;
-  }
 </style>
 
 <script>

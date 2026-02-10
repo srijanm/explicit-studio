@@ -699,13 +699,34 @@ input, textarea {
   padding: 40px var(--section-padding-x) var(--section-padding-y);
 }
 
-.project-page__hero-image {
+.project-page__hero-frame {
   width: 100%;
   aspect-ratio: 16 / 9;
   border-radius: var(--radius-md);
   background: var(--color-bg-alt);
+  padding: clamp(24px, 4vw, 48px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 40px;
   overflow: hidden;
+}
+
+.project-page__hero-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-page__hero-placeholder {
+  font-size: var(--text-small);
+  font-weight: 400;
+  color: var(--color-text-tertiary);
 }
 
 .project-page__title {
@@ -825,7 +846,7 @@ input, textarea {
     padding: 32px var(--section-padding-x) var(--section-padding-y);
   }
 
-  .project-page__hero-image {
+  .project-page__hero-frame {
     margin-bottom: 32px;
   }
 

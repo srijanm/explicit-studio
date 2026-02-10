@@ -44,6 +44,7 @@ const explorations = projects.filter((p) => p.category === 'exploration');
           title={project.title}
           description={project.description}
           tags={project.tags}
+          cardBg={project.cardBg}
         />
       ))}
     </div>
@@ -56,6 +57,7 @@ const explorations = projects.filter((p) => p.category === 'exploration');
             title={project.title}
             description={project.description}
             tags={project.tags}
+            cardBg={project.cardBg}
           />
         ))}
       </div>
@@ -258,10 +260,6 @@ const explorations = projects.filter((p) => p.category === 'exploration');
     font-weight: 500;
     margin-top: 60px;
     margin-bottom: 48px;
-  }
-
-  .home-work-grid :global(.project-card__media) {
-    aspect-ratio: 16 / 9;
   }
 
   .work-section__more {
