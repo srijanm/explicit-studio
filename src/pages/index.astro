@@ -58,7 +58,7 @@ const testimonials = [
   <!-- Logo Bar -->
   <section class="logos-section">
     <p class="logos-section__text">
-      Working with founders in AI, crypto, D2C & venture capital.
+      Working with ambitious founders across AI, Web3, D2C & VC to make sure they stand out.
     </p>
     <div class="logos-grid">
       <img src="/images/logos/pause.png" alt="Pause" class="client-logo" />
@@ -85,11 +85,9 @@ const testimonials = [
         ))}
       </div>
     )}
-    <div class="work-section__more">
-      <a href="/work" class="view-all-link">
-        View all work <span class="view-all-arrow">&rarr;</span>
-      </a>
-    </div>
+    <a href="/work" class="view-all-card">
+      <span class="view-all-card__text">View all work &rarr;</span>
+    </a>
   </section>
 
   <!-- The Problem -->
@@ -161,8 +159,8 @@ const testimonials = [
   }
 
   .hero__descriptor {
-    font-size: 1.1rem;
-    font-weight: var(--weight-medium);
+    font-size: var(--text-h3);
+    font-weight: 500;
     color: var(--color-text-secondary);
     margin-bottom: 20px;
   }
@@ -236,24 +234,20 @@ const testimonials = [
     margin-bottom: 48px;
   }
 
-  .work-section__more {
-    margin-top: 40px;
-  }
-
-  .view-all-link {
-    font-size: var(--text-body);
-    color: var(--color-text);
+  .view-all-card {
+    display: block;
+    width: 100%;
+    background-color: #F0F0F0;
+    border-radius: var(--radius-md);
+    padding: clamp(24px, 3vw, 40px);
     text-decoration: none;
-    transition: color 0.3s ease;
+    color: var(--color-text);
+    text-align: right;
   }
 
-  .view-all-link:hover {
-    color: var(--color-accent);
-  }
-
-  .view-all-arrow {
-    color: var(--color-accent);
-    display: inline-block;
+  .view-all-card__text {
+    font-size: var(--text-h3);
+    font-weight: 500;
   }
 
   /* ===== The Problem ===== */
@@ -275,9 +269,9 @@ const testimonials = [
   }
 
   .problem-section__body p {
-    font-size: var(--text-body);
-    font-weight: var(--weight-regular);
-    line-height: var(--leading-relaxed);
+    font-size: var(--text-h3);
+    font-weight: 400;
+    line-height: 1.6;
     margin-bottom: 24px;
     color: var(--color-text);
   }
@@ -297,7 +291,7 @@ const testimonials = [
   }
 
   .testimonials-section__title {
-    font-size: var(--text-h1);
+    font-size: var(--text-h2);
     font-weight: 500;
     margin-bottom: 32px;
   }
@@ -376,7 +370,7 @@ const testimonials = [
   }
 
   .belong-section__title {
-    font-size: var(--text-h1);
+    font-size: var(--text-h2);
     font-weight: 500;
     margin-bottom: 32px;
   }
@@ -394,13 +388,13 @@ const testimonials = [
 
   .belong-card__title {
     font-size: var(--text-h3);
-    font-weight: 500;
+    font-weight: 700;
     margin-bottom: 16px;
   }
 
   .belong-card__body {
     font-size: var(--text-body);
-    font-weight: 400;
+    font-weight: 500;
     line-height: 1.7;
     color: var(--color-text-secondary);
   }
