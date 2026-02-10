@@ -227,11 +227,6 @@ input, textarea {
 }
 
 .btn-primary .arrow {
-  transition: transform 0.3s ease;
-}
-
-.btn-primary:hover .arrow {
-  transform: translateX(4px);
 }
 
 /* ============================================
@@ -249,7 +244,7 @@ input, textarea {
   justify-content: space-between;
   padding: 0 32px;
   background: var(--color-bg);
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: none;
 }
 
 .topnav__logo {
@@ -327,7 +322,7 @@ input, textarea {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border-right: 1px solid var(--color-border);
+  border-right: none;
   background: var(--color-bg);
   overflow-y: auto;
 }
@@ -453,7 +448,7 @@ input, textarea {
   flex-direction: column;
   transform: translateX(-100%);
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  border-right: 1px solid var(--color-border);
+  border-right: none;
 }
 
 .mobile-sidebar.open {
@@ -821,11 +816,6 @@ input, textarea {
 
 .project-page__next .arrow {
   color: var(--color-accent);
-  transition: transform 0.3s ease;
-}
-
-.project-page__next a:hover .arrow {
-  transform: translateX(6px);
 }
 
 @media (max-width: 767px) {
