@@ -10,6 +10,7 @@
     "metric": "70+ NPS",
     "tags": ["Story & Strategy", "Brand & Content"],
     "cardBg": "",
+    "cardTextColor": "#ffffff",
     "category": "work",
     "featured": true,
     "sections": [
@@ -41,6 +42,7 @@
     "metric": "1000+ signups, ₹0 spent",
     "tags": ["Strategy", "Campaign", "Community"],
     "cardBg": "",
+    "cardTextColor": "#ffffff",
     "category": "work",
     "featured": true,
     "sections": [
@@ -71,6 +73,7 @@
     "metric": "",
     "tags": ["Brand & Positioning", "Content Strategy", "Web Design"],
     "cardBg": "#01adff",
+    "cardTextColor": "",
     "category": "work",
     "featured": true,
     "sections": null
@@ -86,6 +89,7 @@
     "metric": "153% sales increase",
     "tags": ["Advertising Creative", "User Research & Media Buying"],
     "cardBg": "#ea1c24",
+    "cardTextColor": "",
     "category": "work",
     "featured": true,
     "sections": null
@@ -101,6 +105,7 @@
     "metric": "",
     "tags": ["GTM", "Content & Community"],
     "cardBg": "#25d366",
+    "cardTextColor": "",
     "category": "work",
     "featured": true,
     "sections": null
@@ -116,6 +121,7 @@
     "metric": "850+ orders · 250k+ views",
     "tags": ["Strategy", "Campaign", "Product Design"],
     "cardBg": "",
+    "cardTextColor": "#ffffff",
     "category": "work",
     "featured": true,
     "sections": [
@@ -146,6 +152,7 @@
     "metric": "",
     "tags": ["Brand Positioning", "Campaign", "Content Strategy"],
     "cardBg": "",
+    "cardTextColor": "#ffffff",
     "category": "exploration",
     "featured": true,
     "sections": null
@@ -161,6 +168,7 @@
     "metric": "",
     "tags": ["Brand Positioning", "Campaign", "Content Strategy"],
     "cardBg": "",
+    "cardTextColor": "#ffffff",
     "category": "exploration",
     "featured": true,
     "sections": null
