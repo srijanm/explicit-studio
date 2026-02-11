@@ -705,6 +705,14 @@ input, textarea {
   overflow: hidden;
 }
 
+.project-page__hero-image img,
+.project-page__hero-image video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 .project-page__hero-placeholder {
   font-size: var(--text-small);
   font-weight: 400;

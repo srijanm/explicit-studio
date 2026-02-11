@@ -12,13 +12,21 @@ export function getStaticPaths() {
 const { project } = Astro.props;
 const currentIndex = projects.indexOf(project);
 const nextProject = projects[(currentIndex + 1) % projects.length];
+const hasThumb = project.thumbnail && project.thumbnail.length > 0;
+const isVideo = hasThumb && /\.(mp4|webm)$/i.test(project.thumbnail);
 ---
 
 <BaseLayout title={`${project.title} — Explicit Studio`}>
   <article class="project-page">
     <!-- Hero image -->
     <div class="project-page__hero-image" style={`background-color: ${project.cardBg || '#F0F0F0'};`}>
-      <span class="project-page__hero-placeholder">{project.title}</span>
+      {isVideo ? (
+        <video src={project.thumbnail} autoplay muted loop playsinline />
+      ) : hasThumb ? (
+        <img src={project.thumbnail} alt={project.title} />
+      ) : (
+        <span class="project-page__hero-placeholder">{project.title}</span>
+      )}
     </div>
 
     <!-- Title + subtitle -->
