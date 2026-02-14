@@ -323,7 +323,7 @@ input, textarea {
 
 .sidebar__logo-top {
   display: block;
-  margin-bottom: 24px;
+  margin-bottom: 12px;
 }
 
 .sidebar__logo-top-img {
@@ -363,7 +363,7 @@ input, textarea {
   font-weight: 500;
   color: var(--color-text-secondary);
   line-height: 1.5;
-  margin-bottom: 24px;
+  margin-bottom: 12px;
 }
 
 .sidebar__logo-large {
