@@ -17,18 +17,19 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   <!-- We Believe -->
   <section class="info-beliefs reveal">
+    <h2 class="info-beliefs__title">We Believe</h2>
     <div class="info-beliefs__list">
       <div class="info-beliefs__item">
-        <h2>The story is part of the product.</h2>
+        <h3>Tech is culture.</h3>
       </div>
       <div class="info-beliefs__item">
-        <h2>Tech is culture.</h2>
+        <h3>The story is part of the product.</h3>
       </div>
       <div class="info-beliefs__item">
-        <h2>A good story is a business advantage.</h2>
+        <h3>A good story is a business advantage.</h3>
       </div>
       <div class="info-beliefs__item">
-        <h2>Startups die when they stop taking creative risk.</h2>
+        <h3>Startups die when they stop taking creative risk.</h3>
       </div>
     </div>
   </section>
@@ -193,6 +194,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     padding: 0 var(--section-padding-x) var(--section-padding-y);
   }
 
+  .info-beliefs__title {
+    font-size: var(--text-h2);
+    font-weight: 500;
+    margin-bottom: 32px;
+  }
+
   .info-beliefs__list {
     border-top: 1px solid var(--color-border);
   }
@@ -202,7 +209,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     padding: 24px 0;
   }
 
-  .info-beliefs__item h2 {
+  .info-beliefs__item h3 {
     font-size: var(--text-h2);
     font-weight: 500;
   }
