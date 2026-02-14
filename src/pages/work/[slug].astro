@@ -15,7 +15,7 @@ const prevProject = currentIndex > 0 ? projects[currentIndex - 1] : null;
 const nextProject = projects[(currentIndex + 1) % projects.length];
 const heroMedia = project.hero || project.thumbnail;
 const hasThumb = heroMedia && heroMedia.length > 0;
-const isVideo = hasThumb && /\.(mp4|webm)$/i.test(heroMedia);
+const isVideo = hasThumb && /\.(mp4|webm|mov)$/i.test(heroMedia);
 ---
 
 <BaseLayout title={`${project.title} — Explicit Studio`}>

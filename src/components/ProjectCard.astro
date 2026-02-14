@@ -6,7 +6,7 @@ const tagColor = isLightText ? 'rgba(255,255,255,0.6)' : 'rgba(0,0,0,0.5)';
 const borderColor = isLightText ? 'rgba(255,255,255,0.15)' : 'rgba(0,0,0,0.1)';
 const placeholderColor = isLightText ? 'rgba(255,255,255,0.3)' : 'rgba(0,0,0,0.2)';
 const hasThumb = project.thumbnail && project.thumbnail.length > 0;
-const isVideo = hasThumb && /\.(mp4|webm)$/i.test(project.thumbnail);
+const isVideo = hasThumb && /\.(mp4|webm|mov)$/i.test(project.thumbnail);
 ---
 
 <a
