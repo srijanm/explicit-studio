@@ -4,9 +4,14 @@ import '../styles/global.css';
 interface Props {
   title?: string;
   description?: string;
+  ogImage?: string;
+  hideCta?: boolean;
 }
 
-const { title = 'Explicit Studio', description = 'A storytelling studio for startups.' } = Astro.props;
+const siteUrl = 'https://explicit.studio';
+const { title = 'Explicit Studio', description = 'A full cycle creative studio creating monopolising brands for technology startups.', ogImage = '/images/open-graph.png', hideCta = false } = Astro.props;
+const canonicalUrl = new URL(Astro.url.pathname, siteUrl).href;
+const ogImageUrl = new URL(ogImage, siteUrl).href;
 ---
 
 <!DOCTYPE html>
@@ -15,9 +20,26 @@ const { title = 'Explicit Studio', description = 'A storytelling studio for star
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
+    <meta name="author" content="Srijan Mahajan" />
+    <meta name="theme-color" content="#141414" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href={canonicalUrl} />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+
+    <!-- OpenGraph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:site_name" content="Explicit Studio" />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageUrl} />
   </head>
   <body>
     <!-- Mobile top bar (hidden on desktop) -->
@@ -68,14 +90,15 @@ const { title = 'Explicit Studio', description = 'A storytelling studio for star
       <main class="main-content">
         <slot />
 
-        <!-- CTA -->
-        <div class="site-cta">
-          <hr class="site-cta__divider" />
-          <h2 class="site-cta__headline">Tell a story that sells.</h2>
-          <a href="/contact" class="btn-primary site-cta__button">
-            Get in touch <span class="arrow">&rarr;</span>
-          </a>
-        </div>
+        {!hideCta && (
+          <div class="site-cta">
+            <hr class="site-cta__divider" />
+            <h2 class="site-cta__headline">Tell a story that sells.</h2>
+            <a href="/contact" class="btn-primary site-cta__button">
+              Get in touch <span class="arrow">&rarr;</span>
+            </a>
+          </div>
+        )}
       </main>
     </div>
 

@@ -18,7 +18,7 @@ const hasThumb = heroMedia && heroMedia.length > 0;
 const isVideo = hasThumb && /\.(mp4|webm|mov)$/i.test(heroMedia);
 ---
 
-<BaseLayout title={`${project.title} — Explicit Studio`}>
+<BaseLayout title={`${project.title} — Explicit Studio`} description={project.subtitle} ogImage={project.thumbnail && !/\.(mp4|webm|mov)$/i.test(project.thumbnail) ? project.thumbnail : '/images/open-graph.png'}>
   <article class="project-page">
     <!-- Hero image -->
     <div class="project-page__hero-image" style={`background-color: ${project.cardBg || '#1E1E1E'};`}>
