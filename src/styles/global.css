@@ -311,6 +311,7 @@ input, textarea {
 .sidebar__middle .sidebar__cta-btn {
   text-align: left;
   justify-content: flex-start;
+  width: 100%;
 }
 
 .sidebar__tagline {
@@ -355,7 +356,7 @@ input, textarea {
 }
 
 .sidebar__logo-large {
-  margin-bottom: 24px;
+  margin-bottom: 8px;
 }
 
 .sidebar__logo-img {
