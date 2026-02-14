@@ -62,7 +62,7 @@ const isVideo = hasThumb && /\.(mp4|webm)$/i.test(project.thumbnail);
     {project.sections && project.sections.map((section, i) => (
       <div class="project-page__section">
         {section.label && (
-          <p class="project-page__label">{section.label}</p>
+          <p class="project-page__label">{section.label.charAt(0) + section.label.slice(1).toLowerCase()}</p>
         )}
         {section.text && (
           <div class="project-page__body">

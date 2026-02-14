@@ -647,11 +647,9 @@ input, textarea {
 }
 
 .project-page__label {
-  font-size: var(--text-tiny);
-  font-weight: 300;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--color-text-tertiary);
+  font-size: var(--text-small);
+  font-weight: 500;
+  color: var(--color-accent);
   margin-bottom: 20px;
 }
 
