@@ -58,12 +58,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   }
 
   .contact-section__subtitle {
-    font-size: var(--text-body);
-    font-weight: var(--weight-regular);
+    font-size: var(--text-h3);
+    font-weight: 400;
     color: var(--color-text-secondary);
     max-width: 600px;
     margin-bottom: 40px;
-    line-height: 1.7;
+    line-height: 1.6;
   }
 
   .contact-form {
@@ -88,14 +88,28 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     border: none;
     border-bottom: 1px solid var(--color-border);
     padding: 12px 0;
-    font-size: var(--text-body);
-    font-weight: var(--weight-regular);
+    font-size: var(--text-h3);
+    font-weight: 400;
+    line-height: 1.6;
     font-family: var(--font-primary);
     background: transparent;
     color: var(--color-text);
     outline: none;
     transition: border-color 0.3s ease;
     border-radius: 0;
+    -webkit-appearance: none;
+  }
+
+  .form-input:-webkit-autofill,
+  .form-input:-webkit-autofill:hover,
+  .form-input:-webkit-autofill:focus,
+  .form-textarea:-webkit-autofill,
+  .form-textarea:-webkit-autofill:hover,
+  .form-textarea:-webkit-autofill:focus {
+    -webkit-text-fill-color: var(--color-text);
+    -webkit-box-shadow: 0 0 0px 1000px var(--color-bg) inset;
+    transition: background-color 5000s ease-in-out 0s;
+    font-family: var(--font-primary);
   }
 
   .form-input:focus,
@@ -118,10 +132,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   }
 
   .contact-section__footer p {
-    font-size: var(--text-body);
-    font-weight: var(--weight-regular);
+    font-size: var(--text-h3);
+    font-weight: 400;
     color: var(--color-text-secondary);
-    line-height: 1.7;
+    line-height: 1.6;
   }
 
   .contact-section__footer a {
