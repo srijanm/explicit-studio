@@ -23,7 +23,7 @@ const isVideo = hasThumb && /\.(mp4|webm|mov)$/i.test(heroMedia);
     <!-- Hero image -->
     <div class="project-page__hero-image" style={`background-color: ${project.cardBg || '#1E1E1E'};`}>
       {isVideo ? (
-        <video src={heroMedia} autoplay muted loop playsinline />
+        <video src={heroMedia} autoplay muted loop playsinline controls />
       ) : hasThumb ? (
         <img src={heroMedia} alt={project.title} />
       ) : (
