@@ -50,8 +50,8 @@ const testimonials = [
     <h1 class="hero__headline">
       Storytelling for founders who believe creativity is a business advantage.
     </h1>
-    <div class="hero__media placeholder" style="aspect-ratio: 16/9;">
-      Showreel Coming Soon
+    <div class="hero__media">
+      <video src="/images/projects/home-showreel-thumb.mp4" autoplay muted loop playsinline></video>
     </div>
   </section>
 
@@ -178,6 +178,13 @@ const testimonials = [
   .hero__media {
     width: 100%;
     margin-top: 40px;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+  }
+
+  .hero__media video {
+    width: 100%;
+    display: block;
   }
 
   /* ===== Logo Bar ===== */
