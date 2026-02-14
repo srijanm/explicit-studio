@@ -35,9 +35,6 @@ const { title = 'Explicit Studio', description = 'A storytelling studio for star
       <!-- Fixed left sidebar — desktop only -->
       <aside class="sidebar">
         <div class="sidebar__top">
-          <a href="/" class="sidebar__logo-top">
-            <img src="/images/logos/logo.png" alt="Explicit Studio" class="sidebar__logo-top-img" />
-          </a>
           <nav class="sidebar__nav">
             <a href="/">Home</a>
             <a href="/work">Work</a>
@@ -58,7 +55,6 @@ const { title = 'Explicit Studio', description = 'A storytelling studio for star
           <div class="sidebar__logo-large">
             <img src="/images/logos/logo.png" alt="Explicit Studio" class="sidebar__logo-img" />
           </div>
-          <p class="sidebar__tagline">Make startups fun again.</p>
           <div class="sidebar__socials">
             <a href="#" target="_blank" rel="noopener noreferrer">X</a>
             <a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a>
@@ -73,15 +69,12 @@ const { title = 'Explicit Studio', description = 'A storytelling studio for star
         <slot />
 
         <!-- CTA -->
-        <section class="site-cta">
-          <div class="site-cta__inner">
-            <h2>Tell a story that sells.</h2>
-            <a href="/contact" class="btn-primary site-cta__button">
-              Get in touch <span class="arrow">&rarr;</span>
-            </a>
-            <a href="mailto:hey@explicit.studio" class="site-cta__email">hey@explicit.studio</a>
-          </div>
-        </section>
+        <div class="site-cta">
+          <h2 class="site-cta__headline">Tell a story that sells.</h2>
+          <a href="/contact" class="btn-primary site-cta__button">
+            Get in touch <span class="arrow">&rarr;</span>
+          </a>
+        </div>
       </main>
     </div>
 

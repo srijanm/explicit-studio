@@ -309,6 +309,7 @@ input, textarea {
 }
 
 .sidebar__middle .sidebar__cta-btn {
+  display: flex;
   text-align: left;
   justify-content: flex-start;
   width: 100%;
@@ -557,15 +558,11 @@ input, textarea {
    SITE CTA
    ============================================ */
 .site-cta {
-  background: var(--color-bg-alt);
-  padding: var(--section-padding-y) var(--section-padding-x);
+  border-top: 1px solid var(--color-border);
+  padding: clamp(40px, 5vw, 60px) var(--section-padding-x);
 }
 
-.site-cta__inner {
-  text-align: center;
-}
-
-.site-cta__inner h2 {
+.site-cta__headline {
   font-size: var(--text-h1);
   font-weight: 500;
   line-height: 1.15;
@@ -574,20 +571,6 @@ input, textarea {
 
 .site-cta__button {
   padding: 16px 40px;
-}
-
-.site-cta__email {
-  display: block;
-  margin-top: 24px;
-  font-size: var(--text-body);
-  font-weight: var(--weight-regular);
-  color: var(--color-text-secondary);
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.site-cta__email:hover {
-  color: var(--color-accent);
 }
 
 /* ============================================
