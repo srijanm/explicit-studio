@@ -98,7 +98,7 @@ const isVideo = hasThumb && /\.(mp4|webm|mov)$/i.test(heroMedia);
     {!project.sections && (
       <div class="project-page__section">
         <div class="project-page__body">
-          <p>{project.category === 'exploration' ? 'Case Study' : 'Ongoing Project'}</p>
+          <p>{project.year.includes('Ongoing') ? 'Ongoing Project' : project.subtitle}</p>
         </div>
       </div>
     )}
