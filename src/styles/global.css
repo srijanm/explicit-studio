@@ -321,6 +321,17 @@ input, textarea {
   margin-bottom: 16px;
 }
 
+.sidebar__logo-top {
+  display: block;
+  margin-bottom: 24px;
+}
+
+.sidebar__logo-top-img {
+  width: 160px;
+  height: auto;
+  display: block;
+}
+
 .sidebar__nav {
   display: flex;
   flex-direction: column;
@@ -360,7 +371,7 @@ input, textarea {
 }
 
 .sidebar__logo-img {
-  width: 160px;
+  width: 100%;
   height: auto;
   display: block;
 }
