@@ -46,7 +46,7 @@ const testimonials = [
 
   <!-- Hero -->
   <section class="hero">
-    <p class="hero__descriptor">Brand strategy & creative for startups.</p>
+    <p class="hero__descriptor">Creative partner & brand strategy for startups.</p>
     <h1 class="hero__headline">
       Storytelling for founders who believe creativity is a business advantage.
     </h1>
@@ -58,7 +58,7 @@ const testimonials = [
   <!-- Logo Bar -->
   <section class="logos-section">
     <p class="logos-section__text">
-      Working with ambitious founders across AI, Web3, D2C & VC to make sure they stand out.
+      Working with ambitious founders & adventure capitalists across AI, Web3 & D2C.
     </p>
     <div class="logos-grid">
       <img src="/images/logos/pause.png" alt="Pause" class="client-logo" />
@@ -71,7 +71,7 @@ const testimonials = [
 
   <!-- Selected Work -->
   <section class="work-section reveal">
-    <h2 class="work-section__title">Selected work.</h2>
+    <h2 class="work-section__title">Work</h2>
     <div class="home-work-grid">
       {workProjects.map((project) => (
         <ProjectCard project={project} />
@@ -93,14 +93,11 @@ const testimonials = [
   <!-- The Problem -->
   <section class="problem-section reveal">
     <div class="problem-section__inner">
-      <p class="problem-section__opening">
-        If we believe in what you have to say, we'll find the best damn way to say it.
-      </p>
       <div class="problem-section__body">
-        <p>130,000 startups launch every day. Most die of obscurity. Not because the product was bad — because no one heard the story.</p>
-        <p>Code isn't the differentiator it used to be. And "we're an AI company" isn't a brand. The best companies aren't built on great products alone — they're built on stories that make people pay attention before they ever see a demo.</p>
+        <p>130,000 startups launch every day. Most die of obscurity.</p>
+        <p>Code isn't the differentiator it used to be. And "we're an AI company" isn't a brand.</p>
+        <p>The best companies aren't built on great products alone; they're built on stories that make people pay attention before they even see a demo.</p>
         <p>We're a creative studio for founders who've built something real and need the world to know it.</p>
-        <p><strong>We make things people like. We make people like things.</strong></p>
         <p>You've made something the world needs. <strong>Make it Explicit.</strong></p>
       </div>
     </div>
@@ -108,7 +105,7 @@ const testimonials = [
 
   <!-- Testimonials -->
   <section class="testimonials-section reveal">
-    <h2 class="testimonials-section__title">What people say.</h2>
+    <h2 class="testimonials-section__title">We make things people like. We make people like things.</h2>
     <div class="testimonials-grid">
       {testimonials.map(t => (
         <div class="testimonial-card" style={`background-color: ${t.cardBg};`}>
@@ -240,11 +237,11 @@ const testimonials = [
   .view-all-card {
     display: block;
     width: 100%;
-    background-color: var(--color-bg-alt);
+    background-color: var(--color-accent);
     border-radius: var(--radius-md);
-    padding: clamp(24px, 3vw, 40px);
+    padding: clamp(16px, 2vw, 28px);
     text-decoration: none;
-    color: var(--color-text);
+    color: #FFFFFF;
     text-align: right;
     margin-top: clamp(24px, 3vw, 40px);
   }

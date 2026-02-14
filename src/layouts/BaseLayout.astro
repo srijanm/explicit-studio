@@ -1,6 +1,5 @@
 ---
 import '../styles/global.css';
-import Footer from '../components/Footer.astro';
 
 interface Props {
   title?: string;
@@ -21,34 +20,31 @@ const { title = 'Explicit Studio', description = 'A storytelling studio for star
     <title>{title}</title>
   </head>
   <body>
-    <!-- Top nav bar — full width -->
-    <nav class="topnav">
-      <a href="/" class="topnav__logo"><img src="/images/logos/logo.png" alt="Explicit Studio" class="topnav__logo-img" /></a>
-      <div class="topnav__links">
-        <a href="/">Home</a>
-        <a href="/work">Work</a>
-        <a href="/info">Info</a>
-        <a href="/contact">Contact</a>
-      </div>
-      <a href="/contact" class="topnav__cta">Get in touch</a>
-      <button class="topnav__hamburger" id="hamburger-btn" aria-label="Menu">
+    <!-- Mobile top bar (hidden on desktop) -->
+    <nav class="mobile-topbar">
+      <a href="/" class="mobile-topbar__logo"><img src="/images/logos/logo.png" alt="Explicit Studio" class="mobile-topbar__logo-img" /></a>
+      <button class="mobile-topbar__hamburger" id="hamburger-btn" aria-label="Menu">
         <span></span>
         <span></span>
         <span></span>
       </button>
     </nav>
 
-    <!-- Two-column layout below nav -->
+    <!-- Two-column layout -->
     <div class="layout">
       <!-- Fixed left sidebar — desktop only -->
       <aside class="sidebar">
         <div class="sidebar__top">
           <nav class="sidebar__nav">
+            <a href="/">Home</a>
             <a href="/work">Work</a>
             <a href="/info">Info</a>
             <a href="/contact">Contact</a>
-            <a href="/contact" class="btn-primary sidebar__cta-btn">Get in touch <span class="arrow">&rarr;</span></a>
           </nav>
+        </div>
+
+        <div class="sidebar__middle">
+          <a href="/contact" class="btn-primary sidebar__cta-btn">Get in touch <span class="arrow">&rarr;</span></a>
         </div>
 
         <div class="sidebar__bottom">
@@ -59,6 +55,7 @@ const { title = 'Explicit Studio', description = 'A storytelling studio for star
           <div class="sidebar__logo-large">
             <img src="/images/logos/logo.png" alt="Explicit Studio" class="sidebar__logo-img" />
           </div>
+          <p class="sidebar__tagline">Make startups fun again.</p>
           <div class="sidebar__socials">
             <a href="#" target="_blank" rel="noopener noreferrer">X</a>
             <a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a>
@@ -71,7 +68,6 @@ const { title = 'Explicit Studio', description = 'A storytelling studio for star
       <!-- Main scrollable content -->
       <main class="main-content">
         <slot />
-        <Footer />
       </main>
     </div>
 
