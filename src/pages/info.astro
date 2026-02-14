@@ -49,12 +49,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
-  <!-- Services -->
+  <!-- How We Work -->
   <section class="info-services reveal">
     <div class="info-services__inner">
+      <h2 class="info-services__title">How We Work</h2>
       <div class="info-services__intro">
-        <p>We don't have account managers, elaborate processes, or bloated teams. You talk to us. We understand your startup, we move fast, and we build things that work. No scope creep, no surprise invoices, no design-by-committee.</p>
-        <p><strong>We take on 3 clients per quarter.</strong> Not because we can't scale — because we won't.</p>
+        <p>Explicit doesn't have account managers, elaborate processes, or bloated teams. You talk to me & my little gold book of collaborators of designers, developers, copywriters, motion artists, and strategists. We understand your startup, we move fast, and we build things that work. No scope creep, no surprise invoices, no design-by-committee.</p>
+        <p><strong>We work with a maximum of 3 clients per quarter.</strong></p>
       </div>
 
       <div class="info-services__offers">
@@ -246,9 +247,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     border-radius: var(--radius-md);
   }
 
-  /* ===== Services ===== */
+  /* ===== How We Work ===== */
   .info-services {
     padding: var(--section-padding-y) var(--section-padding-x);
+  }
+
+  .info-services__title {
+    font-size: var(--text-h1);
+    font-weight: 500;
+    margin-bottom: 32px;
   }
 
   .info-services__inner {
@@ -260,9 +267,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   }
 
   .info-services__intro p {
-    font-size: var(--text-body);
-    font-weight: var(--weight-regular);
-    line-height: 1.7;
+    font-size: var(--text-h3);
+    font-weight: 400;
+    line-height: 1.6;
     margin-bottom: 24px;
   }
 
