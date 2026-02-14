@@ -19,7 +19,7 @@ const isVideo = hasThumb && /\.(mp4|webm)$/i.test(project.thumbnail);
 <BaseLayout title={`${project.title} — Explicit Studio`}>
   <article class="project-page">
     <!-- Hero image -->
-    <div class="project-page__hero-image" style={`background-color: ${project.cardBg || '#F0F0F0'};`}>
+    <div class="project-page__hero-image" style={`background-color: ${project.cardBg || '#1E1E1E'};`}>
       {isVideo ? (
         <video src={project.thumbnail} autoplay muted loop playsinline />
       ) : hasThumb ? (

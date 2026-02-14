@@ -1,9 +1,10 @@
 ---
 const { project } = Astro.props;
-const textColor = project.cardTextColor || '#1A1A1A';
-const tagColor = project.cardTextColor === '#ffffff' ? 'rgba(255,255,255,0.6)' : 'rgba(0,0,0,0.5)';
-const borderColor = project.cardTextColor === '#ffffff' ? 'rgba(255,255,255,0.15)' : 'rgba(0,0,0,0.1)';
-const placeholderColor = project.cardTextColor === '#ffffff' ? 'rgba(255,255,255,0.3)' : 'rgba(0,0,0,0.2)';
+const textColor = project.cardTextColor || '#F5F5F5';
+const isLightText = !project.cardTextColor || project.cardTextColor !== '#1A1A1A';
+const tagColor = isLightText ? 'rgba(255,255,255,0.6)' : 'rgba(0,0,0,0.5)';
+const borderColor = isLightText ? 'rgba(255,255,255,0.15)' : 'rgba(0,0,0,0.1)';
+const placeholderColor = isLightText ? 'rgba(255,255,255,0.3)' : 'rgba(0,0,0,0.2)';
 const hasThumb = project.thumbnail && project.thumbnail.length > 0;
 const isVideo = hasThumb && /\.(mp4|webm)$/i.test(project.thumbnail);
 ---
@@ -11,7 +12,7 @@ const isVideo = hasThumb && /\.(mp4|webm)$/i.test(project.thumbnail);
 <a
   href={`/work/${project.slug}`}
   class="project-card"
-  style={`background-color: ${project.cardBg || '#F0F0F0'}; color: ${textColor};`}
+  style={`background-color: ${project.cardBg || '#1E1E1E'}; color: ${textColor};`}
 >
   <div class="project-card__media" style={`border-color: ${borderColor};`}>
     {isVideo ? (
