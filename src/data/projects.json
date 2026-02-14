@@ -165,7 +165,15 @@
     "thumbnail": "/images/projects/nothing-thumb.jpg",
     "category": "exploration",
     "featured": true,
-    "sections": null
+    "sections": [
+      { "image": "/images/projects/2.jpg" },
+      { "image": "/images/projects/3.jpg" },
+      { "image": "/images/projects/4.jpg" },
+      { "image": "/images/projects/5.jpg" },
+      { "image": "/images/projects/6.jpg" },
+      { "image": "/images/projects/7.jpg" },
+      { "image": "/images/projects/8.jpg" }
+    ]
   },
   {
     "slug": "singeonesong",
