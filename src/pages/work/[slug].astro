@@ -13,8 +13,9 @@ const { project } = Astro.props;
 const currentIndex = projects.indexOf(project);
 const prevProject = currentIndex > 0 ? projects[currentIndex - 1] : null;
 const nextProject = projects[(currentIndex + 1) % projects.length];
-const hasThumb = project.thumbnail && project.thumbnail.length > 0;
-const isVideo = hasThumb && /\.(mp4|webm)$/i.test(project.thumbnail);
+const heroMedia = project.hero || project.thumbnail;
+const hasThumb = heroMedia && heroMedia.length > 0;
+const isVideo = hasThumb && /\.(mp4|webm)$/i.test(heroMedia);
 ---
 
 <BaseLayout title={`${project.title} — Explicit Studio`}>
@@ -22,9 +23,9 @@ const isVideo = hasThumb && /\.(mp4|webm)$/i.test(project.thumbnail);
     <!-- Hero image -->
     <div class="project-page__hero-image" style={`background-color: ${project.cardBg || '#1E1E1E'};`}>
       {isVideo ? (
-        <video src={project.thumbnail} autoplay muted loop playsinline />
+        <video src={heroMedia} autoplay muted loop playsinline />
       ) : hasThumb ? (
-        <img src={project.thumbnail} alt={project.title} />
+        <img src={heroMedia} alt={project.title} />
       ) : (
         <span class="project-page__hero-placeholder">{project.title}</span>
       )}

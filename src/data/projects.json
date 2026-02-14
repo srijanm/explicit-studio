@@ -45,6 +45,7 @@
     "cardBg": "#1E1E1E",
     "cardTextColor": "#F5F5F5",
     "thumbnail": "/images/projects/attis-insider-thumb.mp4",
+    "hero": "/images/projects/attis-insider-hero-video.mp4",
     "category": "work",
     "featured": true,
     "sections": [
