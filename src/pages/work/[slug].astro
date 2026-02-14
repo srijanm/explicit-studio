@@ -11,6 +11,7 @@ export function getStaticPaths() {
 
 const { project } = Astro.props;
 const currentIndex = projects.indexOf(project);
+const prevProject = currentIndex > 0 ? projects[currentIndex - 1] : null;
 const nextProject = projects[(currentIndex + 1) % projects.length];
 const hasThumb = project.thumbnail && project.thumbnail.length > 0;
 const isVideo = hasThumb && /\.(mp4|webm)$/i.test(project.thumbnail);
@@ -90,11 +91,20 @@ const isVideo = hasThumb && /\.(mp4|webm)$/i.test(project.thumbnail);
       </div>
     )}
 
-    <!-- Next project -->
-    <div class="project-page__next">
-      <a href={`/work/${nextProject.slug}`}>
-        Next project &mdash; {nextProject.title} <span class="arrow">&rarr;</span>
-      </a>
+    <!-- Prev / Next project -->
+    <div class="project-page__nav">
+      <div class="project-page__nav-prev">
+        {prevProject && (
+          <a href={`/work/${prevProject.slug}`}>
+            <span class="arrow">&larr;</span> {prevProject.title}
+          </a>
+        )}
+      </div>
+      <div class="project-page__nav-next">
+        <a href={`/work/${nextProject.slug}`}>
+          {nextProject.title} <span class="arrow">&rarr;</span>
+        </a>
+      </div>
     </div>
   </article>
 </BaseLayout>

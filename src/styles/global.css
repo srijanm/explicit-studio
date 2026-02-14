@@ -558,8 +558,13 @@ input, textarea {
    SITE CTA
    ============================================ */
 .site-cta {
+  padding: 0 var(--section-padding-x) clamp(40px, 5vw, 60px);
+}
+
+.site-cta__divider {
+  border: none;
   border-top: 1px solid var(--color-border);
-  padding: clamp(40px, 5vw, 60px) var(--section-padding-x);
+  margin: 0 0 clamp(40px, 5vw, 60px) 0;
 }
 
 .site-cta__headline {
@@ -653,9 +658,9 @@ input, textarea {
 }
 
 .project-page__body {
-  font-size: var(--text-body);
-  font-weight: var(--weight-regular);
-  line-height: 1.7;
+  font-size: var(--text-h3);
+  font-weight: 400;
+  line-height: 1.6;
   max-width: 800px;
   margin-bottom: 20px;
   color: var(--color-text);
@@ -684,7 +689,7 @@ input, textarea {
   overflow: hidden;
 }
 
-.project-page__next {
+.project-page__nav {
   border-top: 1px solid var(--color-border);
   padding-top: 32px;
   margin-top: 60px;
@@ -693,7 +698,16 @@ input, textarea {
   align-items: center;
 }
 
-.project-page__next a {
+.project-page__nav-prev,
+.project-page__nav-next {
+  display: flex;
+}
+
+.project-page__nav-next {
+  margin-left: auto;
+}
+
+.project-page__nav a {
   font-size: var(--text-h3);
   font-weight: 500;
   text-decoration: none;
@@ -704,11 +718,11 @@ input, textarea {
   transition: color 0.3s ease;
 }
 
-.project-page__next a:hover {
+.project-page__nav a:hover {
   color: var(--color-accent);
 }
 
-.project-page__next .arrow {
+.project-page__nav .arrow {
   color: var(--color-accent);
 }
 
@@ -740,7 +754,7 @@ input, textarea {
     margin: 32px 0;
   }
 
-  .project-page__next {
+  .project-page__nav {
     margin-top: 40px;
   }
 }
