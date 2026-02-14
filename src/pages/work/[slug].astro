@@ -69,12 +69,23 @@ const isVideo = hasThumb && /\.(mp4|webm)$/i.test(project.thumbnail);
             {section.text.split('\n\n').map(p => <p>{p}</p>)}
           </div>
         )}
-        {section.image && (
+        {section.image && typeof section.image === 'string' && (
+          <div class="project-page__full-image">
+            <img src={section.image} alt={project.title} />
+          </div>
+        )}
+        {section.image && section.image === true && (
           <div class="project-page__full-image placeholder">
             {project.title} — Image {i + 1}
           </div>
         )}
-        {section.imageGrid && (
+        {section.imageGrid && Array.isArray(section.imageGrid) && (
+          <div class="project-page__image-grid">
+            <img src={section.imageGrid[0]} alt={`${project.title} — A`} />
+            <img src={section.imageGrid[1]} alt={`${project.title} — B`} />
+          </div>
+        )}
+        {section.imageGrid && section.imageGrid === true && (
           <div class="project-page__image-grid">
             <div class="placeholder">{project.title} — Grid Image A</div>
             <div class="placeholder">{project.title} — Grid Image B</div>

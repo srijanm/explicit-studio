@@ -666,9 +666,18 @@ input, textarea {
   width: 100%;
   border-radius: var(--radius-md);
   background: var(--color-bg-alt);
-  aspect-ratio: 16 / 10;
   margin: 48px 0;
   overflow: hidden;
+}
+
+.project-page__full-image img {
+  width: 100%;
+  display: block;
+  border-radius: var(--radius-md);
+}
+
+.project-page__full-image.placeholder {
+  aspect-ratio: 16 / 10;
 }
 
 .project-page__image-grid {
@@ -683,6 +692,12 @@ input, textarea {
   border-radius: var(--radius-md);
   background: var(--color-bg-alt);
   overflow: hidden;
+}
+
+.project-page__image-grid > img {
+  width: 100%;
+  border-radius: var(--radius-md);
+  display: block;
 }
 
 .project-page__nav {

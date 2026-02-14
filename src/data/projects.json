@@ -19,13 +19,13 @@
         "label": "THE LANDSCAPE",
         "text": "Mental health came with stigma, and the last thing people wanted was another earnest, overly-precious meditation app. Meanwhile the category was drowning in the same visual clichés — pastels, nature, soft whispers, and gentle hands resting on knees."
       },
-      { "image": true },
+      { "image": "/images/projects/pause-image-1.jpg" },
       {
         "label": "THE INSIGHT",
         "text": "Dark humour is how a lot of people actually deal with hard feelings. Instead of the expected \"it's okay to not be okay\" approach, we built Pause's brand voice around self-deprecating humour, honest emotional admission, and a tone that felt like talking to your sharpest friend — the one who makes you laugh about the thing you've been avoiding."
       },
-      { "image": true },
-      { "imageGrid": true },
+      { "image": "/images/projects/pause-image-2.jpg" },
+      { "imageGrid": ["/images/projects/pause-image-3.png", "/images/projects/pause-image-4.jpg"] },
       {
         "label": "THE OUTCOME",
         "text": "When an entire category competes on sincerity, the funniest voice in the room wins. Pause launched with a 70+ NPS and a brand that didn't feel like a brand — it felt like a group chat. Users didn't just use the app, they shared it — because the content was worth sharing independent of the product."
