@@ -37,26 +37,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <!-- About Srijan -->
   <section class="info-about reveal">
     <div class="info-about__grid">
-      <div class="info-about__portrait">
-        <img src="/images/srijan-portrait.JPG" alt="Srijan Mahajan" style="width: 100%; border-radius: var(--radius-md);" />
+      <div class="info-about__body">
+        <p>I'm Srijan. I've spent my entire life thinking about what makes people pay attention & build trust.</p>
+        <p>It began when I started playing music when I was 15. Somewhere along the way, I became the drummer for Parikrama, Shubha Mudgal & a bunch of other bands. I played more than a 1000 concerts around the world & toured with Iron Maiden apart from playing at The Kennedy Centre. I also worked on films and advertising, spending years learning how stories work, what makes them stick, and what makes them forgettable.</p>
+        <p>A few years ago, I started building startups & built Pause & Attis.</p>
+        <p>You can learn more about me on my <a href="https://srijanmahajan.com" target="_blank" rel="noopener noreferrer">website</a>.</p>
       </div>
-      <div class="info-about__blocks">
-        <div class="info-about__block">
-          <p class="info-about__label">Startups</p>
-          <p class="info-about__text">Built Pause, a mental health app that used dark humour to fight stigma — launched with a 70+ NPS. Built Attis, India's first biohacking brand — 1000+ community signups on &#8377;0 ad spend.</p>
-        </div>
-        <div class="info-about__block">
-          <p class="info-about__label">Music</p>
-          <p class="info-about__text">Drummer for Parikrama and Shubha Mudgal. 1000+ concerts across the world. Toured with Iron Maiden. Performed at the Kennedy Center, Washington D.C. Music taught me timing, collaboration, and how to read a room — skills that translate directly to brand building.</p>
-        </div>
-        <div class="info-about__block">
-          <p class="info-about__label">Explicit</p>
-          <p class="info-about__text">Ex-founder. No account managers — you work directly with me. I move fast, think strategically, and specialise in zero-to-one: building brands from scratch for founders who need to make noise quickly.</p>
-        </div>
-        <div class="info-about__block">
-          <p class="info-about__label">The team</p>
-          <p class="info-about__text">Explicit isn't an agency. It's a handpicked network — my little gold book of collaborators. Designers, developers, copywriters, motion artists, and strategists I've worked with for years. We assemble the right team for your project, every time.</p>
-        </div>
+      <div class="info-about__portrait">
+        <img src="/images/srijan-portrait.JPG" alt="Srijan Mahajan" />
       </div>
     </div>
   </section>
@@ -217,7 +205,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   /* ===== About Srijan ===== */
   .info-about {
     padding: var(--section-padding-y) var(--section-padding-x);
-    background: var(--color-bg-alt);
   }
 
   .info-about__grid {
@@ -227,35 +214,36 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     align-items: start;
   }
 
+  .info-about__body p {
+    font-size: var(--text-h3);
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: 24px;
+    color: var(--color-text);
+  }
+
+  .info-about__body p:last-child {
+    margin-bottom: 0;
+  }
+
+  .info-about__body a {
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .info-about__body a:hover {
+    color: var(--color-accent-hover);
+  }
+
   .info-about__portrait {
     position: sticky;
-    top: 100px;
+    top: 40px;
   }
 
-  .info-about__portrait .placeholder {
+  .info-about__portrait img {
+    width: 100%;
     border-radius: var(--radius-md);
-  }
-
-  .info-about__blocks {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-  }
-
-  .info-about__label {
-    font-size: var(--text-tiny);
-    font-weight: 300;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--color-text-tertiary);
-    margin-bottom: 12px;
-  }
-
-  .info-about__text {
-    font-size: var(--text-body);
-    font-weight: var(--weight-regular);
-    line-height: 1.7;
-    color: var(--color-text);
   }
 
   /* ===== Services ===== */
@@ -426,17 +414,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
     .info-about__portrait {
       position: static;
-    }
-
-    .info-about__blocks {
-      gap: 32px;
+      order: -1;
     }
 
     .info-services__offer {
       padding: 24px;
     }
 
-    .info-beliefs__item h2 {
+    .info-beliefs__item h3 {
       font-size: var(--text-h3);
     }
   }
