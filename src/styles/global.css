@@ -126,8 +126,8 @@ input, textarea {
 /* --- CSS Custom Properties --- */
 :root {
   /* Colors */
-  --color-bg: #141414;
-  --color-bg-alt: #1E1E1E;
+  --color-bg: #1a1d23;
+  --color-bg-alt: #24272e;
   --color-text: #F5F5F5;
   --color-text-secondary: rgba(255, 255, 255, 0.6);
   --color-text-tertiary: rgba(255, 255, 255, 0.4);
