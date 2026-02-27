@@ -12,7 +12,7 @@ const isVideo = hasThumb && /\.(mp4|webm|mov)$/i.test(project.thumbnail);
 <a
   href={`/work/${project.slug}`}
   class="project-card"
-  style={`background-color: ${project.cardBg || '#1c2133'}; color: ${textColor};`}
+  style={`background: var(--color-surface); color: ${textColor};`}
 >
   <div class="project-card__media" style={`border-color: ${borderColor};`}>
     {isVideo ? (
@@ -38,6 +38,7 @@ const isVideo = hasThumb && /\.(mp4|webm|mov)$/i.test(project.thumbnail);
     border-radius: var(--radius-md);
     padding: clamp(20px, 3vw, 40px);
     overflow: hidden;
+    border: 1px solid var(--color-border);
   }
 
   .project-card__media {

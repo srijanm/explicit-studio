@@ -12,7 +12,7 @@ const testimonials = [
     name: "Placeholder Name",
     role: "CEO, Startup Co",
     avatar: "",
-    cardBg: "#24272e",
+    cardBg: "transparent",
     textColor: "#F5F5F5"
   },
   {
@@ -20,7 +20,7 @@ const testimonials = [
     name: "Placeholder Name",
     role: "Founder, Product Co",
     avatar: "",
-    cardBg: "#24272e",
+    cardBg: "transparent",
     textColor: "#F5F5F5"
   },
   {
@@ -28,7 +28,7 @@ const testimonials = [
     name: "Placeholder Name",
     role: "Co-founder, AI Startup",
     avatar: "",
-    cardBg: "#24272e",
+    cardBg: "transparent",
     textColor: "#F5F5F5"
   },
   {
@@ -36,7 +36,7 @@ const testimonials = [
     name: "Placeholder Name",
     role: "Founder, Wellness Brand",
     avatar: "",
-    cardBg: "#24272e",
+    cardBg: "transparent",
     textColor: "#F5F5F5"
   }
 ];
@@ -111,7 +111,7 @@ const testimonials = [
     <h2 class="testimonials-section__title">We make things people like. We make people like things.</h2>
     <div class="testimonials-grid">
       {testimonials.map(t => (
-        <div class="testimonial-card" style={`background-color: ${t.cardBg};`}>
+        <div class="testimonial-card">
           <p class="testimonial-card__quote" style={`color: ${t.textColor};`}>"{t.quote}"</p>
           <div class="testimonial-card__author">
             <div class="testimonial-card__avatar">
@@ -135,15 +135,15 @@ const testimonials = [
   <section class="belong-section reveal">
     <h2 class="belong-section__title">You belong with us if you're:</h2>
     <div class="belong-grid">
-      <div class="belong-card" style="background-color: #1a2540;">
+      <div class="belong-card">
         <h3 class="belong-card__title">Launching a Startup</h3>
         <p class="belong-card__body">You've raised (or are raising) your first round and you need a brand that can attract top talent, build trust with customers, and make investors remember your name. You've got the product — now you need the story.</p>
       </div>
-      <div class="belong-card" style="background-color: #1a2540;">
+      <div class="belong-card">
         <h3 class="belong-card__title">Launching a Product</h3>
         <p class="belong-card__body">You've scaled past the initial phase and need to refine your narrative for expansion. Whether you're entering new markets or shipping new products, you need strategic storytelling to make it land.</p>
       </div>
-      <div class="belong-card" style="background-color: #1a2540;">
+      <div class="belong-card">
         <h3 class="belong-card__title">Launching a Fund</h3>
         <p class="belong-card__body">You're building a fund with a unique thesis and need to stand out. From brand positioning to comms strategy, we help you attract the right founders and LPs.</p>
       </div>
@@ -313,6 +313,8 @@ const testimonials = [
     flex-direction: column;
     justify-content: space-between;
     min-height: 280px;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
   }
 
   .testimonial-card__quote {
@@ -388,6 +390,8 @@ const testimonials = [
   .belong-card {
     border-radius: var(--radius-md);
     padding: clamp(24px, 3vw, 40px);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
   }
 
   .belong-card__title {
