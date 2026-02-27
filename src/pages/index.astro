@@ -60,19 +60,12 @@ const testimonials = [
     <p class="logos-section__text">
       Working with ambitious founders & adventure capitalists across AI, Web3 & D2C.
     </p>
-    <div class="logos-scroller">
-      <div class="logos-track">
-        <img src="/images/logos/pause.png" alt="Pause" class="client-logo" />
-        <img src="/images/logos/attis.png" alt="Attis" class="client-logo" />
-        <img src="/images/logos/QAonC.svg" alt="QAonC" class="client-logo" />
-        <img src="/images/logos/qb.png" alt="QB" class="client-logo" />
-        <img src="/images/logos/originone.png" alt="Origin One" class="client-logo" />
-        <img src="/images/logos/pause.png" alt="" class="client-logo" aria-hidden="true" />
-        <img src="/images/logos/attis.png" alt="" class="client-logo" aria-hidden="true" />
-        <img src="/images/logos/QAonC.svg" alt="" class="client-logo" aria-hidden="true" />
-        <img src="/images/logos/qb.png" alt="" class="client-logo" aria-hidden="true" />
-        <img src="/images/logos/originone.png" alt="" class="client-logo" aria-hidden="true" />
-      </div>
+    <div class="logos-grid">
+      <img src="/images/logos/pause.png" alt="Pause" class="client-logo" />
+      <img src="/images/logos/attis.png" alt="Attis" class="client-logo" />
+      <img src="/images/logos/QAonC.svg" alt="QAonC" class="client-logo" />
+      <img src="/images/logos/qb.png" alt="QB" class="client-logo" />
+      <img src="/images/logos/originone.png" alt="Origin One" class="client-logo" />
     </div>
   </section>
 
@@ -206,29 +199,18 @@ const testimonials = [
     margin-bottom: 24px;
   }
 
-  .logos-scroller {
-    overflow: hidden;
-    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-  }
-
-  .logos-track {
+  .logos-grid {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     align-items: center;
-    gap: clamp(40px, 6vw, 80px);
-    width: max-content;
-    animation: scroll-logos 20s linear infinite;
-  }
-
-  @keyframes scroll-logos {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+    gap: 24px 0;
+    width: 100%;
   }
 
   .client-logo {
     height: 36px;
     width: auto;
-    flex-shrink: 0;
   }
 
   /* ===== Selected Work ===== */
@@ -443,8 +425,9 @@ const testimonials = [
       padding: 32px var(--section-padding-x) 32px;
     }
 
-    .logos-track {
-      gap: 32px;
+    .logos-grid {
+      justify-content: center;
+      gap: 20px 32px;
     }
 
     .testimonials-grid {
