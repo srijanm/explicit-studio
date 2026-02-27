@@ -134,6 +134,7 @@ const isVideo = hasThumb && /\.(mp4|webm|mov)$/i.test(heroMedia);
   );
 
   document.querySelectorAll('.reveal, .project-page').forEach((el) => {
+    el.classList.add('reveal-ready');
     observer.observe(el);
   });
 </script>
