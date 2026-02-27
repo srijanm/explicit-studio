@@ -446,7 +446,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   );
 
   document.querySelectorAll('.reveal').forEach((el) => {
-    el.classList.add('reveal-ready');
     observer.observe(el);
   });
 </script>
