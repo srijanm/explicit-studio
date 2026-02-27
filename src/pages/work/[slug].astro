@@ -21,7 +21,7 @@ const isVideo = hasThumb && /\.(mp4|webm|mov)$/i.test(heroMedia);
 <BaseLayout title={`${project.title} — Explicit Studio`} description={project.subtitle} ogImage={project.thumbnail && !/\.(mp4|webm|mov)$/i.test(project.thumbnail) ? project.thumbnail : '/images/open-graph.png'}>
   <article class="project-page">
     <!-- Hero image -->
-    <div class="project-page__hero-image" style={`background: var(--color-surface); border: 1px solid var(--color-border);`}>
+    <div class="project-page__hero-image" style="background-color: #141414; border: 1px solid rgba(255, 255, 255, 0.12);">
       {isVideo ? (
         <video src={heroMedia} autoplay muted loop playsinline controls />
       ) : hasThumb ? (
