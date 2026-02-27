@@ -128,11 +128,11 @@ input, textarea {
   /* Colors */
   --color-bg: #0c0c0c;
   --color-bg-alt: #141414;
-  --color-surface: rgba(255, 255, 255, 0.06);
+  --color-surface: rgba(255, 255, 255, 0.04);
   --color-text: #F5F5F5;
   --color-text-secondary: rgba(255, 255, 255, 0.6);
   --color-text-tertiary: rgba(255, 255, 255, 0.4);
-  --color-border: rgba(255, 255, 255, 0.12);
+  --color-border: rgba(255, 255, 255, 0.08);
   --color-accent: #233dff;
   --color-accent-hover: #1a2fcc;
 
