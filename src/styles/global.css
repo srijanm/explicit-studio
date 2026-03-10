@@ -779,6 +779,30 @@ input, textarea {
   color: #FFFFFF;
 }
 
+/* --- Logo Scroller --- */
+.logos-scroller {
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.logos-scroller .logos-track {
+  display: flex;
+  align-items: center;
+  gap: clamp(40px, 6vw, 80px);
+  width: max-content;
+  animation: scroll-logos 20s linear infinite;
+}
+
+.logos-scroller .client-logo {
+  flex-shrink: 0;
+}
+
+@keyframes scroll-logos {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
 ::-webkit-scrollbar {
   width: 8px;
 }

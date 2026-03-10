@@ -42,14 +42,14 @@ const testimonials = [
 ];
 ---
 
-<BaseLayout title="Explicit Studio — A Storytelling Studio for Startups">
+<BaseLayout title="Explicit Studio — Creative Partners for Startups">
 
   <!-- Hero -->
   <section class="hero">
-    <p class="hero__descriptor">Explicit is a full cycle creative studio creating monopolising brands for technology startups.</p>
     <h1 class="hero__headline">
-      Storytelling for founders who believe creativity is a business advantage.
+      We build brands as ambitious as the founders behind them.
     </h1>
+    <p class="hero__descriptor">Creative partners for startups. Led by Srijan Mahajan.</p>
     <div class="hero__media">
       <video src="/images/projects/home-showreel-thumb.mp4" autoplay muted loop playsinline></video>
     </div>
@@ -60,55 +60,24 @@ const testimonials = [
     <p class="logos-section__text">
       Working with ambitious founders & adventure capitalists across AI, Web3 & D2C.
     </p>
-    <div class="logos-grid">
-      <img src="/images/logos/pause.png" alt="Pause" class="client-logo" />
-      <img src="/images/logos/attis.png" alt="Attis" class="client-logo" />
-      <img src="/images/logos/QAonC.svg" alt="QAonC" class="client-logo" />
-      <img src="/images/logos/qb.png" alt="QB" class="client-logo" />
-      <img src="/images/logos/originone.png" alt="Origin One" class="client-logo" />
-    </div>
-  </section>
-
-  <!-- Selected Work -->
-  <section class="work-section reveal">
-    <h2 class="work-section__title">Work</h2>
-    <div class="home-work-grid">
-      {workProjects.map((project) => (
-        <ProjectCard project={project} />
-      ))}
-    </div>
-    {explorations.length > 0 && (
-      <h3 class="work-section__subtitle">Explorations</h3>
-      <div class="home-work-grid">
-        {explorations.map((project) => (
-          <ProjectCard project={project} />
-        ))}
-      </div>
-    )}
-    <a href="/work" class="view-all-card">
-      <span class="view-all-card__text">View all work &rarr;</span>
-    </a>
-  </section>
-
-  <!-- The Problem -->
-  <section class="problem-section reveal">
-    <div class="problem-section__inner">
-      <p class="problem-section__opening">
-        If we believe in what you have to say, we'll find the best damn way to say it.
-      </p>
-      <div class="problem-section__body">
-        <p>130,000 startups launch every day. Most die of obscurity.</p>
-        <p>Code isn't the differentiator it used to be. And "we're an AI company" isn't a brand.</p>
-        <p>The best companies aren't built on great products alone; they're built on stories that make people pay attention before they even see a demo.</p>
-        <p>We're a creative studio for founders who've built something real and need the world to know it.</p>
-        <p>You've made something the world needs. <strong>Make it Explicit.</strong></p>
+    <div class="logos-scroller">
+      <div class="logos-track">
+        <img src="/images/logos/pause.png" alt="Pause" class="client-logo" />
+        <img src="/images/logos/attis.png" alt="Attis" class="client-logo" />
+        <img src="/images/logos/QAonC.svg" alt="QAonC" class="client-logo" />
+        <img src="/images/logos/qb.png" alt="QB" class="client-logo" />
+        <img src="/images/logos/originone.png" alt="Origin One" class="client-logo" />
+        <img src="/images/logos/pause.png" alt="" class="client-logo" aria-hidden="true" />
+        <img src="/images/logos/attis.png" alt="" class="client-logo" aria-hidden="true" />
+        <img src="/images/logos/QAonC.svg" alt="" class="client-logo" aria-hidden="true" />
+        <img src="/images/logos/qb.png" alt="" class="client-logo" aria-hidden="true" />
+        <img src="/images/logos/originone.png" alt="" class="client-logo" aria-hidden="true" />
       </div>
     </div>
   </section>
 
   <!-- Testimonials -->
   <section class="testimonials-section reveal">
-    <h2 class="testimonials-section__title">We make things people like. We make people like things.</h2>
     <div class="testimonials-grid">
       {testimonials.map(t => (
         <div class="testimonial-card">
@@ -131,23 +100,46 @@ const testimonials = [
     </div>
   </section>
 
-  <!-- You Belong With Us -->
-  <section class="belong-section reveal">
-    <h2 class="belong-section__title">You belong with us if you're:</h2>
-    <div class="belong-grid">
-      <div class="belong-card">
-        <h3 class="belong-card__title">Launching a Startup</h3>
-        <p class="belong-card__body">You've raised (or are raising) your first round and you need a brand that can attract top talent, build trust with customers, and make investors remember your name. You've got the product — now you need the story.</p>
-      </div>
-      <div class="belong-card">
-        <h3 class="belong-card__title">Launching a Product</h3>
-        <p class="belong-card__body">You've scaled past the initial phase and need to refine your narrative for expansion. Whether you're entering new markets or shipping new products, you need strategic storytelling to make it land.</p>
-      </div>
-      <div class="belong-card">
-        <h3 class="belong-card__title">Launching a Fund</h3>
-        <p class="belong-card__body">You're building a fund with a unique thesis and need to stand out. From brand positioning to comms strategy, we help you attract the right founders and LPs.</p>
+  <!-- The Pitch -->
+  <section class="problem-section reveal">
+    <div class="problem-section__inner">
+      <p class="problem-section__opening">
+        130,000 startups launch every day. Most die of obscurity.
+      </p>
+      <div class="problem-section__body">
+        <p>Your product works, but product alone doesn't set you apart anymore. The cost of building is down to zero & attention is the most expensive resource in the world. Maybe that's why the startups winning now (think Anthropic, Stripe, Ramp, Anduril) are all investing in brand as seriously as they invest in engineering. Everyone else competes on price until they disappear. We're here to make sure that's not you.</p>
+        <p>Explicit is led by Srijan Mahajan, a founder, creative director & musician. He has played 1000+ concerts as a drummer for Parikrama. Then he built Pause; a mental health platform that broke its category and Attis; India's first & largest biohacking & longevity community. An ex-founder, he's sat where you're sitting — which is why Explicit is built to be as founder-friendly as possible. No agency layer. No six-month timeline. No scope creep. You work directly with Srijan to build your positioning, identity, website & content strategy — everything your startup needs to launch, in 6 weeks.</p>
       </div>
     </div>
+  </section>
+
+  <!-- CTA after pitch -->
+  <section class="pitch-cta reveal">
+    <a href="/contact" class="btn-primary pitch-cta__button">
+      Get in touch <span class="arrow">&rarr;</span>
+    </a>
+  </section>
+
+  <!-- Selected Work -->
+  <section class="work-section reveal">
+    <h2 class="work-section__title">Work</h2>
+    <p class="work-section__tagline">We make things people like. We make people like things.</p>
+    <div class="home-work-grid">
+      {workProjects.map((project) => (
+        <ProjectCard project={project} />
+      ))}
+    </div>
+    {explorations.length > 0 && (
+      <h3 class="work-section__subtitle">Explorations</h3>
+      <div class="home-work-grid">
+        {explorations.map((project) => (
+          <ProjectCard project={project} />
+        ))}
+      </div>
+    )}
+    <a href="/work" class="view-all-card">
+      <span class="view-all-card__text">View all work &rarr;</span>
+    </a>
   </section>
 
 </BaseLayout>
@@ -221,7 +213,7 @@ const testimonials = [
   .work-section__title {
     font-size: var(--text-h1);
     font-weight: 500;
-    margin-bottom: 48px;
+    margin-bottom: 16px;
   }
 
   .home-work-grid {
@@ -294,12 +286,6 @@ const testimonials = [
     background: var(--color-bg);
   }
 
-  .testimonials-section__title {
-    font-size: var(--text-h2);
-    font-weight: 500;
-    margin-bottom: 32px;
-  }
-
   .testimonials-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -369,42 +355,23 @@ const testimonials = [
     font-weight: 400;
   }
 
-  /* ===== You Belong With Us ===== */
-  .belong-section {
-    padding: clamp(40px, 5vw, 60px) var(--section-padding-x);
+  /* ===== Pitch CTA ===== */
+  .pitch-cta {
+    padding: 0 var(--section-padding-x) clamp(40px, 5vw, 60px);
     background: var(--color-bg);
   }
 
-  .belong-section__title {
-    font-size: var(--text-h2);
-    font-weight: 500;
-    margin-bottom: 32px;
+  .pitch-cta__button {
+    display: inline-flex;
   }
 
-  .belong-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: clamp(16px, 2vw, 24px);
-  }
-
-  .belong-card {
-    border-radius: var(--radius-md);
-    padding: clamp(24px, 3vw, 40px);
-    background: var(--color-surface);
-    border: 1px solid var(--color-border);
-  }
-
-  .belong-card__title {
+  /* ===== Work Tagline ===== */
+  .work-section__tagline {
     font-size: var(--text-h3);
-    font-weight: 700;
-    margin-bottom: 16px;
-  }
-
-  .belong-card__body {
-    font-size: var(--text-body);
     font-weight: 500;
-    line-height: 1.7;
     color: var(--color-text-secondary);
+    margin-bottom: 48px;
+    margin-top: -24px;
   }
 
   /* ===== Responsive ===== */
@@ -431,10 +398,6 @@ const testimonials = [
     }
 
     .testimonials-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .belong-grid {
       grid-template-columns: 1fr;
     }
 
