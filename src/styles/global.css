@@ -568,6 +568,13 @@ input, textarea {
   margin: 0 0 clamp(40px, 5vw, 60px) 0;
 }
 
+.site-cta__subline {
+  font-size: var(--text-h3);
+  font-weight: 400;
+  color: var(--color-text-secondary);
+  margin-bottom: 8px;
+}
+
 .site-cta__headline {
   font-size: var(--text-h1);
   font-weight: 500;
