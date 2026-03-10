@@ -6,10 +6,11 @@ interface Props {
   description?: string;
   ogImage?: string;
   hideCta?: boolean;
+  showExplicitToggle?: boolean;
 }
 
 const siteUrl = 'https://explicit.studio';
-const { title = 'Explicit Studio', description = 'A full cycle creative studio creating monopolising brands for technology startups.', ogImage = '/images/open-graph.png', hideCta = false } = Astro.props;
+const { title = 'Explicit Studio', description = 'A full cycle creative studio creating monopolising brands for technology startups.', ogImage = '/images/open-graph.png', hideCta = false, showExplicitToggle = false } = Astro.props;
 const canonicalUrl = new URL(Astro.url.pathname, siteUrl).href;
 const ogImageUrl = new URL(ogImage, siteUrl).href;
 ---
@@ -70,10 +71,19 @@ const ogImageUrl = new URL(ogImage, siteUrl).href;
         </div>
 
         <div class="sidebar__bottom">
-          <p class="sidebar__descriptor">
+          <p class="sidebar__descriptor" data-explicit-swap="sidebar-descriptor">
             Creative partners for startups.<br />
             Led by Srijan Mahajan.
           </p>
+          {showExplicitToggle && (
+            <div class="explicit-toggle">
+              <span class="explicit-toggle__label">EXPLICIT</span>
+              <label class="explicit-toggle__switch">
+                <input type="checkbox" id="explicit-toggle-desktop" />
+                <span class="explicit-toggle__slider"></span>
+              </label>
+            </div>
+          )}
           <div class="sidebar__logo-large">
             <img src="/images/logos/logo.png" alt="Explicit Studio" class="sidebar__logo-img" />
           </div>
@@ -118,7 +128,16 @@ const ogImageUrl = new URL(ogImage, siteUrl).href;
         <a href="/contact">Contact</a>
       </nav>
       <div class="mobile-sidebar__bottom">
-        <p>Creative partners for startups.<br />Led by Srijan Mahajan.</p>
+        <p data-explicit-swap="mobile-descriptor">Creative partners for startups.<br />Led by Srijan Mahajan.</p>
+        {showExplicitToggle && (
+          <div class="explicit-toggle" style="margin-bottom: 16px;">
+            <span class="explicit-toggle__label">EXPLICIT</span>
+            <label class="explicit-toggle__switch">
+              <input type="checkbox" id="explicit-toggle-mobile" />
+              <span class="explicit-toggle__slider"></span>
+            </label>
+          </div>
+        )}
         <div class="mobile-sidebar__socials">
           <a href="#" target="_blank" rel="noopener noreferrer">X</a>
           <a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a>

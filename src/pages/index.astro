@@ -42,14 +42,14 @@ const testimonials = [
 ];
 ---
 
-<BaseLayout title="Explicit Studio — Creative Partners for Startups">
+<BaseLayout title="Explicit Studio — Creative Partners for Startups" showExplicitToggle={true}>
 
   <!-- Hero -->
   <section class="hero">
-    <h1 class="hero__headline">
+    <h1 class="hero__headline" data-explicit-swap="hero-headline">
       We build brands as ambitious as the founders behind them.
     </h1>
-    <p class="hero__descriptor">Creative partners for startups. Led by Srijan Mahajan.</p>
+    <p class="hero__descriptor" data-explicit-swap="hero-descriptor">Creative partners for startups. Led by Srijan Mahajan.</p>
     <div class="hero__media">
       <video src="/images/projects/home-showreel-thumb.mp4" autoplay muted loop playsinline></video>
     </div>
@@ -96,12 +96,12 @@ const testimonials = [
   <!-- The Pitch -->
   <section class="problem-section reveal">
     <div class="problem-section__inner">
-      <p class="problem-section__opening">
+      <p class="problem-section__opening" data-explicit-swap="pitch-headline">
         130,000 startups launch every day. Most die of obscurity.
       </p>
       <div class="problem-section__body">
-        <p>Your product works, but product alone doesn't set you apart anymore. The cost of building is down to zero & attention is the most expensive resource in the world. Maybe that's why the startups winning now (think Anthropic, Stripe, Ramp, Anduril) are all investing in brand as seriously as they invest in engineering. Everyone else competes on price until they disappear. We're here to make sure that's not you.</p>
-        <p>Explicit is led by Srijan Mahajan, a founder, creative director & musician. He has played 1000+ concerts as a drummer for Parikrama. Then he built Pause; a mental health platform that broke its category and Attis; India's first & largest biohacking & longevity community. <br /><br />An ex-founder, he's sat where you're sitting — which is why Explicit is built to be as founder-friendly as possible. No agency layer. No six-month timeline. No scope creep. You work directly with Srijan to build your positioning, identity, website & content strategy — everything your startup needs to launch, in 6 weeks.</p>
+        <p data-explicit-swap="pitch-p1">Your product works, but product alone doesn't set you apart anymore. The cost of building is down to zero & attention is the most expensive resource in the world. Maybe that's why the startups winning now (think Anthropic, Stripe, Ramp, Anduril) are all investing in brand as seriously as they invest in engineering. Everyone else competes on price until they disappear. We're here to make sure that's not you.</p>
+        <p data-explicit-swap="pitch-p2">Explicit is led by Srijan Mahajan, a founder, creative director & musician. He has played 1000+ concerts as a drummer for Parikrama. Then he built Pause; a mental health platform that broke its category and Attis; India's first & largest biohacking & longevity community. <br /><br />An ex-founder, he's sat where you're sitting — which is why Explicit is built to be as founder-friendly as possible. No agency layer. No six-month timeline. No scope creep. You work directly with Srijan to build your positioning, identity, website & content strategy — everything your startup needs to launch, in 6 weeks.</p>
       </div>
     </div>
   </section>
@@ -391,6 +391,7 @@ const testimonials = [
 </style>
 
 <script>
+  // Scroll reveal
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -404,5 +405,67 @@ const testimonials = [
 
   document.querySelectorAll('.reveal').forEach((el) => {
     observer.observe(el);
+  });
+
+  // Explicit mode toggle
+  const explicitContent: Record<string, { normal: string; explicit: string; html?: boolean }> = {
+    'hero-headline': {
+      normal: 'We build brands as ambitious as the founders behind them.',
+      explicit: 'Explicit helps you make more money and get more attention.',
+    },
+    'hero-descriptor': {
+      normal: 'Creative partners for startups. Led by Srijan Mahajan.',
+      explicit: 'Brand, advertising & GTM for startups that refuse to compete on price.',
+    },
+    'sidebar-descriptor': {
+      normal: 'Creative partners for startups.<br>Led by Srijan Mahajan.',
+      explicit: 'Brand, advertising & GTM for startups that refuse to compete on price.',
+      html: true,
+    },
+    'mobile-descriptor': {
+      normal: 'Creative partners for startups.<br>Led by Srijan Mahajan.',
+      explicit: 'Brand, advertising & GTM for startups that refuse to compete on price.',
+      html: true,
+    },
+    'pitch-headline': {
+      normal: '130,000 startups launch every day. Most die of obscurity.',
+      explicit: "Here's what I actually do.",
+    },
+    'pitch-p1': {
+      normal: "Your product works, but product alone doesn't set you apart anymore. The cost of building is down to zero & attention is the most expensive resource in the world. Maybe that's why the startups winning now (think Anthropic, Stripe, Ramp, Anduril) are all investing in brand as seriously as they invest in engineering. Everyone else competes on price until they disappear. We're here to make sure that's not you.",
+      explicit: "Creativity has been my business for 15 years. I've made money from it as a musician, in advertising, in film, and by building two startups of my own. I'm not a strategist who's never shipped anything, but a founder who spent his own money, and learned what actually works. I help startups with brand, positioning, advertising & content to get your story out in the most honest, explicit way possible.",
+    },
+    'pitch-p2': {
+      normal: "Explicit is led by Srijan Mahajan, a founder, creative director & musician. He has played 1000+ concerts as a drummer for Parikrama. Then he built Pause; a mental health platform that broke its category and Attis; India's first & largest biohacking & longevity community.<br><br>An ex-founder, he's sat where you're sitting — which is why Explicit is built to be as founder-friendly as possible. No agency layer. No six-month timeline. No scope creep. You work directly with Srijan to build your positioning, identity, website & content strategy — everything your startup needs to launch, in 6 weeks.",
+      explicit: "Most of you won't understand why this page reads the way it does. That's fine — it just means we're not ready to work together yet. If you'd like to see me talk about brand building in a more polished way, flip the toggle back. But I'd rather be honest about what this is really about: helping you make more money. If you believe creativity is a business advantage and want a creative partner who actually gets that, we should talk.",
+      html: true,
+    },
+  };
+
+  function setExplicitMode(on: boolean) {
+    for (const [key, content] of Object.entries(explicitContent)) {
+      const el = document.querySelector(`[data-explicit-swap="${key}"]`);
+      if (!el) continue;
+      const text = on ? content.explicit : content.normal;
+      if (content.html) {
+        el.innerHTML = text;
+      } else {
+        el.textContent = text;
+      }
+    }
+
+    // Sync both toggles
+    const desktop = document.getElementById('explicit-toggle-desktop') as HTMLInputElement | null;
+    const mobile = document.getElementById('explicit-toggle-mobile') as HTMLInputElement | null;
+    if (desktop) desktop.checked = on;
+    if (mobile) mobile.checked = on;
+  }
+
+  document.getElementById('explicit-toggle-desktop')?.addEventListener('change', (e) => {
+    setExplicitMode((e.target as HTMLInputElement).checked);
+  });
+
+  document.getElementById('explicit-toggle-mobile')?.addEventListener('change', (e) => {
+    setExplicitMode((e.target as HTMLInputElement).checked);
   });
 </script>
