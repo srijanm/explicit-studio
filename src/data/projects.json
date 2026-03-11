@@ -69,19 +69,32 @@
   {
     "slug": "qaoncloud",
     "title": "QAonCloud",
-    "description": "QAonCloud: Increased sales conversion rate with strategic positioning, GTM engineering & a new identity & content strategy.",
-    "subtitle": "Increased sales conversion rate with strategic positioning, GTM engineering & a new identity & content strategy.",
+    "description": "QAonCloud: Repositioned, rebranded, and rebuilt a 12-year-old QA company from the ground up.",
+    "subtitle": "Repositioned, rebranded, and rebuilt a 12-year-old QA company from the ground up.",
     "client": "QAonCloud",
     "industry": "SaaS / QA",
     "year": "2025 - Ongoing",
-    "metric": "",
-    "tags": ["Brand & Positioning", "Content Strategy", "Web"],
+    "metric": "Complete rebrand & reposition",
+    "tags": ["Brand & Positioning", "Identity", "Content Strategy", "Web Design & Development"],
     "cardBg": "#1c2133",
     "cardTextColor": "#F5F5F5",
     "thumbnail": "/images/projects/qaonc-thumb.png",
     "category": "work",
     "featured": true,
-    "sections": null
+    "sections": [
+      {
+        "label": "THE LANDSCAPE",
+        "text": "QAonCloud is a software testing company with 12+ years of experience and 60+ global clients. The problem wasn't the work — it was the brand. The existing website looked like every other generic IT services company: clip art icons, vague promises, and zero differentiation. In a market where every QA company says the same thing, QAonCloud had no reason for anyone to pick them over the next search result."
+      },
+      {
+        "label": "THE INSIGHT",
+        "text": "We stripped everything back and found the one thing that was actually true and defensible: QAonCloud's AI-accelerated process genuinely delivered QA 40% faster than in-house teams. That became the entire brand. We repositioned from a generic \"QA testing services company\" to a specific, measurable promise — \"40% faster QA. Accelerated by AI, driven by experts.\" Then we rebuilt the visual identity, rewrote every word on the site, and designed and developed a completely new web presence from scratch."
+      },
+      {
+        "label": "THE OUTCOME",
+        "text": "The new site went from a generic enterprise template to a sharp, conversion-focused experience with clear positioning, real social proof, and a specific promise that no competitor was making. We also built a content strategy and outreach programme to drive inbound and outbound leads."
+      }
+    ]
   },
   {
     "slug": "origin-one",
@@ -98,24 +111,53 @@
     "thumbnail": "/images/projects/originone-thumb.png",
     "category": "work",
     "featured": true,
-    "sections": null
+    "sections": [
+      {
+        "label": "THE LANDSCAPE",
+        "text": "Origin One is a premium stationery brand with a product people loved once they tried it — but almost no one was trying it. Advertising existed but it was scattered and directionless. There was no clear positioning, no consistent creative, and no strategy behind what was being spent. The brand had strong social proof from existing customers but had never used it."
+      },
+      { "image": "/images/projects/originone-1.png" },
+      {
+        "label": "THE INSIGHT",
+        "text": "Stationery isn't a rational purchase — nobody needs another notebook. It's an emotional one. We built a creative strategy around what the product actually made people feel: the texture of the paper, the ritual of writing, the quiet satisfaction of something beautifully made. We paired visceral, sensory-driven ads with real customer stories that had been sitting unused. Then we built the media buying infrastructure to put it all in front of the right people."
+      },
+      { "image": "/images/projects/originone-2.png" },
+      {
+        "label": "THE OUTCOME",
+        "text": "Sales increased by 153% in 4 weeks. What started as an advertising engagement has since expanded into full CRO — optimising the funnel, improving the user experience, and turning one-time buyers into repeat customers."
+      },
+      { "image": "/images/projects/originone-3.png" }
+    ]
   },
   {
     "slug": "qwikbuild",
     "title": "QwikBuild",
-    "description": "QwikBuild: Swiss army knife role spanning GTM, advertising, positioning & content.",
-    "subtitle": "Swiss army knife role spanning GTM, advertising, positioning & content.",
+    "description": "QwikBuild: GTM strategy & channel validation that generated the signal to pivot the product.",
+    "subtitle": "GTM strategy & channel validation that generated the signal to pivot the product.",
     "client": "QwikBuild",
     "industry": "Construction Tech",
     "year": "2025 - Ongoing",
     "metric": "",
-    "tags": ["GTM", "Content & Community"],
+    "tags": ["GTM Strategy", "Advertising", "Positioning & Content"],
     "cardBg": "#1c2133",
     "cardTextColor": "#F5F5F5",
     "thumbnail": "/images/projects/qwikbuild-thumb.mp4",
     "category": "work",
     "featured": true,
-    "sections": null
+    "sections": [
+      {
+        "label": "THE LANDSCAPE",
+        "text": "QwikBuild is a consumer AI platform that lets anyone build production-ready apps without code. The product was built. The question was: how do you get it in front of people, and which people? There was no established GTM playbook and no clear sense of which channels, messages, or positioning would work."
+      },
+      {
+        "label": "THE INSIGHT",
+        "text": "Instead of guessing, we tested everything. We ran advertising across Meta and Google, experimented with different positioning angles and messaging, tested product onboarding flows, explored PLG levers, and tried community-led adoption. Each experiment was designed to generate signal, not just traffic."
+      },
+      {
+        "label": "THE OUTCOME",
+        "text": "Some channels worked. Some messaging landed. But the most valuable thing we uncovered wasn't a growth hack — it was product signal. The GTM experiments revealed enough about how people understood (and misunderstood) the product that it informed a pivot on the product itself. Sometimes the best thing a creative partner can do isn't make the numbers go up — it's help you figure out what to build next. A major relaunch is coming."
+      }
+    ]
   },
   {
     "slug": "attis-campaigns",
