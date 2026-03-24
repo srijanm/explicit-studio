@@ -625,6 +625,13 @@ input, textarea {
   margin: 0 0 clamp(40px, 5vw, 60px) 0;
 }
 
+.site-cta__card {
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: clamp(28px, 4vw, 48px);
+}
+
 .site-cta__subline {
   font-size: var(--text-h2);
   font-weight: 500;
@@ -649,6 +656,28 @@ input, textarea {
 .site-cta__button {
   padding: 16px 40px;
   flex-shrink: 0;
+}
+
+@media (max-width: 767px) {
+  .site-cta__row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .site-cta__subline {
+    font-size: var(--text-h3);
+  }
+
+  .site-cta__headline {
+    font-size: var(--text-h3);
+  }
+
+  .site-cta__button {
+    padding: 12px 28px;
+    font-size: 1rem;
+    width: auto;
+  }
 }
 
 /* ============================================

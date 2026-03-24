@@ -8,34 +8,26 @@ const explorations = projects.filter((p) => p.category === 'exploration');
 
 const testimonials = [
   {
-    quote: "Explicit didn't just give us a brand — they gave us a story that made investors lean in and customers remember our name.",
-    name: "Placeholder Name",
-    role: "CEO, Startup Co",
-    avatar: "",
+    quote: "Srijan didn't just give us a brand, he gave us a story that tied our business, product & distribution in a way that would've been impossible to do otherwise.",
+    name: "Sushine Ullas",
+    role: "Chief Business Officer, QAonCloud",
+    avatar: "/images/avatars/placeholder-1.svg",
     cardBg: "transparent",
     textColor: "#F5F5F5"
   },
   {
-    quote: "Most agencies gave us mood boards. Explicit gave us a narrative that became our entire GTM strategy.",
-    name: "Placeholder Name",
-    role: "Founder, Product Co",
-    avatar: "",
+    quote: "Srijan has been an integral resource for the past 6 months, bringing founder energy to our GTM motion. He moves fast, understands business goals & is an excellent partner to have on your side.",
+    name: "Pradeep Aiyyagiri",
+    role: "Co-Founder Qwikbuild, Ex-CPO, Slice",
+    avatar: "/images/avatars/placeholder-2.svg",
     cardBg: "transparent",
     textColor: "#F5F5F5"
   },
   {
-    quote: "We went from 'another AI company' to the one people actually talked about. That's the Explicit difference.",
-    name: "Placeholder Name",
-    role: "Co-founder, AI Startup",
-    avatar: "",
-    cardBg: "transparent",
-    textColor: "#F5F5F5"
-  },
-  {
-    quote: "They made biohacking feel like culture, not science. Our community grew itself after that.",
-    name: "Placeholder Name",
-    role: "Founder, Wellness Brand",
-    avatar: "",
+    quote: "Since Explicit took over our advertising, we've started facing problems we never knew existed before - running out of stock & expediting the manufacturing process. Highly recommend.",
+    name: "Pushkar Thakur",
+    role: "Founder, Origin One",
+    avatar: "/images/avatars/placeholder-3.svg",
     cardBg: "transparent",
     textColor: "#F5F5F5"
   }
@@ -58,7 +50,7 @@ const testimonials = [
   <!-- Logo Bar -->
   <section class="logos-section">
     <p class="logos-section__text">
-      Working with ambitious founders & adventure capitalists across AI, Web3 & D2C.
+      Working with ambitious founders & adventure capitalists across consumer & enterprise tech, AI & D2C.
     </p>
     <div class="logos-grid">
       <img src="/images/logos/pause.png" alt="Pause" class="client-logo" />
@@ -66,6 +58,7 @@ const testimonials = [
       <img src="/images/logos/QAonC.svg" alt="QAonC" class="client-logo" />
       <img src="/images/logos/qb.png" alt="QB" class="client-logo" />
       <img src="/images/logos/originone.png" alt="Origin One" class="client-logo" />
+      <img src="/images/logos/pianoman.png" alt="Piano Man" class="client-logo" />
     </div>
   </section>
 
@@ -100,8 +93,8 @@ const testimonials = [
         130,000 startups launch every day. Most die of obscurity.
       </p>
       <div class="problem-section__body">
-        <p data-explicit-swap="pitch-p1">Your product works, but product alone doesn't set you apart anymore. The cost of building is down to zero & attention is the most expensive resource in the world. Maybe that's why the startups winning now (think Anthropic, Stripe, Ramp, Anduril) are all investing in brand as seriously as they invest in engineering. Everyone else competes on price until they disappear. We're here to make sure that's not you.</p>
-        <p data-explicit-swap="pitch-p2">Explicit is led by Srijan Mahajan, a founder, creative director & musician. He has played 1000+ concerts as a drummer for Parikrama. Then he built Pause; a mental health platform that broke its category and Attis; India's first & largest biohacking & longevity community. <br /><br />An ex-founder, he's sat where you're sitting — which is why Explicit is built to be as founder-friendly as possible. No agency layer. No six-month timeline. No scope creep. You work directly with Srijan to build your positioning, identity, website & content strategy — everything your startup needs to launch, in 6 weeks.</p>
+        <p data-explicit-swap="pitch-p1">Your product works, but product alone doesn't set you apart anymore.<br /><br />The cost of building is down to zero & attention is the most expensive resource in the world. Maybe that's why the startups winning now (think Anthropic, Stripe, Ramp, Anduril) are all investing in brand as seriously as they invest in engineering.<br /><br />Everyone else competes on price until they disappear. We're here to make sure that's not you.</p>
+        <p data-explicit-swap="pitch-p2">Explicit is led by Srijan Mahajan, a founder, creative director & musician. He has played 1000+ concerts as a drummer for Parikrama. Then he built Pause; a mental health platform that broke its category and Attis; India's first & largest biohacking & longevity community. <br /><br />An ex-founder, he's sat where you're sitting — which is why Explicit is built to be as founder-friendly as possible. No agency layer. No six-month timeline. No scope creep. No surprises.</p>
       </div>
     </div>
   </section>
@@ -113,19 +106,31 @@ const testimonials = [
     </a>
   </section>
 
+  <!-- Floating Explicit Toggle -->
+  <div class="explicit-fab" id="explicit-fab">
+    <label class="explicit-fab__inner">
+      <span class="explicit-fab__dot"></span>
+      <span class="explicit-fab__label">EXPLICIT</span>
+      <span class="explicit-fab__switch">
+        <input type="checkbox" id="explicit-toggle-fab" />
+        <span class="explicit-fab__slider"></span>
+      </span>
+    </label>
+  </div>
+
   <!-- Selected Work -->
   <section class="work-section reveal">
     <h2 class="work-section__title">We make things people like. We make people like things.</h2>
     <div class="home-work-grid">
       {workProjects.map((project) => (
-        <ProjectCard project={project} />
+        <ProjectCard project={project} useHomeThumbnail={true} />
       ))}
     </div>
     {explorations.length > 0 && (
       <h3 class="work-section__subtitle">Explorations</h3>
       <div class="home-work-grid">
         {explorations.map((project) => (
-          <ProjectCard project={project} />
+          <ProjectCard project={project} useHomeThumbnail={true} />
         ))}
       </div>
     )}
@@ -196,7 +201,7 @@ const testimonials = [
 
   /* ===== Selected Work ===== */
   .work-section {
-    padding: 60px var(--section-padding-x) var(--section-padding-y);
+    padding: 60px var(--section-padding-x) clamp(40px, 5vw, 60px);
   }
 
   .work-section__title {
@@ -277,7 +282,7 @@ const testimonials = [
 
   .testimonials-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: clamp(16px, 2vw, 24px);
   }
 
@@ -354,6 +359,138 @@ const testimonials = [
     display: inline-flex;
   }
 
+  /* ===== Floating Explicit Toggle ===== */
+  .explicit-fab {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 90;
+    animation: fab-entrance 0.6s cubic-bezier(0.16, 1, 0.3, 1) 1s both;
+  }
+
+  .explicit-fab__inner {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 20px;
+    background: rgba(12, 12, 12, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1.5px solid rgba(35, 61, 255, 0.3);
+    border-radius: 40px;
+    cursor: pointer;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5), 0 0 0 0 rgba(35, 61, 255, 0);
+    transition: box-shadow 0.4s ease, border-color 0.4s ease, transform 0.2s ease;
+  }
+
+  .explicit-fab__inner:hover {
+    transform: scale(1.04);
+  }
+
+  /* Glow pulse until first interaction */
+  .explicit-fab:not(.interacted) .explicit-fab__inner {
+    animation: fab-glow 2s ease-in-out infinite;
+  }
+
+  .explicit-fab.active .explicit-fab__inner {
+    border-color: rgba(35, 61, 255, 0.6);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5), 0 0 24px rgba(35, 61, 255, 0.35);
+  }
+
+  @keyframes fab-glow {
+    0%, 100% {
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5), 0 0 12px rgba(35, 61, 255, 0.2);
+      border-color: rgba(35, 61, 255, 0.25);
+    }
+    50% {
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5), 0 0 28px rgba(35, 61, 255, 0.5);
+      border-color: rgba(35, 61, 255, 0.6);
+    }
+  }
+
+  @keyframes fab-entrance {
+    from {
+      opacity: 0;
+      transform: translateY(20px) scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  .explicit-fab__dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--color-accent);
+    animation: dot-pulse 2s ease-in-out infinite;
+    flex-shrink: 0;
+  }
+
+  .explicit-fab.interacted .explicit-fab__dot {
+    animation: none;
+  }
+
+  .explicit-fab.active .explicit-fab__dot {
+    background: #fff;
+  }
+
+  @keyframes dot-pulse {
+    0%, 100% { opacity: 0.5; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.4); }
+  }
+
+  .explicit-fab__label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    color: #fff;
+    user-select: none;
+    text-transform: uppercase;
+  }
+
+  .explicit-fab__switch {
+    position: relative;
+    display: inline-block;
+    width: 38px;
+    height: 22px;
+  }
+
+  .explicit-fab__switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .explicit-fab__slider {
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 22px;
+    transition: background 0.3s ease;
+  }
+
+  .explicit-fab__slider::before {
+    content: '';
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    left: 3px;
+    bottom: 3px;
+    background: #fff;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+  }
+
+  .explicit-fab__switch input:checked + .explicit-fab__slider {
+    background: var(--color-accent);
+  }
+
+  .explicit-fab__switch input:checked + .explicit-fab__slider::before {
+    transform: translateX(16px);
+  }
+
   /* ===== Responsive ===== */
   @media (max-width: 767px) {
     .hero {
@@ -370,11 +507,16 @@ const testimonials = [
 
     .logos-section {
       padding: 32px var(--section-padding-x) 32px;
+      margin-bottom: 16px;
     }
 
     .logos-grid {
       justify-content: center;
       gap: 20px 32px;
+    }
+
+    .testimonials-section {
+      padding-top: 16px;
     }
 
     .testimonials-grid {
@@ -383,6 +525,11 @@ const testimonials = [
 
     .client-logo {
       height: 28px;
+    }
+
+    .explicit-fab {
+      bottom: 16px;
+      right: 16px;
     }
   }
 </style>
@@ -412,19 +559,20 @@ const testimonials = [
     },
     'hero-descriptor': {
       normal: 'Creative partners for startups. Led by Srijan Mahajan.',
-      explicit: 'Brand, advertising & GTM for startups that refuse to compete on price.',
+      explicit: 'Brand Strategy, advertising & GTM for startups that refuse to compete on price.',
     },
     'pitch-headline': {
       normal: '130,000 startups launch every day. Most die of obscurity.',
       explicit: "Creativity has been my business for 15 years.",
     },
     'pitch-p1': {
-      normal: "Your product works, but product alone doesn't set you apart anymore. The cost of building is down to zero & attention is the most expensive resource in the world. Maybe that's why the startups winning now (think Anthropic, Stripe, Ramp, Anduril) are all investing in brand as seriously as they invest in engineering. Everyone else competes on price until they disappear. We're here to make sure that's not you.",
-      explicit: "I've made money from it as a musician, in advertising, in film, and by building two startups of my own. I'm not a strategist who's never shipped anything, but a founder who spent his own money, and learned what actually works. I help startups with brand, positioning, advertising & content to get your story out in the most honest, explicit way possible.",
+      normal: "Your product works, but product alone doesn't set you apart anymore.<br><br>The cost of building is down to zero & attention is the most expensive resource in the world. Maybe that's why the startups winning now (think Anthropic, Stripe, Ramp, Anduril) are all investing in brand as seriously as they invest in engineering.<br><br>Everyone else competes on price until they disappear. We're here to make sure that's not you.",
+      explicit: "I've made money from it as a musician, in advertising, in film, and by building two startups of my own.<br><br>I'm not a strategist who's never shipped anything, but a founder who spent his own money, and learned what actually works.<br><br>I help startups with brand strategy, positioning, advertising & content to get your story out in the most honest, explicit way possible.",
+      html: true,
     },
     'pitch-p2': {
-      normal: "Explicit is led by Srijan Mahajan, a founder, creative director & musician. He has played 1000+ concerts as a drummer for Parikrama. Then he built Pause; a mental health platform that broke its category and Attis; India's first & largest biohacking & longevity community.<br><br>An ex-founder, he's sat where you're sitting — which is why Explicit is built to be as founder-friendly as possible. No agency layer. No six-month timeline. No scope creep. You work directly with Srijan to build your positioning, identity, website & content strategy — everything your startup needs to launch, in 6 weeks.",
-      explicit: "Most of you won't understand why this page reads the way it does. That's fine — it just means we're not ready to work together yet. If you'd like to see me talk about brand building in a more polished way, flip the toggle back.<br><br>But I'd rather be honest about what this is really about: helping you make more money. If you believe creativity is a business advantage and want a creative partner who actually gets that, we should talk.",
+      normal: "Explicit is led by Srijan Mahajan, a founder, creative director & musician. He has played 1000+ concerts as a drummer for Parikrama. Then he built Pause; a mental health platform that broke its category and Attis; India's first & largest biohacking & longevity community.<br><br>An ex-founder, he's sat where you're sitting — which is why Explicit is built to be as founder-friendly as possible. No agency layer. No six-month timeline. No scope creep. No surprises.",
+      explicit: "Most of you won't understand why this page reads the way it does and thats fine. Flip the toggle back if you'd like me to be more implicit.<br><br>But I'd rather be explicit (no pun intended) about what this is really about: helping you make more money. If you believe creativity is a business advantage and want a creative partner who actually gets that, we should talk.",
       html: true,
     },
     'cta-subline': {
@@ -449,11 +597,19 @@ const testimonials = [
       }
     }
 
-    // Sync both toggles
+    // Sync all toggles
     const desktop = document.getElementById('explicit-toggle-desktop') as HTMLInputElement | null;
     const mobile = document.getElementById('explicit-toggle-mobile') as HTMLInputElement | null;
+    const fab = document.getElementById('explicit-toggle-fab') as HTMLInputElement | null;
     if (desktop) desktop.checked = on;
     if (mobile) mobile.checked = on;
+    if (fab) fab.checked = on;
+
+    // Update fab active state
+    const fabEl = document.getElementById('explicit-fab');
+    if (fabEl) {
+      fabEl.classList.toggle('active', on);
+    }
   }
 
   document.getElementById('explicit-toggle-desktop')?.addEventListener('change', (e) => {
@@ -463,4 +619,13 @@ const testimonials = [
   document.getElementById('explicit-toggle-mobile')?.addEventListener('change', (e) => {
     setExplicitMode((e.target as HTMLInputElement).checked);
   });
+
+  document.getElementById('explicit-toggle-fab')?.addEventListener('change', (e) => {
+    setExplicitMode((e.target as HTMLInputElement).checked);
+  });
+
+  // Remove glow animation after first interaction
+  document.getElementById('explicit-fab')?.addEventListener('click', () => {
+    document.getElementById('explicit-fab')?.classList.add('interacted');
+  }, { once: true });
 </script>

@@ -142,6 +142,7 @@
     "cardBg": "#1c2133",
     "cardTextColor": "#F5F5F5",
     "thumbnail": "/images/projects/qwikbuild-thumb.mp4",
+    "homeThumbnail": "/images/projects/qwikbuild-thumb-home.png",
     "category": "work",
     "featured": true,
     "sections": [
@@ -172,6 +173,7 @@
     "cardBg": "#1c2133",
     "cardTextColor": "#F5F5F5",
     "thumbnail": "/images/projects/attis-campaigns-thumb.png",
+    "homeThumbnail": "/images/projects/attis-campaigns-header-video.mp4",
     "hero": "/images/projects/attis-campaigns-header-video.mp4",
     "category": "work",
     "featured": true,
@@ -195,8 +197,8 @@
   {
     "slug": "nothing",
     "title": "Nothing",
-    "description": "Nothing: [Case Study]",
-    "subtitle": "[Case Study]",
+    "description": "Nothing: An exploration for the iconoclasts [Case Study]",
+    "subtitle": "An exploration for the iconoclasts [Case Study]",
     "client": "Nothing",
     "industry": "Consumer Tech",
     "year": "2025",
@@ -220,8 +222,8 @@
   {
     "slug": "raweceek",
     "title": "Raweceek",
-    "description": "Raweceek: A motorsport culture brand for the generation that fell in love with F1 through Drive to Survive.",
-    "subtitle": "A motorsport culture brand for the generation that fell in love with F1 through Drive to Survive.",
+    "description": "Raweceek: A motorsport culture brand for the generation that fell in love with F1 through Drive to Survive. [Spec Work]",
+    "subtitle": "A motorsport culture brand for the generation that fell in love with F1 through Drive to Survive. [Spec Work]",
     "client": "Personal Project",
     "industry": "Motorsport / Culture / D2C",
     "year": "2026",
