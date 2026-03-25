@@ -33,46 +33,12 @@
     ]
   },
   {
-    "slug": "attis-insider",
-    "title": "Attis Insider",
-    "description": "Attis Insider: Launched India's first biohacking community with a viral campaign and a bag of magic beans.",
-    "subtitle": "Launched India's first biohacking community with a viral campaign and a bag of magic beans.",
-    "client": "Attis",
-    "industry": "Biohacking / Wellness",
-    "year": "2024",
-    "metric": "1000+ signups, ₹0 spent",
-    "tags": ["Strategy", "Campaign", "Community"],
-    "cardBg": "#1c2133",
-    "cardTextColor": "#F5F5F5",
-    "thumbnail": "/images/projects/attis-insider-thumb.png",
-    "hero": "/images/projects/attis-insider-hero-video.mp4",
-    "category": "work",
-    "featured": true,
-    "sections": [
-      {
-        "label": "THE LANDSCAPE",
-        "text": "India's biohacking space was nonexistent. There were no dedicated brands, no communities, no cultural conversation around the idea that optimisation wasn't just for athletes or tech bros. Attis wanted to build a community before selling a product — but \"biohacking\" sounded intimidating."
-      },
-      { "image": "/images/projects/attis-insider-1.png" },
-      {
-        "label": "THE INSIGHT",
-        "text": "We created Attis Insider — a membership-style community that made biohacking feel like a culture, not a science experiment. The launch campaign, \"Magic Pills\", was deliberately provocative: we sent mystery packages branded as pills to health influencers and content creators with no context."
-      },
-      { "image": "/images/projects/attis-insider-2.webp" },
-      {
-        "label": "THE OUTCOME",
-        "text": "The campaign generated over 100k organic views, 500+ social mentions, and 1000+ community signups — all on ₹0 ad spend. The mystery packaging created FOMO-driven sharing loops that outperformed paid campaigns."
-      },
-      { "image": "/images/projects/attis-insider-3.webp" }
-    ]
-  },
-  {
     "slug": "qaoncloud",
     "title": "QAonCloud",
     "description": "QAonCloud: Repositioned, rebranded, and rebuilt a 12-year-old QA company from the ground up.",
     "subtitle": "Repositioned, rebranded, and rebuilt a 12-year-old QA company from the ground up.",
     "client": "QAonCloud",
-    "industry": "SaaS / QA",
+    "industry": "Enterprise AI",
     "year": "2025 - Ongoing",
     "metric": "Complete rebrand & reposition",
     "tags": ["Brand & Positioning", "Identity", "Content Strategy", "Web Design & Development"],
@@ -125,8 +91,7 @@
       {
         "label": "THE OUTCOME",
         "text": "Sales increased by 153% in 4 weeks. What started as an advertising engagement has since expanded into full CRO — optimising the funnel, improving the user experience, and turning one-time buyers into repeat customers."
-      },
-      { "image": "/images/projects/originone-3.png" }
+      }
     ]
   },
   {
@@ -135,7 +100,7 @@
     "description": "QwikBuild: GTM strategy & channel validation that generated the signal to pivot the product.",
     "subtitle": "GTM strategy & channel validation that generated the signal to pivot the product.",
     "client": "QwikBuild",
-    "industry": "Construction Tech",
+    "industry": "Artificial Intelligence",
     "year": "2025 - Ongoing",
     "metric": "",
     "tags": ["GTM Strategy", "Advertising", "Positioning & Content"],
@@ -150,14 +115,50 @@
         "label": "THE LANDSCAPE",
         "text": "QwikBuild is a consumer AI platform that lets anyone build production-ready apps without code. The product was built. The question was: how do you get it in front of people, and which people? There was no established GTM playbook and no clear sense of which channels, messages, or positioning would work."
       },
+      { "image": "/images/projects/qwikbuild-1.png" },
       {
         "label": "THE INSIGHT",
         "text": "Instead of guessing, we tested everything. We ran advertising across Meta and Google, experimented with different positioning angles and messaging, tested product onboarding flows, explored PLG levers, and tried community-led adoption. Each experiment was designed to generate signal, not just traffic."
       },
+      { "image": "/images/projects/qwikbuild-2.png" },
       {
         "label": "THE OUTCOME",
         "text": "Some channels worked. Some messaging landed. But the most valuable thing we uncovered wasn't a growth hack — it was product signal. The GTM experiments revealed enough about how people understood (and misunderstood) the product that it informed a pivot on the product itself. Sometimes the best thing a creative partner can do isn't make the numbers go up — it's help you figure out what to build next. A major relaunch is coming."
       }
+    ]
+  },
+  {
+    "slug": "attis-insider",
+    "title": "Attis Insider",
+    "description": "Attis Insider: Launched India's first biohacking community with a viral campaign and a bag of magic beans.",
+    "subtitle": "Launched India's first biohacking community with a viral campaign and a bag of magic beans.",
+    "client": "Attis",
+    "industry": "Biohacking / Wellness",
+    "year": "2024",
+    "metric": "1000+ signups, ₹0 spent",
+    "tags": ["Strategy", "Campaign", "Community"],
+    "cardBg": "#1c2133",
+    "cardTextColor": "#F5F5F5",
+    "thumbnail": "/images/projects/attis-insider-thumb.png",
+    "hero": "/images/projects/attis-insider-hero-video.mp4",
+    "category": "work",
+    "featured": true,
+    "sections": [
+      {
+        "label": "THE LANDSCAPE",
+        "text": "India's biohacking space was nonexistent. There were no dedicated brands, no communities, no cultural conversation around the idea that optimisation wasn't just for athletes or tech bros. Attis wanted to build a community before selling a product — but \"biohacking\" sounded intimidating."
+      },
+      { "image": "/images/projects/attis-insider-1.png" },
+      {
+        "label": "THE INSIGHT",
+        "text": "We created Attis Insider — a membership-style community that made biohacking feel like a culture, not a science experiment. The launch campaign, \"Magic Pills\", was deliberately provocative: we sent mystery packages branded as pills to health influencers and content creators with no context."
+      },
+      { "image": "/images/projects/attis-insider-2.webp" },
+      {
+        "label": "THE OUTCOME",
+        "text": "The campaign generated over 100k organic views, 500+ social mentions, and 1000+ community signups — all on ₹0 ad spend. The mystery packaging created FOMO-driven sharing loops that outperformed paid campaigns."
+      },
+      { "image": "/images/projects/attis-insider-3.webp" }
     ]
   },
   {
@@ -173,7 +174,7 @@
     "cardBg": "#1c2133",
     "cardTextColor": "#F5F5F5",
     "thumbnail": "/images/projects/attis-campaigns-thumb.png",
-    "homeThumbnail": "/images/projects/attis-campaigns-header-video.mp4",
+    "homeThumbnail": "/images/projects/attis-campaigns-thumb-home.png",
     "hero": "/images/projects/attis-campaigns-header-video.mp4",
     "category": "work",
     "featured": true,

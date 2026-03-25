@@ -407,8 +407,9 @@ input, textarea {
 .explicit-toggle__label {
   font-size: 0.8rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
-  color: var(--color-text-secondary);
+  font-style: italic;
+  letter-spacing: 0.02em;
+  color: #ff1a1a;
 }
 
 .explicit-toggle__switch {
@@ -428,7 +429,7 @@ input, textarea {
 .explicit-toggle__slider {
   position: absolute;
   inset: 0;
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 50, 50, 0.25);
   border-radius: 24px;
   transition: background 0.3s ease;
 }
@@ -446,7 +447,7 @@ input, textarea {
 }
 
 .explicit-toggle__switch input:checked + .explicit-toggle__slider {
-  background: var(--color-accent);
+  background: #ff1a1a;
 }
 
 .explicit-toggle__switch input:checked + .explicit-toggle__slider::before {
