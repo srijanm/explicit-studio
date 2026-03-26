@@ -6,11 +6,10 @@ interface Props {
   description?: string;
   ogImage?: string;
   hideCta?: boolean;
-  showExplicitToggle?: boolean;
 }
 
 const siteUrl = 'https://explicit.studio';
-const { title = 'Explicit Studio', description = 'A full cycle creative studio creating monopolising brands for technology startups.', ogImage = '/images/open-graph.png', hideCta = false, showExplicitToggle = false } = Astro.props;
+const { title = 'Explicit Studio', description = 'A full cycle creative studio creating monopolising brands for technology startups.', ogImage = '/images/open-graph.png', hideCta = false } = Astro.props;
 const canonicalUrl = new URL(Astro.url.pathname, siteUrl).href;
 const ogImageUrl = new URL(ogImage, siteUrl).href;
 ---
@@ -71,19 +70,9 @@ const ogImageUrl = new URL(ogImage, siteUrl).href;
         </div>
 
         <div class="sidebar__bottom">
-          <p class="sidebar__descriptor" data-explicit-swap="sidebar-descriptor">
-            Creative partners for startups.<br />
-            Led by Srijan Mahajan.
+          <p class="sidebar__descriptor">
+            Brand Strategy, advertising & GTM for startups that refuse to compete on price.
           </p>
-          {showExplicitToggle && (
-            <div class="explicit-toggle">
-              <span class="explicit-toggle__label">DANGER! EXPLICIT MODE</span>
-              <label class="explicit-toggle__switch">
-                <input type="checkbox" id="explicit-toggle-desktop" />
-                <span class="explicit-toggle__slider"></span>
-              </label>
-            </div>
-          )}
           <div class="sidebar__logo-large">
             <img src="/images/logos/logo.png" alt="Explicit Studio" class="sidebar__logo-img" />
           </div>
@@ -106,8 +95,7 @@ const ogImageUrl = new URL(ogImage, siteUrl).href;
             <div class="site-cta__card">
               <div class="site-cta__row">
                 <div>
-                  <p class="site-cta__subline" data-explicit-swap="cta-subline">You've made something the world needs.</p>
-                  <h2 class="site-cta__headline" data-explicit-swap="cta-headline">Make it Explicit.</h2>
+                  <h2 class="site-cta__headline">Make more money.</h2>
                 </div>
                 <a href="/contact" class="btn-primary site-cta__button">
                   Get in touch <span class="arrow">&rarr;</span>
@@ -130,16 +118,7 @@ const ogImageUrl = new URL(ogImage, siteUrl).href;
         <a href="/contact">Contact</a>
       </nav>
       <div class="mobile-sidebar__bottom">
-        <p data-explicit-swap="mobile-descriptor">Creative partners for startups.<br />Led by Srijan Mahajan.</p>
-        {showExplicitToggle && (
-          <div class="explicit-toggle" style="margin-bottom: 16px;">
-            <span class="explicit-toggle__label">DANGER! EXPLICIT MODE</span>
-            <label class="explicit-toggle__switch">
-              <input type="checkbox" id="explicit-toggle-mobile" />
-              <span class="explicit-toggle__slider"></span>
-            </label>
-          </div>
-        )}
+        <p>Brand Strategy, advertising & GTM for startups that refuse to compete on price.</p>
         <div class="mobile-sidebar__socials">
           <a href="#" target="_blank" rel="noopener noreferrer">X</a>
           <a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a>
