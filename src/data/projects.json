@@ -1,5 +1,37 @@
 [
   {
+    "slug": "luma-wars",
+    "title": "Luma Wars",
+    "description": "Luma Wars: Built a game that fights review-bombing by never fighting back.",
+    "subtitle": "Built a game that fights review-bombing by never fighting back.",
+    "client": "EDT",
+    "industry": "Gaming",
+    "year": "2026",
+    "metric": "100k views · 1000+ played",
+    "tags": ["Story & Strategy", "Campaign", "Design & Development"],
+    "cardBg": "#1c2133",
+    "cardTextColor": "#F5F5F5",
+    "thumbnail": "/images/projects/luma-wars-thumb.png",
+    "hero": "/images/projects/luma-wars-hero.png",
+    "category": "work",
+    "featured": true,
+    "sections": [
+      {
+        "label": "THE LANDSCAPE",
+        "text": "EDT is a D2C air fryer brand, built mostly around people setting up their first kitchen. Then the bots showed up, dropping fake one-star reviews in bulk. The question we kept asking ourselves was: \"this is a real problem every D2C brand faces, what can we do different?\" The usual answer is to report them and wait. We wanted to do something more real and impactful."
+      },
+      {
+        "label": "THE INSIGHT",
+        "text": "The obvious was to write a post about it, but we decided to build a game. The brand stands up for itself without putting anyone down, and shooting back would have said the opposite. So we flipped it. You don't shoot the bots, you dodge them. Luma, the EDT air fryer, became the hero, wrapped in a Star Wars opening and an 8-bit look the audience grew up on. The score ran on founder and VC in-jokes, because founders were the ones playing. Mobile only, because that's where it would spread."
+      },
+      { "imageGrid": ["/images/projects/luma-wars-1.png", "/images/projects/luma-wars-2.png"] },
+      {
+        "label": "THE OUTCOME",
+        "text": "100k views and over a thousand people played. But the real result was the reaction. People watched a brand think this hard about a one-star review and turn it into something its own community wanted to pass around."
+      }
+    ]
+  },
+  {
     "slug": "pause",
     "title": "Pause",
     "description": "Pause: Built a mental health brand people actually loved by doing what no one else would — making them laugh.",
