@@ -6,6 +6,21 @@ import projects from '../data/projects.json';
 const workProjects = projects.filter((p) => p.category === 'work');
 const explorations = projects.filter((p) => p.category === 'exploration');
 
+// Client logos, laid out as two centred rows. `h` is a per-logo height so each
+// mark reads at the same optical weight — a single shared height makes the
+// heavy slab marks (EDT) shout and the delicate ones (Piano Man) vanish.
+const clientLogos = [
+  { src: '/images/logos/desicrew.png', alt: 'DesiCrew', h: 30 },
+  { src: '/images/logos/pause.png', alt: 'Pause', h: 30 },
+  { src: '/images/logos/QAonC.svg', alt: 'QAonCloud', h: 32 },
+  { src: '/images/logos/agentq.png', alt: 'AgentQ', h: 26 },
+  { src: '/images/logos/originone.png', alt: 'Origin One', h: 34 },
+  { src: '/images/logos/attis.png', alt: 'Attis', h: 30 },
+  { src: '/images/logos/pianoman.png', alt: 'Piano Man', h: 36 },
+  { src: '/images/logos/edt.png', alt: 'EDT', h: 24 }
+];
+const logoRows = [clientLogos.slice(0, 4), clientLogos.slice(4)];
+
 const testimonials = [
   {
     quote: "Srijan didn't just give us a brand, he gave us a story that tied our business, product & distribution in a way that would've been impossible to do otherwise.",
@@ -53,12 +68,13 @@ const testimonials = [
       Working with ambitious founders & adventure capitalists across consumer & enterprise tech, AI & D2C.
     </p>
     <div class="logos-grid">
-      <img src="/images/logos/pause.png" alt="Pause" class="client-logo" />
-      <img src="/images/logos/QAonC.svg" alt="QAonCloud" class="client-logo" />
-      <img src="/images/logos/qb.png" alt="AgentQ" class="client-logo" />
-      <img src="/images/logos/originone.png" alt="Origin One" class="client-logo" />
-      <img src="/images/logos/attis.png" alt="Attis" class="client-logo" />
-      <img src="/images/logos/pianoman.png" alt="Piano Man" class="client-logo" />
+      {logoRows.map(row => (
+        <div class="logos-row">
+          {row.map(logo => (
+            <img src={logo.src} alt={logo.alt} class="client-logo" style={`--logo-h: ${logo.h}px;`} />
+          ))}
+        </div>
+      ))}
     </div>
   </section>
 
@@ -175,15 +191,22 @@ const testimonials = [
 
   .logos-grid {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    gap: 24px 0;
+    gap: 36px;
     width: 100%;
   }
 
+  .logos-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 28px clamp(48px, 7vw, 100px);
+  }
+
   .client-logo {
-    height: 36px;
+    height: var(--logo-h, 32px);
     width: auto;
   }
 
@@ -367,8 +390,11 @@ const testimonials = [
     }
 
     .logos-grid {
-      justify-content: center;
-      gap: 20px 32px;
+      gap: 24px;
+    }
+
+    .logos-row {
+      gap: 24px 32px;
     }
 
     .testimonials-section {
@@ -380,7 +406,7 @@ const testimonials = [
     }
 
     .client-logo {
-      height: 28px;
+      height: calc(var(--logo-h, 32px) * 0.82);
     }
 
   }

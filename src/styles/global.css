@@ -707,6 +707,10 @@ input, textarea {
   color: var(--color-text);
 }
 
+.project-page__body p + p {
+  margin-top: 1.1em;
+}
+
 .project-page__full-image {
   width: 100%;
   border-radius: var(--radius-md);

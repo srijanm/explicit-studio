@@ -1,5 +1,48 @@
 [
   {
+    "slug": "desicrew",
+    "title": "DesiCrew",
+    "description": "DesiCrew: Repositioned & branded a 19 year old business operations company to what it has become, a deployed intelligence AI enterprise.",
+    "subtitle": "Build DesiCrew's brand, positioning, content engine, and outbound infrastructure so the quality of work happening inside the company becomes visible outside it.",
+    "client": "DesiCrew",
+    "industry": "Enterprise AI",
+    "year": "2026 - Ongoing",
+    "metric": "Complete rebrand and reposition",
+    "tags": [
+      "Brand & Positioning",
+      "Messaging Architecture",
+      "Content Strategy",
+      "Web Design & Development",
+      "GTM Engineering"
+    ],
+    "cardBg": "#1c2133",
+    "cardTextColor": "#F5F5F5",
+    "thumbnail": "/images/projects/desicrew-thumb.png",
+    "hero": "/images/projects/desicrew-hero.mp4",
+    "category": "work",
+    "featured": true,
+    "sections": [
+      {
+        "label": "THE LANDSCAPE",
+        "text": "DesiCrew is a data and operations company with 19+ years of experience, delivering for some of the largest organisations in the world — the menus behind half of India's food orders, LIDAR for autonomous vehicles. The problem was never the work — it was the perception. DesiCrew was positioned as a rural BPO, not the company quietly building the data behind frontier AI. The company's growth had been built on relationships, referrals, and the quality of work speaking for itself."
+      },
+      {
+        "label": "THE INSIGHT",
+        "text": "DesiCrew works on both sides of AI. It helps build AI — collecting and labelling the data that trains the models — and it runs on AI, handling enterprise operations faster and cleaner than most. The annotation companies can't run the operations. The big BPM players don't have the technical depth. DesiCrew has both, plus nineteen years a newer company can't fake.\n\nSo we stopped calling it a BPO and started calling it what it is: an AI operations company. Then we built everything around that — the positioning and messaging, one website instead of scattered ones, a new sales story, a content engine the leaders run themselves, and outbound that targets the right people instead of everyone."
+      },
+      {
+        "imageGrid": [
+          "/images/projects/desicrew-1.webp",
+          "/images/projects/desicrew-2.png"
+        ]
+      },
+      {
+        "label": "THE OUTCOME",
+        "text": "DesiCrew went from a set of six verticals, read as a legacy BPO, to a single brand with clear positioning and a complete rebrand. It is now positioned on both sides of AI. The leaders now publish in their own voice, the narrative finally matches the work, and the company the market sees is finally the one that's actually there."
+      }
+    ]
+  },
+  {
     "slug": "luma-wars",
     "title": "Luma Wars",
     "description": "Luma Wars: Built a game that fights review-bombing by never fighting back.",
@@ -12,7 +55,7 @@
     "cardBg": "#1c2133",
     "cardTextColor": "#F5F5F5",
     "thumbnail": "/images/projects/luma-wars-thumb.png",
-    "homeThumbnail": "/images/projects/luma-wars-thumb-home.png",
+    "homeThumbnail": "/images/projects/luma-wars-cover-home.webp",
     "hero": "/images/projects/luma-wars-hero.mp4",
     "category": "work",
     "featured": true,
