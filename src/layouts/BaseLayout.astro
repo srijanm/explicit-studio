@@ -40,6 +40,10 @@ const ogImageUrl = new URL(ogImage, siteUrl).href;
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImageUrl} />
+
+    <!-- Marks JS as available before first paint, which arms the .reveal styles.
+         Without it, .reveal content stays visible rather than stuck hidden. -->
+    <script is:inline>document.documentElement.classList.add('js');</script>
   </head>
   <body>
     <!-- Mobile top bar (hidden on desktop) -->
@@ -151,6 +155,37 @@ const ogImageUrl = new URL(ogImage, siteUrl).href;
       document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') closeMobile();
       });
+
+      // Scroll reveal, shared by every page.
+      //
+      // threshold MUST stay 0. A ratio-based threshold is a share of the
+      // *element's own* area, so a section taller than 1/threshold viewports can
+      // never reach it and stays at opacity 0 forever. The work sections are
+      // ~7700px tall, which put them past a 0.1 threshold on any window shorter
+      // than ~770px — i.e. a normal laptop with the bookmarks bar showing.
+      const revealTargets = document.querySelectorAll('.reveal, .project-page');
+
+      function revealAll() {
+        revealTargets.forEach((el) => el.classList.add('visible'));
+      }
+
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0, rootMargin: '0px 0px -40px 0px' }
+        );
+
+        revealTargets.forEach((el) => observer.observe(el));
+      } else {
+        revealAll();
+      }
     </script>
   </body>
 </html>

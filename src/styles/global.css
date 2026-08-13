@@ -194,15 +194,24 @@ input, textarea {
 }
 
 /* --- Scroll Reveal Animation --- */
-.reveal {
+/* Scroll reveal. Only hide content once we know JS is running (the `js` class is
+   set by an inline script in <head>), so a failed or blocked script can never
+   leave a section permanently invisible. */
+.js .reveal {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-.reveal.visible {
+.js .reveal.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .js .reveal {
+    transition: none;
+  }
 }
 
 /* --- Button Styles --- */
