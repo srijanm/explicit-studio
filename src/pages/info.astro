@@ -1,108 +1,80 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+// Flip to false when we stop actively recruiting — that removes the hiring
+// note below the founder's signature and nothing else.
+const hiring = true;
+
+// The note, kept as data so the paragraph rhythm stays obvious and editable.
+// Short lines are deliberate; don't merge them into longer paragraphs.
+const note = [
+  "I'm pretty optimistic about the future that technology and creativity can create together.",
+  "Which is apparently becoming a contrarian position, especially with all the (p)doom around AI coming for creative jobs.",
+  "I think the opposite is true.",
+  "Technology pushes creativity forward. Creativity pushes technology forward.",
+  "It took an enormous amount of creativity to build the iPhone. In turn, it gave millions of people a completely new way to express themselves through photography.",
+  "The cycle keeps going. The more powerful our tools become, the more we can imagine. And the more ambitious our imagination becomes, the more technology we build.",
+  "I also think technology products are becoming some of the most important cultural products of our time. They shape how we work, communicate, create, date, spend money and understand the world.",
+  "Which makes it particularly strange that so much of the creative work around technology has become incredibly boring.",
+  "Everything looks the same. Everyone sounds the same. Creative risk seems to be disappearing at exactly the moment our creative possibilities are expanding.",
+  "And with AI making pretty-good work easier than ever, I think genuinely great ideas are going to become more valuable, not less.",
+  "I've spent much of my career moving between these worlds — music, advertising, film and building companies of my own.",
+  "One thing I've learned is that making something valuable is only half the problem. You also have to help people understand why it matters.",
+  "That's why I'm building Explicit.",
+  "I want us to understand technology deeply, take creativity seriously, and help important ideas find their place in culture.",
+  "Over the next five years, if we can inspire more creativity, make technology a little less boring, bring some joy to people and make good money for our clients and ourselves, I think we'll have done our job pretty well."
+];
 ---
 
-<BaseLayout title="Info - Explicit Studio" description="Explicit Studio is a full cycle creative studio led by Srijan Mahajan, creating monopolising brands for technology startups.">
+<BaseLayout
+  title="About — Explicit"
+  description="Explicit is a strategic creative company for technology, working with companies when something important changes."
+  hideCta={true}
+>
 
-  <!-- Studio Philosophy -->
-  <section class="info-philosophy reveal">
-    <h1 class="info-philosophy__headline">Look hard enough & there's an interesting story everywhere. Including B2B SaaS.</h1>
-    <div class="info-philosophy__body">
-      <p>We believe tech startups will become the consumer brands of tomorrow. Which means they can't just be functional anymore. They have to mean something. They have to make people feel something.</p>
-      <p>Explicit exists at the intersection of art & technology to help startups build brands that people remember, trust, and talk about.</p>
-      <p>You've made something the world needs. <strong>Make it Explicit.</strong></p>
-    </div>
+  <!-- A short introduction -->
+  <section class="about-intro reveal">
+    <h1 class="about-intro__headline">A strategic creative company for technology.</h1>
+    <p class="about-intro__body">
+      Explicit works with technology companies when something important changes. We get close to
+      the product, business and people involved, then figure out how to make that change meaningful
+      in the market. The work can take many forms, but it always starts with understanding what
+      matters.
+    </p>
   </section>
 
-  <!-- We Believe -->
-  <section class="info-beliefs reveal">
-    <h2 class="info-beliefs__title">We Believe</h2>
-    <div class="info-beliefs__list">
-      <div class="info-beliefs__item">
-        <h3>Tech is culture.</h3>
-      </div>
-      <div class="info-beliefs__item">
-        <h3>The story is part of the product.</h3>
-      </div>
-      <div class="info-beliefs__item">
-        <h3>A good brand is a business advantage.</h3>
-      </div>
-      <div class="info-beliefs__item">
-        <h3>Startups die when they stop taking creative risk.</h3>
-      </div>
-    </div>
-  </section>
+  <!-- A note from the founder -->
+  <section class="note reveal">
+    <div class="note__grid">
+      <div class="note__body">
+        <h2 class="note__heading">A note from the founder</h2>
+        {note.map((p) => <p>{p}</p>)}
 
-  <!-- About Srijan -->
-  <section class="info-about reveal">
-    <div class="info-about__grid">
-      <div class="info-about__body">
-        <p>I'm Srijan. I've spent my life thinking about what makes people pay attention & build trust.</p>
-        <p>I started playing drums at 15, became the drummer for Parikrama, played with Shubha Mudgal, opened for Iron Maiden, and performed at The Kennedy Centre - 1000+ concerts across the world. Then I spent years in film and advertising learning how stories work, what makes them stick, and what makes them forgettable.</p>
-        <p>Then I started building startups. I built Pause, a mental health platform that broke its category with its positioning, and Attis, India's first biohacking & longevity community. Building those taught me what agencies will never understand - what it actually feels like to be a founder. That's why I built Explicit.</p>
-        <p>You can learn more about me <a href="https://srijanmahajan.com" target="_blank" rel="noopener noreferrer">here</a>.</p>
+        <div class="note__sign">
+          <span class="note__name">Srijan</span>
+          <span class="note__role">Founder, Explicit</span>
+        </div>
+
+        {hiring && (
+          <aside class="hiring">
+            <h3 class="hiring__heading">Come make technology less boring.</h3>
+            <p>
+              I'm building a small, curious team that likes understanding hard problems, coming up
+              with ambitious ideas and taking creative risks.
+            </p>
+            <p>Come do some of the most interesting work of your career.</p>
+            <a
+              href="mailto:hey@explicit.studio?subject=I%20want%20to%20work%20with%20Explicit"
+              class="hiring__link"
+            >
+              Join Explicit <span class="arrow">&rarr;</span>
+            </a>
+          </aside>
+        )}
       </div>
-      <div class="info-about__portrait">
+
+      <div class="note__portrait">
         <img src="/images/srijan-portrait.JPG" alt="Srijan Mahajan" />
-      </div>
-    </div>
-  </section>
-
-  <!-- How We Work -->
-  <section class="info-services reveal">
-    <div class="info-services__inner">
-      <h2 class="info-services__title">How We Work</h2>
-      <div class="info-services__intro">
-        <p>We don't have account managers, elaborate processes, or bloated teams. You talk to me & a handpicked team of designers, developers, copywriters, motion artists, and strategists. We understand your startup, we move fast, and we build things that work. No scope creep, no surprise invoices, no design-by-committee.</p>
-      </div>
-
-      <div class="info-services__offers">
-        <div class="info-services__offer">
-          <h3>Brand Sprint - 4 Weeks</h3>
-          <p class="info-services__offer-sub">Positioning, narrative, and messaging that make you impossible to ignore.</p>
-          <p class="info-services__offer-label">What you walk away with:</p>
-          <div class="info-services__deliverables">
-            <p>&rarr; Brand positioning & messaging framework</p>
-            <p>&rarr; Brand voice & tone guidelines</p>
-            <p>&rarr; 90-day content strategy</p>
-            <p>&rarr; Investor deck</p>
-            <p>&rarr; 30 days of post-launch support</p>
-          </div>
-          <a href="/contact" class="btn-primary info-services__offer-cta">Get in touch <span class="arrow">&rarr;</span></a>
-        </div>
-
-        <div class="info-services__offer">
-          <h3>Primer - 5 Week Launch Sprint</h3>
-          <p class="info-services__offer-sub">The complete launch sprint for early-stage startups. By Explicit × <a href="https://www.studioinfer.com/" target="_blank" rel="noopener noreferrer">Studio Infer</a>.</p>
-          <p class="info-services__offer-label">What you walk away with:</p>
-          <div class="info-services__deliverables">
-            <p>&rarr; Brand positioning & messaging framework</p>
-            <p>&rarr; Brand identity & visual system</p>
-            <p>&rarr; Designed and developed website</p>
-            <p>&rarr; Brand guidelines</p>
-            <p>&rarr; ~10 hours of your time. We handle the rest.</p>
-          </div>
-          <a href="#" class="btn-primary info-services__offer-cta">Learn more <span class="arrow">&rarr;</span></a>
-        </div>
-
-        <div class="info-services__offer">
-          <h3>Monthly Partnership - Ongoing</h3>
-          <p class="info-services__offer-sub">An embedded creative partner across storytelling, growth, and GTM. Your CMO, creative director, and intern - owning strategy and execution from inside the org.</p>
-          <p class="info-services__offer-label">What this looks like:</p>
-          <div class="info-services__deliverables">
-            <p>&rarr; Embedded within the team</p>
-            <p>&rarr; Storytelling, growth, and GTM under one roof</p>
-            <p>&rarr; Campaigns, content, advertising creatives and copy</p>
-          </div>
-          <a href="/contact" class="btn-primary info-services__offer-cta">Get in touch <span class="arrow">&rarr;</span></a>
-        </div>
-
-        <div class="info-services__offer">
-          <h3>1:1 with Srijan</h3>
-          <p class="info-services__offer-sub">Not ready for a full engagement? Book a 1:1 session or a brand strategy workshop with Srijan to work through anything - brand positioning, go-to-market strategy, growth challenges, content direction, or whatever's keeping you up at night.</p>
-          <div class="info-services__deliverables"></div>
-          <a href="/contact" class="btn-primary info-services__offer-cta">Book now <span class="arrow">&rarr;</span></a>
-        </div>
       </div>
     </div>
   </section>
@@ -110,280 +82,148 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 </BaseLayout>
 
 <style>
-  /* ===== Philosophy ===== */
-  .info-philosophy {
-    padding: 40px var(--section-padding-x) var(--section-padding-y);
+  /* ===== Introduction ===== */
+  .about-intro {
+    padding: 40px var(--section-padding-x) clamp(48px, 6vw, 72px);
   }
 
-  .info-philosophy__headline {
+  .about-intro__headline {
     font-size: var(--text-h1);
     font-weight: 500;
-    margin-bottom: 32px;
+    line-height: 1.12;
+    letter-spacing: -0.03em;
+    max-width: 20ch;
+    margin-bottom: 28px;
   }
 
-  .info-philosophy__body {
-    max-width: 800px;
-  }
-
-  .info-philosophy__body p {
+  .about-intro__body {
     font-size: var(--text-h3);
     font-weight: 400;
-    line-height: 1.6;
-    margin-bottom: 24px;
-    color: var(--color-text);
+    line-height: 1.65;
+    color: var(--color-text-secondary);
+    max-width: 68ch;
   }
 
-  .info-philosophy__body p:last-child {
-    margin-bottom: 0;
+  /* ===== Founder's note ===== */
+  .note {
+    padding: 0 var(--section-padding-x) clamp(56px, 7vw, 88px);
+    border-top: 1px solid var(--color-rule);
+    padding-top: clamp(48px, 6vw, 72px);
   }
 
-  .info-philosophy__body strong {
-    font-weight: 700;
-  }
-
-  /* ===== We Believe ===== */
-  .info-beliefs {
-    padding: 0 var(--section-padding-x) var(--section-padding-y);
-  }
-
-  .info-beliefs__title {
-    font-size: var(--text-h1);
-    font-weight: 500;
-    margin-bottom: 32px;
-  }
-
-  .info-beliefs__list {
-    border-top: 1px solid var(--color-border);
-  }
-
-  .info-beliefs__item {
-    border-bottom: 1px solid var(--color-border);
-    padding: 24px 0;
-  }
-
-  .info-beliefs__item h3 {
-    font-size: var(--text-h2);
-    font-weight: 500;
-  }
-
-  /* ===== About Srijan ===== */
-  .info-about {
-    padding: var(--section-padding-y) var(--section-padding-x);
-  }
-
-  .info-about__grid {
+  .note__grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.75fr);
+    gap: clamp(40px, 6vw, 72px);
     align-items: start;
   }
 
-  .info-about__body p {
+  .note__heading {
+    font-size: var(--text-h2);
+    font-weight: 500;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin-bottom: 32px;
+  }
+
+  /* A letter, not a manifesto — one readable column, the writing does the work. */
+  .note__body p {
     font-size: var(--text-h3);
     font-weight: 400;
-    line-height: 1.6;
-    margin-bottom: 24px;
+    line-height: 1.7;
+    color: var(--color-text);
+    max-width: 58ch;
+    margin-bottom: 1.15em;
+  }
+
+  .note__sign {
+    margin-top: 36px;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .note__name {
+    font-size: var(--text-h3);
+    font-weight: 500;
     color: var(--color-text);
   }
 
-  .info-about__body p:last-child {
-    margin-bottom: 0;
+  .note__role {
+    font-size: var(--text-small);
+    font-weight: 400;
+    color: var(--color-text-tertiary);
   }
 
-  .info-about__body a {
-    color: var(--color-accent);
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-
-  .info-about__body a:hover {
-    color: var(--color-accent-hover);
-  }
-
-  .info-about__portrait {
+  .note__portrait {
     position: sticky;
     top: 40px;
   }
 
-  .info-about__portrait img {
+  .note__portrait img {
     width: 100%;
     border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
   }
 
-  /* ===== How We Work ===== */
-  .info-services {
-    position: relative;
-    padding: var(--section-padding-y) var(--section-padding-x);
-    background: url('/images/services-bg.jpg') center / cover no-repeat;
-    border-radius: var(--radius-md);
+  /* ===== Hiring note — a quiet invitation under the signature ===== */
+  .hiring {
+    margin-top: clamp(40px, 5vw, 56px);
+    padding-top: clamp(24px, 3vw, 32px);
+    border-top: 1px solid var(--color-rule);
+    max-width: 58ch;
   }
 
-  .info-services::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: rgba(12, 12, 12, 0.75);
-    border-radius: var(--radius-md);
-    pointer-events: none;
-    z-index: 0;
-  }
-
-  .info-services__inner {
-    position: relative;
-    z-index: 1;
-    max-width: none;
-  }
-
-  .info-services__title {
-    font-size: var(--text-h1);
-    font-weight: 500;
-    margin-bottom: 32px;
-  }
-
-  .info-services__intro {
-    margin-bottom: 48px;
-  }
-
-  .info-services__intro p {
+  .hiring__heading {
     font-size: var(--text-h3);
+    font-weight: 500;
+    color: var(--color-text);
+    margin-bottom: 14px;
+  }
+
+  .hiring p {
+    font-size: var(--text-small);
     font-weight: 400;
     line-height: 1.6;
-    margin-bottom: 24px;
-  }
-
-  .info-services__intro p:last-child {
-    margin-bottom: 0;
-  }
-
-  .info-services__intro strong {
-    font-weight: 700;
-  }
-
-  .info-services__offers {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-  }
-
-  .info-services__offer {
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(255, 255, 255, 0.06);
-    border-radius: var(--radius-md);
-    padding: clamp(24px, 3vw, 40px);
-    display: flex;
-    flex-direction: column;
-  }
-
-  .info-services__offer h3 {
-    font-size: var(--text-h3);
-    font-weight: 700;
-    margin-bottom: 8px;
-  }
-
-  .info-services__offer-sub {
-    font-size: var(--text-h3);
-    font-weight: 400;
-    font-style: italic;
     color: var(--color-text-secondary);
-    margin-bottom: 24px;
+    margin-bottom: 0.9em;
   }
 
-  .info-services__offer-label {
-    font-size: var(--text-h3);
-    font-weight: 400;
-    margin-bottom: 16px;
-  }
-
-  .info-services__deliverables p {
-    font-size: var(--text-h3);
-    font-weight: 400;
-    line-height: 1.8;
-  }
-
-  .info-services__offer-price {
-    font-size: var(--text-h3);
-    font-weight: 700;
-    margin-top: 24px;
-    margin-bottom: 24px;
-  }
-
-  .info-services__deliverables {
-    flex-grow: 1;
-  }
-
-  .info-services__offer-cta {
+  .hiring__link {
     display: inline-flex;
-    margin-top: 24px;
-    align-self: flex-end;
-  }
-
-  .info-services__offer-sub a {
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+    font-size: var(--text-small);
+    font-weight: 500;
     color: var(--color-accent);
-    text-decoration: none;
     transition: color 0.3s ease;
   }
 
-  .info-services__offer-sub a:hover {
+  .hiring__link:hover {
     color: var(--color-accent-hover);
   }
 
-  /* ===== CTA ===== */
-  .info-cta {
-    background: var(--color-bg-alt);
-    padding: var(--section-padding-y) var(--section-padding-x);
-  }
-
-  .info-cta__inner {
-    text-align: center;
-  }
-
-  .info-cta__inner h2 {
-    font-size: var(--text-h1);
-    font-weight: 500;
-    line-height: 1.15;
-    margin-bottom: 40px;
-  }
-
-  .info-cta__button {
-    padding: 16px 40px;
-  }
-
-  .info-cta__email {
-    display: block;
-    margin-top: 24px;
-    font-size: var(--text-body);
-    font-weight: var(--weight-regular);
-    color: var(--color-text-secondary);
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-
-  .info-cta__email:hover {
-    color: var(--color-accent);
-  }
-
-  /* ===== Responsive ===== */
-  @media (max-width: 767px) {
-    .info-about__grid {
+  @media (max-width: 900px) {
+    .note__grid {
       grid-template-columns: 1fr;
       gap: 32px;
     }
 
-    .info-about__portrait {
+    .note__portrait {
       position: static;
       order: -1;
+      max-width: 320px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .about-intro__headline {
+      max-width: none;
     }
 
-    .info-services__offers {
-      grid-template-columns: 1fr;
-    }
-
-    .info-services__offer {
-      padding: 24px;
-    }
-
-    .info-beliefs__item h3 {
-      font-size: var(--text-h3);
+    .note__body p {
+      max-width: none;
     }
   }
 </style>

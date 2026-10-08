@@ -1,15 +1,22 @@
 ---
 import '../styles/global.css';
+import Footer from '../components/Footer.astro';
 
 interface Props {
   title?: string;
   description?: string;
   ogImage?: string;
   hideCta?: boolean;
+  /** The fixed sidebar already carries nav, contact and socials on desktop, so
+   *  the homepage closes on its CTA instead of repeating them in a footer. */
+  hideFooter?: boolean;
+  /** Homepage closes on headline + one line only; the inner pages still carry
+   *  the explanatory paragraph, which is the first thing a visitor meets there. */
+  briefCta?: boolean;
 }
 
 const siteUrl = 'https://explicit.studio';
-const { title = 'Explicit Studio', description = 'A full cycle creative studio creating monopolising brands for technology startups.', ogImage = '/images/open-graph.png', hideCta = false } = Astro.props;
+const { title = 'Explicit Studio', description = 'Explicit works with technology companies at important moments of change — helping make what has become true understood and wanted.', ogImage = '/images/open-graph.png', hideCta = false, briefCta = false, hideFooter = false } = Astro.props;
 const canonicalUrl = new URL(Astro.url.pathname, siteUrl).href;
 const ogImageUrl = new URL(ogImage, siteUrl).href;
 ---
@@ -21,7 +28,7 @@ const ogImageUrl = new URL(ogImage, siteUrl).href;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <meta name="author" content="Srijan Mahajan" />
-    <meta name="theme-color" content="#0c0c0c" />
+    <meta name="theme-color" content="#F7F6F2" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="canonical" href={canonicalUrl} />
     <meta name="generator" content={Astro.generator} />
@@ -64,7 +71,7 @@ const ogImageUrl = new URL(ogImage, siteUrl).href;
           <nav class="sidebar__nav">
             <a href="/">Home</a>
             <a href="/work">Work</a>
-            <a href="/info">Info</a>
+            <a href="/info">About</a>
             <a href="/contact">Contact</a>
           </nav>
         </div>
@@ -75,7 +82,7 @@ const ogImageUrl = new URL(ogImage, siteUrl).href;
 
         <div class="sidebar__bottom">
           <p class="sidebar__descriptor">
-            Creative partners to Startups & VCs. Working across Growth, Storytelling & New Media.
+            Strategic creative partners for technology companies.
           </p>
           <div class="sidebar__logo-large">
             <img src="/images/logos/logo.png" alt="Explicit Studio" class="sidebar__logo-img" />
@@ -93,20 +100,27 @@ const ogImageUrl = new URL(ogImage, siteUrl).href;
         <slot />
 
         {!hideCta && (
-          <div class="site-cta">
+          <div class:list={['site-cta', { 'site-cta--last': hideFooter }]}>
             <hr class="site-cta__divider" />
-            <div class="site-cta__card">
-              <div class="site-cta__row">
-                <div>
-                  <h2 class="site-cta__headline">Make more money.</h2>
-                </div>
-                <a href="/contact" class="btn-primary site-cta__button">
-                  Get in touch <span class="arrow">&rarr;</span>
-                </a>
+            <div class="site-cta__row">
+              <div class="site-cta__copy">
+                <h2 class="site-cta__headline">Something important changed?</h2>
+                {!briefCta && (
+                  <p class="site-cta__body">
+                    A new product, market, audience or direction. A company that's outgrown its old
+                    story. Something genuinely interesting that people don't understand yet.
+                  </p>
+                )}
+                <p class="site-cta__kicker">We'd like to know.</p>
               </div>
+              <a href="/contact" class="btn-primary site-cta__button">
+                Talk to Explicit <span class="arrow">&rarr;</span>
+              </a>
             </div>
           </div>
         )}
+
+        {!hideFooter && <Footer />}
       </main>
     </div>
 
@@ -117,11 +131,11 @@ const ogImageUrl = new URL(ogImage, siteUrl).href;
       <nav class="mobile-sidebar__nav">
         <a href="/">Home</a>
         <a href="/work">Work</a>
-        <a href="/info">Info</a>
+        <a href="/info">About</a>
         <a href="/contact">Contact</a>
       </nav>
       <div class="mobile-sidebar__bottom">
-        <p>Creative partners to Startups & VCs. Working across Growth, Storytelling & New Media.</p>
+        <p>Strategic creative partners for technology companies.</p>
         <div class="mobile-sidebar__socials">
           <a href="https://x.com/studio_explicit" target="_blank" rel="noopener noreferrer">Twitter (AKA X)</a>
           <a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a>

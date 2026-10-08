@@ -2,11 +2,21 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="Contact — Explicit Studio" description="Got a story to tell? Get in touch with Explicit Studio. If there's a fit, we'll be on a call within 48 hours." hideCta={true}>
+<BaseLayout title="Contact — Explicit" description="Tell us what changed. Explicit works with technology companies at important moments of change." hideCta={true}>
 
   <section class="contact-section reveal">
-    <h1 class="contact-section__headline">Got a story to tell?</h1>
-    <p class="contact-section__subtitle">Tell us what you're building. If there's a fit, we'll be on a call within 48 hours.</p>
+    <h1 class="contact-section__headline">Tell us what changed.</h1>
+    <ul class="contact-section__list">
+      <li>A new product.</li>
+      <li>A new market.</li>
+      <li>A new audience.</li>
+      <li>A new category.</li>
+      <li>A company that has become something its old story can no longer explain.</li>
+      <li>Or something important that people simply don't understand yet.</li>
+    </ul>
+    <p class="contact-section__email">
+      <a href="mailto:hey@explicit.studio">hey@explicit.studio</a>
+    </p>
 
     <form class="contact-form" action="https://formspree.io/f/xreaqbjg" method="POST">
       <div class="form-group">
@@ -39,9 +49,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </button>
     </form>
 
-    <div class="contact-section__footer">
-      <p>Or email us: <a href="mailto:hey@explicit.studio">hey@explicit.studio</a></p>
-    </div>
   </section>
 
 </BaseLayout>
@@ -57,13 +64,31 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     margin-bottom: 16px;
   }
 
-  .contact-section__subtitle {
+  .contact-section__list {
+    max-width: 60ch;
+    margin-bottom: 32px;
+  }
+
+  .contact-section__list li {
     font-size: var(--text-h3);
     font-weight: 400;
-    color: var(--color-text-secondary);
-    max-width: 600px;
-    margin-bottom: 40px;
     line-height: 1.6;
+    color: var(--color-text-secondary);
+  }
+
+  .contact-section__email {
+    font-size: var(--text-h3);
+    font-weight: 500;
+    margin-bottom: 48px;
+  }
+
+  .contact-section__email a {
+    color: var(--color-accent);
+    transition: color 0.3s ease;
+  }
+
+  .contact-section__email a:hover {
+    color: var(--color-accent-hover);
   }
 
   .contact-form {
@@ -126,32 +151,4 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     margin-top: 32px;
   }
 
-  .contact-section__footer {
-    margin-top: 48px;
-    max-width: 600px;
-  }
-
-  .contact-section__footer p {
-    font-size: var(--text-h3);
-    font-weight: 400;
-    color: var(--color-text-secondary);
-    line-height: 1.6;
-  }
-
-  .contact-section__footer a {
-    color: var(--color-text);
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-
-  .contact-section__footer a:hover {
-    color: var(--color-accent);
-  }
-
-  .contact-section__byline {
-    margin-top: 8px;
-    font-size: var(--text-small);
-    font-weight: var(--weight-regular);
-    color: var(--color-text-tertiary);
-  }
 </style>

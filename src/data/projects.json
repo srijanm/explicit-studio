@@ -17,7 +17,7 @@
     ],
     "cardBg": "#1c2133",
     "cardTextColor": "#F5F5F5",
-    "thumbnail": "/images/projects/desicrew-thumb.png",
+    "thumbnail": "/images/projects/desicrew-thumb.webp",
     "hero": "/images/projects/desicrew-hero.mp4",
     "category": "work",
     "featured": true,
@@ -40,7 +40,9 @@
         "label": "THE OUTCOME",
         "text": "DesiCrew went from a set of six verticals, read as a legacy BPO, to a single brand with clear positioning and a complete rebrand. It is now positioned on both sides of AI. The leaders now publish in their own voice, the narrative finally matches the work, and the company the market sees is finally the one that's actually there."
       }
-    ]
+    ],
+    "cardHeadline": "A 19-year-old company had become something its old category could no longer explain.",
+    "cardLine": "We helped rebuild its positioning and narrative around the company it had actually become."
   },
   {
     "slug": "luma-wars",
@@ -51,10 +53,14 @@
     "industry": "Gaming",
     "year": "2026",
     "metric": "100k views · 1000+ played",
-    "tags": ["Story & Strategy", "Campaign", "Design & Development"],
+    "tags": [
+      "Story & Strategy",
+      "Campaign",
+      "Design & Development"
+    ],
     "cardBg": "#1c2133",
     "cardTextColor": "#F5F5F5",
-    "thumbnail": "/images/projects/luma-wars-thumb.png",
+    "thumbnail": "/images/projects/luma-wars-thumb.webp",
     "homeThumbnail": "/images/projects/luma-wars-cover-home.webp",
     "hero": "/images/projects/luma-wars-hero.mp4",
     "category": "work",
@@ -68,12 +74,20 @@
         "label": "THE INSIGHT",
         "text": "The obvious was to write a post about it, but we decided to build a game. The brand stands up for itself without putting anyone down, and shooting back would have said the opposite. So we flipped it. You don't shoot the bots, you dodge them. Luma, the EDT air fryer, became the hero, wrapped in a Star Wars opening and an 8-bit look the audience grew up on. The score ran on founder and VC in-jokes, because founders were the ones playing. Mobile only, because that's where it would spread."
       },
-      { "imageGrid": ["/images/projects/luma-wars-1.png", "/images/projects/luma-wars-2.png"] },
+      {
+        "imageGrid": [
+          "/images/projects/luma-wars-1.png",
+          "/images/projects/luma-wars-2.png"
+        ]
+      },
       {
         "label": "THE OUTCOME",
         "text": "100k views and over a thousand people played. But the real result was the reaction. People watched a brand think this hard about a one-star review and turn it into something its own community wanted to pass around."
       }
-    ]
+    ],
+    "cardHeadline": "Review bots were hitting a D2C brand. Reporting them and waiting wasn't much of an answer.",
+    "cardLine": "So we built a game where you dodge the bots instead of shooting back — a brand standing up for itself without putting anyone down.",
+    "cardMetric": "100k views · 1000+ played"
   },
   {
     "slug": "pause",
@@ -84,10 +98,13 @@
     "industry": "Mental Health",
     "year": "2021-2025",
     "metric": "70+ NPS",
-    "tags": ["Story & Strategy", "Brand & Content"],
+    "tags": [
+      "Story & Strategy",
+      "Brand & Content"
+    ],
     "cardBg": "#1c2133",
     "cardTextColor": "#F5F5F5",
-    "thumbnail": "/images/projects/pause-thumb.png",
+    "thumbnail": "/images/projects/pause-thumb.webp",
     "category": "work",
     "featured": true,
     "sections": [
@@ -95,18 +112,30 @@
         "label": "THE LANDSCAPE",
         "text": "Mental health came with stigma, and the last thing people wanted was another earnest, overly-precious meditation app. Meanwhile the category was drowning in the same visual clichés — pastels, nature, soft whispers, and gentle hands resting on knees."
       },
-      { "image": "/images/projects/pause-image-1.jpg" },
+      {
+        "image": "/images/projects/pause-image-1.jpg"
+      },
       {
         "label": "THE INSIGHT",
         "text": "Dark humour is how a lot of people actually deal with hard feelings. Instead of the expected \"it's okay to not be okay\" approach, we built Pause's brand voice around self-deprecating humour, honest emotional admission, and a tone that felt like talking to your sharpest friend — the one who makes you laugh about the thing you've been avoiding."
       },
-      { "image": "/images/projects/pause-image-2.jpg" },
-      { "imageGrid": ["/images/projects/pause-image-3.png", "/images/projects/pause-image-4.jpg"] },
+      {
+        "image": "/images/projects/pause-image-2.jpg"
+      },
+      {
+        "imageGrid": [
+          "/images/projects/pause-image-3.png",
+          "/images/projects/pause-image-4.jpg"
+        ]
+      },
       {
         "label": "THE OUTCOME",
         "text": "When an entire category competes on sincerity, the funniest voice in the room wins. Pause launched with a 70+ NPS and a brand that didn't feel like a brand — it felt like a group chat. Users didn't just use the app, they shared it — because the content was worth sharing independent of the product."
       }
-    ]
+    ],
+    "cardHeadline": "An entire category was competing on sincerity.",
+    "cardLine": "We built a mental health brand around dark humour instead — the voice people actually use for hard feelings.",
+    "cardMetric": "70+ NPS"
   },
   {
     "slug": "qaoncloud",
@@ -117,10 +146,15 @@
     "industry": "Enterprise AI",
     "year": "2025 - Ongoing",
     "metric": "Complete rebrand & reposition",
-    "tags": ["Brand & Positioning", "Identity", "Content Strategy", "Web Design & Development"],
+    "tags": [
+      "Brand & Positioning",
+      "Identity",
+      "Content Strategy",
+      "Web Design & Development"
+    ],
     "cardBg": "#1c2133",
     "cardTextColor": "#F5F5F5",
-    "thumbnail": "/images/projects/qaonc-thumb.png",
+    "thumbnail": "/images/projects/qaonc-thumb.webp",
     "category": "work",
     "featured": true,
     "sections": [
@@ -136,7 +170,9 @@
         "label": "THE OUTCOME",
         "text": "The new site went from a generic enterprise template to a sharp, conversion-focused experience with clear positioning, real social proof, and a specific promise that no competitor was making. We also built a content strategy and outreach programme to drive inbound and outbound leads."
       }
-    ]
+    ],
+    "cardHeadline": "A better product truth was hiding inside a generic services story.",
+    "cardLine": "We found the sharper promise in the business and rebuilt its market expression around it."
   },
   {
     "slug": "origin-one",
@@ -147,10 +183,13 @@
     "industry": "E-commerce",
     "year": "2026 - Ongoing",
     "metric": "153% sales increase",
-    "tags": ["Advertising Creative", "User Research & Media Buying"],
+    "tags": [
+      "Advertising Creative",
+      "User Research & Media Buying"
+    ],
     "cardBg": "#1c2133",
     "cardTextColor": "#F5F5F5",
-    "thumbnail": "/images/projects/originone-thumb.png",
+    "thumbnail": "/images/projects/originone-thumb.webp",
     "category": "work",
     "featured": true,
     "sections": [
@@ -158,50 +197,71 @@
         "label": "THE LANDSCAPE",
         "text": "Origin One is a premium stationery brand with a product people loved once they tried it — but almost no one was trying it. Advertising existed but it was scattered and directionless. There was no clear positioning, no consistent creative, and no strategy behind what was being spent. The brand had strong social proof from existing customers but had never used it."
       },
-      { "image": "/images/projects/originone-1.png" },
+      {
+        "image": "/images/projects/originone-1.png"
+      },
       {
         "label": "THE INSIGHT",
         "text": "Stationery isn't a rational purchase — nobody needs another notebook. It's an emotional one. We built a creative strategy around what the product actually made people feel: the texture of the paper, the ritual of writing, the quiet satisfaction of something beautifully made. We paired visceral, sensory-driven ads with real customer stories that had been sitting unused. Then we built the media buying infrastructure to put it all in front of the right people."
       },
-      { "image": "/images/projects/originone-2.png" },
+      {
+        "image": "/images/projects/originone-2.png"
+      },
       {
         "label": "THE OUTCOME",
         "text": "Sales increased by 153% in 4 weeks. What started as an advertising engagement has since expanded into full CRO — optimising the funnel, improving the user experience, and turning one-time buyers into repeat customers."
       }
-    ]
+    ],
+    "cardHeadline": "153% more sales in four weeks.",
+    "cardLine": "Customer understanding, creative and distribution came together to move a clearer commercial proposition into the market."
   },
   {
     "slug": "qwikbuild",
     "title": "QwikBuild",
-    "description": "QwikBuild: GTM strategy & channel validation that generated the signal to pivot the product.",
-    "subtitle": "GTM strategy & channel validation that generated the signal to pivot the product.",
+    "description": "QwikBuild: The market changed. We rebuilt the positioning, value proposition and website to change with it.",
+    "subtitle": "The market changed. We rebuilt QwikBuild's positioning, value proposition and website to change with it.",
     "client": "QwikBuild",
     "industry": "Artificial Intelligence",
     "year": "2025 - Ongoing",
     "metric": "",
-    "tags": ["GTM Strategy", "Advertising", "Positioning & Content"],
+    "tags": [
+      "Positioning & Value Proposition",
+      "Messaging",
+      "Web Design & Development",
+      "GTM Experiments"
+    ],
     "cardBg": "#1c2133",
     "cardTextColor": "#F5F5F5",
-    "thumbnail": "/images/projects/qwikbuild-thumb.mp4",
-    "homeThumbnail": "/images/projects/qwikbuild-thumb-home.png",
+    "thumbnail": "/images/projects/qwikbuild-thumb-web.mp4",
+    "homeThumbnail": "/images/projects/qwikbuild-thumb-home.webp",
     "category": "work",
     "featured": true,
     "sections": [
       {
         "label": "THE LANDSCAPE",
-        "text": "QwikBuild is a consumer AI platform that lets anyone build production-ready apps without code. The product was built. The question was: how do you get it in front of people, and which people? There was no established GTM playbook and no clear sense of which channels, messages, or positioning would work."
+        "text": "QwikBuild began in a category moving at absurd speed.\n\nProducts changed. Competitors changed. What users expected from AI software changed. Language that felt new six months earlier could become generic almost overnight.\n\nAt some point the problem stopped being how do we market the existing proposition better, and became: what should QwikBuild mean now?"
       },
-      { "image": "/images/projects/qwikbuild-1.png" },
       {
-        "label": "THE INSIGHT",
-        "text": "Instead of guessing, we tested everything. We ran advertising across Meta and Google, experimented with different positioning angles and messaging, tested product onboarding flows, explored PLG levers, and tried community-led adoption. Each experiment was designed to generate signal, not just traffic."
+        "label": "THE EVIDENCE",
+        "text": "Our earlier work with QwikBuild had given us something more useful than opinions.\n\nWe had real signal from positioning, advertising, channels, customer response and product adoption. We could see what people understood, what created interest, what created confusion, and how the competitive context around the product was changing. That signal had already informed a pivot on the product itself.\n\nThe market had moved enough that simply improving the old story would have been the wrong answer."
       },
-      { "image": "/images/projects/qwikbuild-2.png" },
       {
-        "label": "THE OUTCOME",
-        "text": "Some channels worked. Some messaging landed. But the most valuable thing we uncovered wasn't a growth hack — it was product signal. The GTM experiments revealed enough about how people understood (and misunderstood) the product that it informed a pivot on the product itself. Sometimes the best thing a creative partner can do isn't make the numbers go up — it's help you figure out what to build next. A major relaunch is coming."
+        "image": "/images/projects/qwikbuild-1.png"
+      },
+      {
+        "label": "THE REPOSITIONING",
+        "text": "So we went back to the product, the company, the audience and the competitive landscape.\n\nWe rebuilt the positioning and value proposition around the reality QwikBuild was operating in now. Then we translated that into a new website and a clearer market expression.\n\nThe aim was not cosmetic change. It was to make the company easier to understand for the market it actually wanted to win."
+      },
+      {
+        "image": "/images/projects/qwikbuild-2.png"
+      },
+      {
+        "label": "THE PATTERN",
+        "text": "QwikBuild is a useful example of the kind of problem we want to get very good at.\n\nA company changes. The market changes. The old explanation stops being useful.\n\nSo you go back to what is true now — and build the new meaning from there."
       }
-    ]
+    ],
+    "cardHeadline": "The AI market changed. QwikBuild needed to change with it.",
+    "cardLine": "We rebuilt the positioning, value proposition and website around the market QwikBuild was actually competing in."
   },
   {
     "slug": "attis-insider",
@@ -212,10 +272,14 @@
     "industry": "Biohacking / Wellness",
     "year": "2024",
     "metric": "1000+ signups, ₹0 spent",
-    "tags": ["Strategy", "Campaign", "Community"],
+    "tags": [
+      "Strategy",
+      "Campaign",
+      "Community"
+    ],
     "cardBg": "#1c2133",
     "cardTextColor": "#F5F5F5",
-    "thumbnail": "/images/projects/attis-insider-thumb.png",
+    "thumbnail": "/images/projects/attis-insider-thumb.webp",
     "hero": "/images/projects/attis-insider-hero-video.mp4",
     "category": "work",
     "featured": true,
@@ -224,18 +288,27 @@
         "label": "THE LANDSCAPE",
         "text": "India's biohacking space was nonexistent. There were no dedicated brands, no communities, no cultural conversation around the idea that optimisation wasn't just for athletes or tech bros. Attis wanted to build a community before selling a product — but \"biohacking\" sounded intimidating."
       },
-      { "image": "/images/projects/attis-insider-1.png" },
+      {
+        "image": "/images/projects/attis-insider-1.png"
+      },
       {
         "label": "THE INSIGHT",
         "text": "We created Attis Insider — a membership-style community that made biohacking feel like a culture, not a science experiment. The launch campaign, \"Magic Pills\", was deliberately provocative: we sent mystery packages branded as pills to health influencers and content creators with no context."
       },
-      { "image": "/images/projects/attis-insider-2.webp" },
+      {
+        "image": "/images/projects/attis-insider-2.webp"
+      },
       {
         "label": "THE OUTCOME",
         "text": "The campaign generated over 100k organic views, 500+ social mentions, and 1000+ community signups — all on ₹0 ad spend. The mystery packaging created FOMO-driven sharing loops that outperformed paid campaigns."
       },
-      { "image": "/images/projects/attis-insider-3.webp" }
-    ]
+      {
+        "image": "/images/projects/attis-insider-3.webp"
+      }
+    ],
+    "cardHeadline": "India had no biohacking culture, so there was nothing to belong to yet.",
+    "cardLine": "We launched the community before the product, with a deliberately provocative campaign and no media spend.",
+    "cardMetric": "1000+ signups · ₹0 spent"
   },
   {
     "slug": "attis-campaigns",
@@ -246,11 +319,15 @@
     "industry": "Biohacking / Wellness",
     "year": "2024",
     "metric": "850+ orders · 250k+ views",
-    "tags": ["Strategy", "Campaign", "Product Design"],
+    "tags": [
+      "Strategy",
+      "Campaign",
+      "Product Design"
+    ],
     "cardBg": "#1c2133",
     "cardTextColor": "#F5F5F5",
-    "thumbnail": "/images/projects/attis-campaigns-thumb.png",
-    "homeThumbnail": "/images/projects/attis-campaigns-thumb-home.png",
+    "thumbnail": "/images/projects/attis-campaigns-thumb.webp",
+    "homeThumbnail": "/images/projects/attis-campaigns-thumb-home.webp",
     "hero": "/images/projects/attis-campaigns-header-video.mp4",
     "category": "work",
     "featured": true,
@@ -259,17 +336,24 @@
         "label": "THE LANDSCAPE",
         "text": "After building the community, Attis needed to convert attention into revenue. But typical health-brand advertising — clean product shots, benefit-focused copy, influencer unboxings — would have killed the edge that made the brand interesting."
       },
-      { "image": "/images/projects/attis-campaigns-1.png" },
+      {
+        "image": "/images/projects/attis-campaigns-1.png"
+      },
       {
         "label": "THE INSIGHT",
         "text": "We ran two campaigns designed to expose nerves. Each one made people uncomfortable enough to stop scrolling, curious enough to click, and convinced enough to buy. The campaigns leaned into Attis's counter-cultural positioning rather than softening it for conversion."
       },
-      { "image": "/images/projects/attis-campaigns-2.png" },
+      {
+        "image": "/images/projects/attis-campaigns-2.png"
+      },
       {
         "label": "THE OUTCOME",
         "text": "Two viral campaigns. 850+ product orders. 250k+ organic views. The brand maintained its edge while proving that provocative creative isn't just for awareness — it converts."
       }
-    ]
+    ],
+    "cardHeadline": "The community had attention. It hadn't become revenue.",
+    "cardLine": "Two campaigns that converted by keeping the brand's edge rather than softening it.",
+    "cardMetric": "850+ orders · 250k+ views"
   },
   {
     "slug": "nothing",
@@ -280,21 +364,40 @@
     "industry": "Consumer Tech",
     "year": "2025",
     "metric": "",
-    "tags": ["Strategy", "Product & Campaign"],
+    "tags": [
+      "Strategy",
+      "Product & Campaign"
+    ],
     "cardBg": "#1c2133",
     "cardTextColor": "#F5F5F5",
-    "thumbnail": "/images/projects/nothing-thumb.jpg",
+    "thumbnail": "/images/projects/nothing-thumb.webp",
     "category": "exploration",
     "featured": true,
     "sections": [
-      { "image": "/images/projects/2.jpg" },
-      { "image": "/images/projects/3.jpg" },
-      { "image": "/images/projects/4.jpg" },
-      { "image": "/images/projects/5.jpg" },
-      { "image": "/images/projects/6.jpg" },
-      { "image": "/images/projects/7.jpg" },
-      { "image": "/images/projects/8.jpg" }
-    ]
+      {
+        "image": "/images/projects/2.jpg"
+      },
+      {
+        "image": "/images/projects/3.jpg"
+      },
+      {
+        "image": "/images/projects/4.jpg"
+      },
+      {
+        "image": "/images/projects/5.jpg"
+      },
+      {
+        "image": "/images/projects/6.jpg"
+      },
+      {
+        "image": "/images/projects/7.jpg"
+      },
+      {
+        "image": "/images/projects/8.jpg"
+      }
+    ],
+    "cardHeadline": "An exploration for the iconoclasts.",
+    "cardLine": "Self-initiated. Strategy, product and campaign thinking for a consumer technology brand, without waiting for a brief."
   },
   {
     "slug": "raweceek",
@@ -305,33 +408,76 @@
     "industry": "Motorsport / Culture / D2C",
     "year": "2026",
     "metric": "Spec Work",
-    "tags": ["Brand Strategy", "Identity", "Product Design", "Content Strategy", "GTM"],
+    "tags": [
+      "Brand Strategy",
+      "Identity",
+      "Product Design",
+      "Content Strategy",
+      "GTM"
+    ],
     "cardBg": "#1c2133",
     "cardTextColor": "#F5F5F5",
-    "thumbnail": "/images/projects/raweceek-27.png",
+    "thumbnail": "/images/projects/raweceek-27.webp",
     "category": "exploration",
     "featured": true,
     "sections": [
       {
         "text": "A spec project. Raweceek is a racing media & culture company that monetizes through limited merch drops, track posters, and community events tied to every race weekend. 24 races. 24 drops. Brand strategy, identity, product design, content strategy & GTM — from pitch to launch."
       },
-      { "image": "/images/projects/raweceek-11.png" },
-      { "image": "/images/projects/raweceek-12.png" },
-      { "image": "/images/projects/raweceek-13.png" },
-      { "image": "/images/projects/raweceek-14.png" },
-      { "image": "/images/projects/raweceek-15.png" },
-      { "image": "/images/projects/raweceek-16.png" },
-      { "image": "/images/projects/raweceek-17.png" },
-      { "image": "/images/projects/raweceek-18.png" },
-      { "image": "/images/projects/raweceek-19.png" },
-      { "image": "/images/projects/raweceek-20.png" },
-      { "image": "/images/projects/raweceek-21.png" },
-      { "image": "/images/projects/raweceek-22.png" },
-      { "image": "/images/projects/raweceek-23.png" },
-      { "image": "/images/projects/raweceek-24.png" },
-      { "image": "/images/projects/raweceek-25.png" },
-      { "image": "/images/projects/raweceek-26.png" },
-      { "image": "/images/projects/raweceek-27.png" }
-    ]
+      {
+        "image": "/images/projects/raweceek-11.png"
+      },
+      {
+        "image": "/images/projects/raweceek-12.png"
+      },
+      {
+        "image": "/images/projects/raweceek-13.png"
+      },
+      {
+        "image": "/images/projects/raweceek-14.png"
+      },
+      {
+        "image": "/images/projects/raweceek-15.png"
+      },
+      {
+        "image": "/images/projects/raweceek-16.png"
+      },
+      {
+        "image": "/images/projects/raweceek-17.png"
+      },
+      {
+        "image": "/images/projects/raweceek-18.png"
+      },
+      {
+        "image": "/images/projects/raweceek-19.png"
+      },
+      {
+        "image": "/images/projects/raweceek-20.png"
+      },
+      {
+        "image": "/images/projects/raweceek-21.png"
+      },
+      {
+        "image": "/images/projects/raweceek-22.png"
+      },
+      {
+        "image": "/images/projects/raweceek-23.png"
+      },
+      {
+        "image": "/images/projects/raweceek-24.png"
+      },
+      {
+        "image": "/images/projects/raweceek-25.png"
+      },
+      {
+        "image": "/images/projects/raweceek-26.png"
+      },
+      {
+        "image": "/images/projects/raweceek-27.png"
+      }
+    ],
+    "cardHeadline": "A motorsport culture brand for the generation that found F1 through Drive to Survive.",
+    "cardLine": "Spec work. 24 races, 24 drops — brand strategy, identity, product design, content and GTM, from pitch to launch.",
+    "cardMetric": "Spec work"
   }
 ]

@@ -1,57 +1,61 @@
 ---
-const { project, useHomeThumbnail = false } = Astro.props;
-const textColor = project.cardTextColor || '#F5F5F5';
-const isLightText = !project.cardTextColor || project.cardTextColor !== '#1A1A1A';
-const tagColor = isLightText ? 'rgba(255,255,255,0.6)' : 'rgba(0,0,0,0.5)';
-const borderColor = isLightText ? 'rgba(255,255,255,0.15)' : 'rgba(0,0,0,0.1)';
-const placeholderColor = isLightText ? 'rgba(255,255,255,0.3)' : 'rgba(0,0,0,0.2)';
+const { project, useHomeThumbnail = false, featured = false } = Astro.props;
+
 const thumbSrc = (useHomeThumbnail && project.homeThumbnail) ? project.homeThumbnail : project.thumbnail;
 const hasThumb = thumbSrc && thumbSrc.length > 0;
 const isVideo = hasThumb && /\.(mp4|webm|mov)$/i.test(thumbSrc);
+
+// Card face leads with the problem, not a service list. `cardHeadline` /
+// `cardLine` carry the framing; older entries fall back to their subtitle so
+// nothing in the archive renders blank.
+const headline = project.cardHeadline || project.subtitle;
+const line = project.cardLine || '';
+// Only verified results earn the accent chip. `metric` also holds scope
+// descriptions ("Complete rebrand"), which read wrong as an outcome, so the
+// card opts in via cardMetric rather than printing metric blindly.
+const metric = project.cardMetric || '';
 ---
 
-<a
-  href={`/work/${project.slug}`}
-  class="project-card"
-  style={`background: var(--color-surface); color: ${textColor};`}
->
-  <div class="project-card__media" style={`border-color: ${borderColor};`}>
+<a href={`/work/${project.slug}`} class:list={['project-card', { 'project-card--featured': featured }]}>
+  <div class="project-card__media">
     {isVideo ? (
       <video src={thumbSrc} autoplay muted loop playsinline />
     ) : hasThumb ? (
       <img src={thumbSrc} alt={project.title} />
     ) : (
-      <span class="project-card__placeholder" style={`color: ${placeholderColor};`}>
-        {project.title}
-      </span>
+      <span class="project-card__placeholder">{project.title}</span>
     )}
   </div>
   <div class="project-card__info">
-    <h3 class="project-card__title">{project.description}</h3>
-    <span class="project-card__tags" style={`color: ${tagColor};`}>{project.tags.join(', ')}</span>
+    <p class="project-card__meta">
+      <span class="project-card__client">{project.client}</span>
+      {metric && <span class="project-card__metric">{metric}</span>}
+    </p>
+    <h3 class="project-card__title">{headline}</h3>
+    {line && <p class="project-card__line">{line}</p>}
   </div>
 </a>
 
 <style>
+  /* No outer panel. On warm paper the image frame and the rule under the meta
+     line do the structural work a filled card used to do on black. */
   .project-card {
     display: block;
     text-decoration: none;
-    border-radius: var(--radius-md);
-    padding: clamp(20px, 3vw, 40px);
-    overflow: hidden;
-    border: 1px solid var(--color-border);
+    color: var(--color-text);
   }
 
   .project-card__media {
     width: 100%;
     aspect-ratio: 16 / 9;
-    border-radius: 8px;
-    border: 1.5px solid rgba(255, 255, 255, 0.15);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
+    background: var(--color-surface);
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: clamp(16px, 2vw, 28px);
+    margin-bottom: clamp(16px, 2vw, 24px);
   }
 
   .project-card__media img,
@@ -60,28 +64,82 @@ const isVideo = hasThumb && /\.(mp4|webm|mov)$/i.test(thumbSrc);
     height: 100%;
     object-fit: cover;
     display: block;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .project-card:hover .project-card__media img,
+  .project-card:hover .project-card__media video {
+    transform: scale(1.02);
   }
 
   .project-card__placeholder {
     font-size: var(--text-small);
     font-weight: 400;
+    color: var(--color-text-tertiary);
   }
 
-  .project-card__info {
-    padding: 0;
+  .project-card__meta {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    padding-bottom: 10px;
+    margin-bottom: 14px;
+    border-bottom: 1px solid var(--color-rule);
+    font-size: var(--text-tiny);
+    font-weight: 500;
+  }
+
+  .project-card__client {
+    color: var(--color-text);
+    letter-spacing: var(--tracking-wide);
+    text-transform: uppercase;
+  }
+
+  .project-card__metric {
+    color: var(--color-accent);
   }
 
   .project-card__title {
     font-size: var(--text-h3);
     font-weight: 500;
-    line-height: 1.4;
+    line-height: 1.35;
+    letter-spacing: -0.01em;
     margin-bottom: 8px;
-    color: inherit;
+    max-width: 46ch;
   }
 
-  .project-card__tags {
+  .project-card__line {
     font-size: var(--text-small);
     font-weight: 400;
+    line-height: 1.6;
+    color: var(--color-text-secondary);
+    max-width: 62ch;
   }
 
+  .project-card:hover .project-card__title {
+    color: var(--color-accent);
+  }
+
+  /* Featured — the three cases that carry the new thesis. */
+  .project-card--featured .project-card__title {
+    font-size: var(--text-h2);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin-bottom: 12px;
+  }
+
+  .project-card--featured .project-card__line {
+    font-size: var(--text-h3);
+    line-height: 1.55;
+  }
+
+  @media (max-width: 767px) {
+    .project-card--featured .project-card__title {
+      font-size: var(--text-h3);
+    }
+
+    .project-card--featured .project-card__line {
+      font-size: var(--text-small);
+    }
+  }
 </style>

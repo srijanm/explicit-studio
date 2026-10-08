@@ -3,70 +3,114 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import ProjectCard from '../components/ProjectCard.astro';
 import projects from '../data/projects.json';
 
-const workProjects = projects.filter((p) => p.category === 'work');
-const explorations = projects.filter((p) => p.category === 'exploration');
+const bySlug = Object.fromEntries(projects.map((p) => [p.slug, p]));
+
+// The homepage is the pitch, not the archive. Only these four appear here;
+// the full portfolio and the explorations live on /work.
+const selected = ['qwikbuild', 'desicrew', 'qaoncloud', 'origin-one'].map((s) => bySlug[s]);
+
+// Working commercial categories for v0.1 — the first three are buying moments,
+// the fourth is an engagement a client can commission on its own. Deliberately
+// not forced into one framework.
+const offerings = [
+  {
+    num: '01',
+    title: 'Launches',
+    desc: 'Bringing new products, companies and categories into the world. From positioning and narratives to launch campaigns, films and websites.'
+  },
+  {
+    num: '02',
+    title: 'Repositioning',
+    desc: "Helping companies express what they've become. New positioning, stories, identities and websites that reflect where the business is going."
+  },
+  {
+    num: '03',
+    title: 'New markets & audiences',
+    desc: 'Making products and companies relevant to new people. Through audience insights, messaging, creative campaigns and market-specific storytelling.'
+  },
+  {
+    num: '04',
+    title: 'Creative campaigns',
+    desc: 'Turning an important idea into something people notice, care about and act on. Advertising, films, content, experiences or whatever else the idea deserves.'
+  }
+];
 
 // Client logos, laid out as two centred rows. `h` is a per-logo height so each
 // mark reads at the same optical weight — a single shared height makes the
 // heavy slab marks (EDT) shout and the delicate ones (Piano Man) vanish.
+// Technology-relevant companies lead.
 const clientLogos = [
-  { src: '/images/logos/desicrew.png', alt: 'DesiCrew', h: 30 },
-  { src: '/images/logos/pause.png', alt: 'Pause', h: 30 },
   { src: '/images/logos/QAonC.svg', alt: 'QAonCloud', h: 32 },
+  { src: '/images/logos/desicrew.png', alt: 'DesiCrew', h: 30 },
+  { src: '/images/logos/qwikbuild.png', alt: 'QwikBuild', h: 24 },
   { src: '/images/logos/agentq.png', alt: 'AgentQ', h: 26 },
+  { src: '/images/logos/edt.png', alt: 'EDT', h: 24 },
   { src: '/images/logos/originone.png', alt: 'Origin One', h: 34 },
   { src: '/images/logos/attis.png', alt: 'Attis', h: 30 },
-  { src: '/images/logos/pianoman.png', alt: 'Piano Man', h: 36 },
-  { src: '/images/logos/edt.png', alt: 'EDT', h: 24 }
+  { src: '/images/logos/pause.png', alt: 'Pause', h: 30 },
+  { src: '/images/logos/pianoman.png', alt: 'Piano Man', h: 36 }
 ];
-const logoRows = [clientLogos.slice(0, 4), clientLogos.slice(4)];
+const logoRows = [clientLogos.slice(0, 5), clientLogos.slice(5)];
 
-const testimonials = [
-  {
-    quote: "Srijan didn't just give us a brand, he gave us a story that tied our business, product & distribution in a way that would've been impossible to do otherwise.",
-    name: "Sushine Ullas",
-    role: "Chief Business Officer, QAonCloud",
-    avatar: "/images/avatars/placeholder-1.svg",
-    cardBg: "transparent",
-    textColor: "#F5F5F5"
-  },
-  {
+// Testimonials sit against the work they describe. Quotes, names and roles are
+// verbatim from the existing site — do not edit.
+const testimonials = {
+  qwikbuild: {
     quote: "Srijan has been an integral resource for the past 6 months, bringing founder energy to our GTM motion. He moves fast, understands business goals & is an excellent partner to have on your side.",
     name: "Pradeep Aiyyagiri",
     role: "Co-Founder Qwikbuild, Ex-CPO, Slice",
-    avatar: "/images/avatars/pradeep.jpeg",
-    cardBg: "transparent",
-    textColor: "#F5F5F5"
+    avatar: "/images/avatars/pradeep.jpeg"
   },
-  {
+  qaoncloud: {
+    quote: "Srijan didn't just give us a brand, he gave us a story that tied our business, product & distribution in a way that would've been impossible to do otherwise.",
+    name: "Sushine Ullas",
+    role: "Chief Business Officer, QAonCloud",
+    avatar: "/images/avatars/placeholder-1.svg"
+  },
+  'origin-one': {
     quote: "Srijan is highly perceptive & insightful. His deconstruction of where we stand and want to get to is tremendously educational, and he sets the cogs in motion to achieve it. Results came shockingly fast. A pleasure to work with.",
     name: "Pushkar Thakur",
     role: "Founder, Origin One & The Grafiosi",
-    avatar: "/images/avatars/pushkar.jpeg",
-    cardBg: "transparent",
-    textColor: "#F5F5F5"
+    avatar: "/images/avatars/pushkar.jpeg"
   }
-];
+};
 ---
 
-<BaseLayout title="Explicit Studio — Creative Partners for Startups">
+<BaseLayout
+  title="Explicit — Strategic Creative Partners for Technology Companies"
+  description="Explicit works with technology companies at important moments of change — helping make what has become true understood and wanted."
+  briefCta={true}
+  hideFooter={true}
+>
 
-  <!-- Hero -->
+  <!-- 01 — Hero -->
   <section class="hero">
     <h1 class="hero__headline">
-      Turn your product into a brand that gets attention and makes money.
+      Technology companies change fast.<br />
+      The way people think about them doesn't.
     </h1>
-    <p class="hero__descriptor">Creative partners to Startups & VCs. Working across Growth, Storytelling & New Media.</p>
+    <div class="hero__copy">
+      <p class="hero__definition">
+        Explicit is a strategic creative partner for technology companies.
+      </p>
+      <p class="hero__moments">
+        We're useful at important moments of change — launches, repositions, new market entry and
+        audience expansion. Or when a company has evolved into something its old story can no
+        longer explain.
+      </p>
+    </div>
+    <a href="/contact" class="btn-primary hero__cta">Get in touch <span class="arrow">&rarr;</span></a>
     <div class="hero__media">
-      <video src="/images/projects/home-showreel-thumb.mp4" autoplay muted loop playsinline></video>
+      <video
+        src="/images/projects/home-showreel-web.mp4"
+        poster="/images/projects/home-showreel-poster.jpg"
+        autoplay muted loop playsinline preload="metadata"
+      ></video>
     </div>
   </section>
 
-  <!-- Logo Bar -->
+  <!-- 02 — Client logos, unlabelled -->
   <section class="logos-section">
-    <p class="logos-section__text">
-      Working with ambitious founders & adventure capitalists across consumer & enterprise tech, AI & D2C.
-    </p>
     <div class="logos-grid">
       {logoRows.map(row => (
         <div class="logos-row">
@@ -78,97 +122,160 @@ const testimonials = [
     </div>
   </section>
 
-  <!-- Testimonials -->
-  <section class="testimonials-section reveal">
-    <div class="testimonials-grid">
-      {testimonials.map(t => (
-        <div class="testimonial-card">
-          <p class="testimonial-card__quote" style={`color: ${t.textColor};`}>"{t.quote}"</p>
-          <div class="testimonial-card__author">
-            <div class="testimonial-card__avatar">
-              {t.avatar ? (
-                <img src={t.avatar} alt={t.name} />
-              ) : (
-                <span>{t.name.charAt(0)}</span>
-              )}
-            </div>
-            <div class="testimonial-card__info">
-              <span class="testimonial-card__name" style={`color: ${t.textColor};`}>{t.name}</span>
-              <span class="testimonial-card__role" style={`color: rgba(255,255,255,0.5);`}>{t.role}</span>
-            </div>
+  <!-- 03 — Problem, approach and offerings -->
+  <section class="approach-section reveal">
+    <h2 class="section-heading">Making something new is only half the problem.</h2>
+    <div class="prose">
+      <p class="prose__lead">The other half is helping people understand why it matters.</p>
+      <p>
+        Products evolve. Markets change. Companies grow into something their old story can no
+        longer explain. Sometimes something genuinely new comes along that nobody quite knows what
+        to make of yet.
+      </p>
+      <p>
+        When a gap emerges between what's become true and what people understand or believe, we
+        step in and understand the technology, the product and the business. We then figure out
+        what the change should mean and find the most interesting way to make that meaning heard.
+      </p>
+    </div>
+
+    <p class="offerings__lead">In practice, that looks like:</p>
+    <ol class="offerings">
+      {offerings.map((o) => (
+        <li class="offering">
+          <div class="offering__head">
+            <span class="offering__num">{o.num}</span>
+            <h3 class="offering__title">{o.title}</h3>
           </div>
-        </div>
+          <p class="offering__desc">{o.desc}</p>
+        </li>
+      ))}
+    </ol>
+  </section>
+
+  <!-- 04 — Selected work and testimonials -->
+  <section class="work-section reveal">
+    <div class="work-stack">
+      {selected.map((project) => (
+        <>
+          <ProjectCard project={project} useHomeThumbnail={true} featured={true} />
+          {testimonials[project.slug] && (
+            <figure class="pull-quote">
+              <blockquote>"{testimonials[project.slug].quote}"</blockquote>
+              <figcaption class="pull-quote__author">
+                <span class="pull-quote__avatar">
+                  <img src={testimonials[project.slug].avatar} alt={testimonials[project.slug].name} />
+                </span>
+                <span>
+                  <span class="pull-quote__name">{testimonials[project.slug].name}</span>
+                  <span class="pull-quote__role">{testimonials[project.slug].role}</span>
+                </span>
+              </figcaption>
+            </figure>
+          )}
+        </>
       ))}
     </div>
-  </section>
-
-  <!-- The Pitch -->
-  <section class="problem-section reveal">
-    <div class="problem-section__inner">
-      <p class="problem-section__opening">
-        Creativity has been my business for 15 years.
-      </p>
-      <div class="problem-section__body">
-        <p>I've made money from it as a musician, in advertising, in film, and by building two startups of my own.<br /><br />I'm not a strategist who's never shipped anything, but a founder who spent his own money, and learned what actually works.<br /><br />I help startups with brand strategy, positioning, advertising & content to get your story out in the most honest, explicit way possible.</p>
-        <p>If you believe creativity is a business advantage and want a creative partner who gets that, we should talk.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA after pitch -->
-  <section class="pitch-cta reveal">
-    <a href="/contact" class="btn-primary pitch-cta__button">
-      Get in touch <span class="arrow">&rarr;</span>
+    <a href="/work" class="text-link work-section__all">
+      View all work <span class="arrow">&rarr;</span>
     </a>
   </section>
 
-  <!-- Selected Work -->
-  <section class="work-section reveal">
-    <h2 class="work-section__title">We make things people want. We make people want things.</h2>
-    <div class="home-work-grid">
-      {workProjects.map((project) => (
-        <ProjectCard project={project} useHomeThumbnail={true} />
-      ))}
-    </div>
-    {explorations.length > 0 && (
-      <h3 class="work-section__subtitle">Explorations</h3>
-      <div class="home-work-grid">
-        {explorations.map((project) => (
-          <ProjectCard project={project} useHomeThumbnail={true} />
-        ))}
-      </div>
-    )}
-  </section>
+  <!-- 05 — Closing CTA and footer come from BaseLayout -->
 
 </BaseLayout>
 
 <style>
-  /* ===== Hero ===== */
-  .hero {
-    padding: 40px var(--section-padding-x) 40px;
+  /* ===== Shared editorial primitives ===== */
+  .section-heading {
+    font-size: var(--text-h2);
+    font-weight: 500;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    max-width: 22ch;
+    margin-bottom: 32px;
   }
 
-  .hero__descriptor {
+  .prose {
+    max-width: 68ch;
+  }
+
+  .prose p {
+    font-size: var(--text-h3);
+    font-weight: 400;
+    line-height: 1.65;
+    color: var(--color-text-secondary);
+    margin-bottom: 1.1em;
+  }
+
+  .prose p:last-child {
+    margin-bottom: 0;
+  }
+
+  .prose p.prose__lead {
+    color: var(--color-text);
+    font-weight: 500;
+  }
+
+  .text-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
     font-size: var(--text-h3);
     font-weight: 500;
-    color: var(--color-text-secondary);
-    margin-bottom: 20px;
+    color: var(--color-accent);
+    transition: color 0.3s ease;
+  }
+
+  .text-link:hover {
+    color: var(--color-accent-hover);
+  }
+
+  /* ===== 01 Hero ===== */
+  .hero {
+    padding: 40px var(--section-padding-x) 48px;
   }
 
   .hero__headline {
     font-size: var(--text-hero);
     font-weight: 500;
-    line-height: 1.1;
-    letter-spacing: -0.02em;
+    line-height: 1.08;
+    letter-spacing: -0.03em;
     color: var(--color-text);
-    max-width: none;
-    margin-bottom: 12px;
+    margin-bottom: 32px;
+  }
+
+  /* One block: the definition and the buying moments stay visually joined,
+     separated by weight and colour rather than by space. */
+  .hero__copy {
+    max-width: 62ch;
+  }
+
+  .hero__copy p {
+    font-size: var(--text-h3);
+    line-height: 1.6;
+  }
+
+  .hero__definition {
+    font-weight: 500;
+    color: var(--color-text);
+    margin-bottom: 0.35em;
+  }
+
+  .hero__moments {
+    font-weight: 400;
+    color: var(--color-text-secondary);
+  }
+
+  .hero__cta {
+    margin-top: 32px;
   }
 
   .hero__media {
     width: 100%;
-    margin-top: 40px;
+    margin-top: 48px;
     border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
     overflow: hidden;
   }
 
@@ -177,16 +284,9 @@ const testimonials = [
     display: block;
   }
 
-  /* ===== Logo Bar ===== */
+  /* ===== 02 Client logos ===== */
   .logos-section {
-    padding: 24px var(--section-padding-x) 24px;
-  }
-
-  .logos-section__text {
-    font-size: var(--text-h3);
-    font-weight: 500;
-    color: #ffffff;
-    margin-bottom: 24px;
+    padding: 8px var(--section-padding-x) 40px;
   }
 
   .logos-grid {
@@ -202,191 +302,182 @@ const testimonials = [
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 28px clamp(48px, 7vw, 100px);
+    gap: 28px clamp(40px, 6vw, 84px);
   }
 
+  /* Six of these marks ship as white-on-transparent artwork, which is invisible
+     on the light background. brightness(0) flattens every mark to near-black and
+     keeps the alpha, so the row reads as one restrained monochrome set rather
+     than a mix of broken and intact logos. */
   .client-logo {
     height: var(--logo-h, 32px);
     width: auto;
+    filter: brightness(0);
+    opacity: 0.68;
+    transition: opacity 0.3s ease;
   }
 
-  /* ===== Selected Work ===== */
-  .work-section {
-    padding: 60px var(--section-padding-x) clamp(40px, 5vw, 60px);
+  .client-logo:hover {
+    opacity: 1;
   }
 
-  .work-section__title {
-    font-size: var(--text-h2);
+  /* ===== 03 Problem, approach and offerings ===== */
+  .approach-section {
+    padding: clamp(56px, 7vw, 88px) var(--section-padding-x);
+  }
+
+  .offerings__lead {
+    font-size: var(--text-h3);
     font-weight: 500;
-    margin-bottom: 48px;
+    color: var(--color-text);
+    margin-top: clamp(40px, 5vw, 56px);
+    margin-bottom: clamp(20px, 2.5vw, 28px);
   }
 
-  .home-work-grid {
+  .offerings {
+    list-style: none;
+    border-top: 1px solid var(--color-rule);
+  }
+
+  /* Two columns on desktop: the label carries the scan, the description sits
+     beside it so the list stays readable in one pass. */
+  .offering {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: clamp(24px, 4vw, 64px);
+    align-items: baseline;
+    padding: clamp(24px, 3vw, 36px) 0;
+    border-bottom: 1px solid var(--color-rule);
+  }
+
+  .offering__head {
     display: flex;
-    flex-direction: column;
-    gap: clamp(24px, 4vw, 40px);
+    align-items: baseline;
+    gap: 16px;
   }
 
-  .work-section__subtitle {
+  .offering__num {
+    font-size: var(--text-tiny);
+    font-weight: 500;
+    color: var(--color-text-tertiary);
+    font-variant-numeric: tabular-nums;
+    flex-shrink: 0;
+  }
+
+  .offering__title {
     font-size: var(--text-h2);
     font-weight: 500;
-    margin-top: 60px;
-    margin-bottom: 48px;
-  }
-
-  .view-all-card {
-    display: block;
-    width: 100%;
-    background-color: var(--color-accent);
-    border-radius: var(--radius-md);
-    padding: clamp(11px, 1.4vw, 20px);
-    text-decoration: none;
-    color: #FFFFFF;
-    text-align: right;
-    margin-top: clamp(24px, 3vw, 40px);
-  }
-
-  .view-all-card__text {
-    font-size: var(--text-h3);
-    font-weight: 500;
-  }
-
-  /* ===== The Problem ===== */
-  .problem-section {
-    padding: clamp(40px, 5vw, 60px) var(--section-padding-x);
-    background: var(--color-bg);
-  }
-
-  .problem-section__inner {
-    max-width: 800px;
-  }
-
-  .problem-section__opening {
-    font-size: var(--text-h2);
-    font-weight: 500;
-    font-style: normal;
-    line-height: 1.3;
-    margin-bottom: 32px;
-  }
-
-  .problem-section__body p {
-    font-size: var(--text-h3);
-    font-weight: 400;
-    line-height: 1.6;
-    margin-bottom: 24px;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
     color: var(--color-text);
   }
 
-  .problem-section__body p:last-child {
-    margin-bottom: 0;
-  }
-
-  .problem-section__body strong {
-    font-weight: 700;
-  }
-
-  /* ===== Testimonials ===== */
-  .testimonials-section {
-    padding: clamp(40px, 5vw, 60px) var(--section-padding-x);
-    background: var(--color-bg);
-  }
-
-  .testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: clamp(16px, 2vw, 24px);
-  }
-
-  .testimonial-card {
-    border-radius: var(--radius-md);
-    padding: clamp(24px, 3vw, 40px);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 280px;
-    background: var(--color-surface);
-    border: 1px solid var(--color-border);
-  }
-
-  .testimonial-card__quote {
-    font-size: var(--text-body);
+  .offering__desc {
+    font-size: var(--text-h3);
     font-weight: 400;
     line-height: 1.6;
-    margin-bottom: 32px;
+    color: var(--color-text-secondary);
+    max-width: 52ch;
   }
 
-  .testimonial-card__author {
+  /* ===== 04 Selected work and testimonials ===== */
+  .work-section {
+    padding: 0 var(--section-padding-x) clamp(56px, 7vw, 88px);
+  }
+
+  .work-stack {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(64px, 8vw, 104px);
+  }
+
+  .work-section__all {
+    margin-top: clamp(40px, 5vw, 56px);
+  }
+
+  /* Pull quotes — duplicated from /work rather than shared, to keep this
+     change scoped to the homepage. */
+  .pull-quote {
+    max-width: 68ch;
+    padding-left: clamp(20px, 3vw, 32px);
+    border-left: 2px solid var(--color-accent);
+  }
+
+  .pull-quote blockquote {
+    font-size: var(--text-h3);
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--color-text);
+    margin-bottom: 20px;
+  }
+
+  .pull-quote__author {
     display: flex;
     align-items: center;
     gap: 12px;
   }
 
-  .testimonial-card__avatar {
-    width: 44px;
-    height: 44px;
+  .pull-quote__avatar {
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     overflow: hidden;
-    background: rgba(255, 255, 255, 0.1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
     flex-shrink: 0;
+    background: var(--color-surface);
+    border: 1px solid var(--color-rule);
   }
 
-  .testimonial-card__avatar img {
+  .pull-quote__avatar img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
 
-  .testimonial-card__avatar span {
-    font-size: 1rem;
-    font-weight: 500;
-  }
-
-  .testimonial-card__info {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-  }
-
-  .testimonial-card__name {
-    font-size: var(--text-small);
-    font-weight: 500;
-  }
-
-  .testimonial-card__role {
+  .pull-quote__name,
+  .pull-quote__role {
+    display: block;
     font-size: var(--text-tiny);
+    line-height: 1.4;
+  }
+
+  .pull-quote__name {
+    font-weight: 500;
+    color: var(--color-text);
+  }
+
+  .pull-quote__role {
     font-weight: 400;
-  }
-
-  /* ===== Pitch CTA ===== */
-  .pitch-cta {
-    padding: 0 var(--section-padding-x) clamp(40px, 5vw, 60px);
-    background: var(--color-bg);
-  }
-
-  .pitch-cta__button {
-    display: inline-flex;
+    color: var(--color-text-tertiary);
   }
 
   /* ===== Responsive ===== */
+  @media (max-width: 900px) {
+    .offering {
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+
+    .offering__desc {
+      max-width: none;
+      padding-left: calc(var(--text-tiny) + 16px);
+    }
+  }
+
   @media (max-width: 767px) {
     .hero {
       padding: 32px var(--section-padding-x) 32px;
-    }
-
-    .hero__headline {
-      margin-bottom: 8px;
     }
 
     .hero__media {
       margin-top: 32px;
     }
 
+    .section-heading {
+      max-width: none;
+    }
+
     .logos-section {
-      padding: 32px var(--section-padding-x) 32px;
-      margin-bottom: 16px;
+      padding: 8px var(--section-padding-x) 32px;
     }
 
     .logos-grid {
@@ -397,17 +488,17 @@ const testimonials = [
       gap: 24px 32px;
     }
 
-    .testimonials-section {
-      padding-top: 16px;
-    }
-
-    .testimonials-grid {
-      grid-template-columns: 1fr;
-    }
-
     .client-logo {
       height: calc(var(--logo-h, 32px) * 0.82);
     }
 
+    .offering__title {
+      font-size: var(--text-h3);
+    }
+
+    .offering__desc {
+      font-size: var(--text-small);
+      padding-left: 0;
+    }
   }
 </style>
