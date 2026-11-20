@@ -3,13 +3,13 @@
     "slug": "desicrew",
     "title": "DesiCrew",
     "description": "DesiCrew: Repositioned & branded a 19 year old business operations company to what it has become, a deployed intelligence AI enterprise.",
-    "subtitle": "Build DesiCrew's brand, positioning, content engine, and outbound infrastructure so the quality of work happening inside the company becomes visible outside it.",
+    "subtitle": "Positioning, story, visual design and website rebuilt as one engagement, so the quality of work happening inside the company becomes visible outside it.",
     "client": "DesiCrew",
     "industry": "Enterprise AI",
     "year": "2026 - Ongoing",
     "metric": "Complete rebrand and reposition",
     "tags": [
-      "Brand & Positioning",
+      "Brand Strategy & Design",
       "Messaging Architecture",
       "Content Strategy",
       "Web Design & Development",
@@ -42,7 +42,7 @@
       }
     ],
     "cardHeadline": "A 19-year-old company had become something its old category could no longer explain.",
-    "cardLine": "We helped rebuild its positioning and narrative around the company it had actually become."
+    "cardLine": "We brought its story, visual design and website into line with the company it had become."
   },
   {
     "slug": "luma-wars",
@@ -100,6 +100,7 @@
     "metric": "70+ NPS",
     "tags": [
       "Story & Strategy",
+      "Brand Design",
       "Brand & Content"
     ],
     "cardBg": "#1c2133",
@@ -117,7 +118,7 @@
       },
       {
         "label": "THE INSIGHT",
-        "text": "Dark humour is how a lot of people actually deal with hard feelings. Instead of the expected \"it's okay to not be okay\" approach, we built Pause's brand voice around self-deprecating humour, honest emotional admission, and a tone that felt like talking to your sharpest friend — the one who makes you laugh about the thing you've been avoiding."
+        "text": "Dark humour is how a lot of people actually deal with hard feelings. Instead of the expected \"it's okay to not be okay\" approach, we built Pause's brand voice around self-deprecating humour, honest emotional admission, and a tone that felt like talking to your sharpest friend — the one who makes you laugh about the thing you've been avoiding.\n\nThe visual design followed the same instinct. Where the category defaulted to pastels and soft nature imagery, Pause looked the way it sounded."
       },
       {
         "image": "/images/projects/pause-image-2.jpg"
@@ -134,7 +135,7 @@
       }
     ],
     "cardHeadline": "An entire category was competing on sincerity.",
-    "cardLine": "We built a mental health brand around dark humour instead — the voice people actually use for hard feelings.",
+    "cardLine": "We developed the voice and visual design of a mental health brand built around humour.",
     "cardMetric": "70+ NPS"
   },
   {
@@ -148,7 +149,7 @@
     "metric": "Complete rebrand & reposition",
     "tags": [
       "Brand & Positioning",
-      "Identity",
+      "Visual Identity",
       "Content Strategy",
       "Web Design & Development"
     ],
@@ -172,7 +173,7 @@
       }
     ],
     "cardHeadline": "A better product truth was hiding inside a generic services story.",
-    "cardLine": "We found the sharper promise in the business and rebuilt its market expression around it."
+    "cardLine": "A sharper promise, expressed through a new visual identity and website."
   },
   {
     "slug": "origin-one",
@@ -227,6 +228,7 @@
     "tags": [
       "Positioning & Value Proposition",
       "Messaging",
+      "Visual Design",
       "Web Design & Development",
       "GTM Experiments"
     ],
@@ -250,7 +252,7 @@
       },
       {
         "label": "THE REPOSITIONING",
-        "text": "So we went back to the product, the company, the audience and the competitive landscape.\n\nWe rebuilt the positioning and value proposition around the reality QwikBuild was operating in now. Then we translated that into a new website and a clearer market expression.\n\nThe aim was not cosmetic change. It was to make the company easier to understand for the market it actually wanted to win."
+        "text": "So we went back to the product, the company, the audience and the competitive landscape.\n\nWe rebuilt the positioning and value proposition around the reality QwikBuild was operating in now. Then we carried that through into the website — its messaging and its visual design — and a clearer expression of the company in the market.\n\nThe aim was not cosmetic change. It was to make the company easier to understand for the market it actually wanted to win."
       },
       {
         "image": "/images/projects/qwikbuild-2.png"
@@ -261,7 +263,7 @@
       }
     ],
     "cardHeadline": "The AI market changed. QwikBuild needed to change with it.",
-    "cardLine": "We rebuilt the positioning, value proposition and website around the market QwikBuild was actually competing in."
+    "cardLine": "A clearer position for the business, expressed through new messaging, visual design and a rebuilt website."
   },
   {
     "slug": "attis-insider",
@@ -275,6 +277,8 @@
     "tags": [
       "Strategy",
       "Campaign",
+      "Campaign Design",
+      "Packaging",
       "Community"
     ],
     "cardBg": "#1c2133",
@@ -307,7 +311,7 @@
       }
     ],
     "cardHeadline": "India had no biohacking culture, so there was nothing to belong to yet.",
-    "cardLine": "We launched the community before the product, with a deliberately provocative campaign and no media spend.",
+    "cardLine": "We developed the campaign visuals and packaging that introduced the community to the world.",
     "cardMetric": "1000+ signups · ₹0 spent"
   },
   {
@@ -322,6 +326,7 @@
     "tags": [
       "Strategy",
       "Campaign",
+      "Campaign Design",
       "Product Design"
     ],
     "cardBg": "#1c2133",
